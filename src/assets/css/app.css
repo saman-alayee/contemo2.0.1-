@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'IRANYekanLight';
+	src: url('../fonts/IRANYekanLight\(FaNum\).ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'IRANYekan';
+	src: url('../fonts/IRANYekanRegular\(FaNum\).ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'IRANYekanBold';
+	src: url('../fonts/IRANYekanBold\(FaNum\).ttf') format('truetype');
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #f6f8fa;
+	direction: rtl;
+	font-family: 'IRANYekan';
+}
