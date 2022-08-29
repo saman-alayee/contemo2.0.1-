@@ -17,6 +17,48 @@ const routes = [
 		},
 		component: () => import('@/views/Home/index.vue'),
 	},
+	{
+		path: '/login',
+		name: 'login',
+		meta: {
+			title: 'ورود',
+		},
+		component: () => import('@/views/login/index.vue'),
+	},
+	{
+		path: '/register',
+		name: 'register',
+		meta: {
+			title: 'عضویت',
+		},
+		component: () => import('@/views/register/index.vue'),
+	},
+	{
+		path: '/',
+		name: '/layout',
+		redirect: '/dashboard',
+		component: () => import('@/layout/Layout.vue'),
+		children: [
+			{
+				path: '/dashboard',
+				name: 'dashboard',
+				meta: {
+					title: 'داشبورد',
+					breadcrumbs: [{ title: 'داشبورد', url: 'dashboard' }],
+				},
+				component: () => import('@/views/dashbaord/index.vue'),
+			},
+			{
+				path: '/accounts',
+				name: 'accounts',
+				meta: {
+					title: 'acc',
+					breadcrumbs: [{ title: 'acc', url: 'dashboard' }],
+				},
+				component: () => import('@/views/accounts/index.vue'),
+			},
+		],
+	},
 ];
 
 const router = new VueRouter({

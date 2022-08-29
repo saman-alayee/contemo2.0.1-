@@ -22,3 +22,7 @@ body {
 	direction: rtl;
 	font-family: 'IRANYekan';
 }
+
+.app-rtl{direction: rtl;}
+.app-ltr{direction: ltr;}
+.app-pointer{cursor: pointer;}
