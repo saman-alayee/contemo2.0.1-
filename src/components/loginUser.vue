@@ -59,7 +59,7 @@
 							</div>
 							<div class="col-md-4">
 								<button class="btn btn-social btn-light">
-									<img src="@/assets/vectors/googleIcon.svg" alt="" />
+									<img src="@/assets/vectors/linkedin.svg" alt="" />
 								</button>
 							</div>
 							<div class="col-md-4">
