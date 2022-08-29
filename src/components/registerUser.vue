@@ -9,9 +9,11 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
+								<router-link class="mt-4 px-4 login-router" to="/login">ورود</router-link>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
+							<div class="mt-4">
+								<router-link class="mt-4 register-router" to="/register">ثبت نام</router-link>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -94,7 +96,7 @@ export default {};
 }
 .input-form:active {
 	box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.05);
-	border: 1px solid #FCBF00;
+	border: 1px solid #fcbf00;
 	border-radius: 10px;
 }
 .border_primary:active {
@@ -113,17 +115,17 @@ export default {};
 	background: #f4f4f4;
 }
 .login-router {
+	color: $color-secoundary;
+	font-weight: 500;
+	font-size: 15px;
+}
+.register-router {
 	background: #fafafa;
 	padding: 10px 50px;
 	border-radius: 21px;
 	box-shadow: rgba(0, 0, 0, 0.05);
 	font-weight: 700;
 	font-size: 17px;
-}
-.register-router {
-	color: $color-secoundary;
-	font-weight: 500;
-	font-size: 15px;
 }
 .hr-sect {
 	display: flex;

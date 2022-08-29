@@ -25,3 +25,4 @@ body {
 
 .app-rtl{direction: rtl;}
 .app-ltr{direction: ltr;}
+.app-pointer{cursor: pointer;}
