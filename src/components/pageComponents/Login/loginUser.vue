@@ -35,7 +35,7 @@
 							<div class="form-group">
 								<validation-provider
 									name="آدرس ایمیل"
-									rules="email"
+									rules="required|email"
 									:bails="false"
 									v-slot="{ errors }"
 								>
