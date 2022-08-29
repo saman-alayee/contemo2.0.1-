@@ -1,8 +1,11 @@
 <template>
-	<h1>register</h1>
+	<Register />
 </template>
 
 <script>
-export default {};
+import Register from '@/components/registerUser.vue';
+export default {
+	components: { Register },
+};
 </script>
 
