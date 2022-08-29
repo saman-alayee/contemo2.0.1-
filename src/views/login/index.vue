@@ -1,11 +1,11 @@
 <template>
 	<div class="login">
-		<loginUser/>
+		<loginUser />
 	</div>
 </template>
 
 <script>
-import loginUser from '@/components/loginUser.vue';
+import loginUser from '@/components/pageComponents/Login/loginUser.vue';
 export default {
 	name: 'name',
 	components: { loginUser },
