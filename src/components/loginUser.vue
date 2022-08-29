@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
-					<form class="app-ltr">
+					<form class="app-ltr" @submit.prevent="doLogin">
 						<div class="form-group">
 							<input
 								type="email"
@@ -34,6 +34,7 @@
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								placeholder="آدرس ایمیل "
+								v-model="email"
 							/>
 						</div>
 						<div class="form-group">
@@ -42,12 +43,13 @@
 								class="form-control input_form"
 								id="exampleInputPassword1"
 								placeholder="رمز عبور"
+								v-model="password"
 							/>
 						</div>
-                        <div class="rtl">
+						<div class="rtl">
 							<span class="text-secondary app-pointer">بازیابی رمز عبور</span>
 						</div>
-						<button type="submit" class="btn btn-primary mt-3 color-primary w-100">ذخیره</button>
+						<button type="submit" class="btn btn-primary mt-3 color-primary w-100">ورود</button>
 						<div class="hr-sect mt-3">با این حساب وارد شو</div>
 						<div class="row mt-2">
 							<div class="col-md-4">
@@ -74,7 +76,23 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			email: '',
+			password: '',
+		};
+	},
+	methods: {
+		async doLogin() {
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
+				email: this.email,
+				password: this.password,
+			});
+			console.log(res);
+		},
+	},
+};
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';

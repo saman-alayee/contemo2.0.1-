@@ -36,6 +36,7 @@
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								placeholder="آدرس ایمیل "
+								v-model="email"
 							/>
 						</div>
 						<div class="form-group">
@@ -44,18 +45,19 @@
 								class="form-control input_form"
 								id="exampleInputPassword1"
 								placeholder="رمز عبور"
+								v-model="password"
 							/>
 						</div>
 						<div class="form-group">
 							<input
-								type="password"
 								class="form-control input_form"
 								id="exampleInputPassword1"
 								placeholder="تکرار رمز عبور"
+								v-model="name"
 							/>
 						</div>
 
-						<button type="submit" class="btn btn-primary mt-3 color-primary w-100">ذخیره</button>
+						<button type="submit" class="btn btn-primary mt-3 color-primary w-100">ثبت نام</button>
 						<div class="hr-sect mt-3">با این حساب وارد شو</div>
 						<div class="row mt-2">
 							<div class="col-md-4">
@@ -82,7 +84,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			email: '',
+			password: '',
+			name: '',
+		};
+	},
+	methods: {
+		async register() {
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.REGISTER, {
+				email: this.email,
+				password: this.password,
+				name: this.name,
+			});
+			console.log(res);
+		},
+	},
+};
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
