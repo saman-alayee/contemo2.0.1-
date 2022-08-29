@@ -26,6 +26,14 @@ const routes = [
 		component: () => import('@/views/login/index.vue'),
 	},
 	{
+		path: '/register',
+		name: 'register',
+		meta: {
+			title: 'عضویت',
+		},
+		component: () => import('@/views/register/index.vue'),
+	},
+	{
 		path: '/',
 		name: '/layout',
 		redirect: '/dashboard',
