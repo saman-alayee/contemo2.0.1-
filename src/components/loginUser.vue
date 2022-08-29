@@ -9,9 +9,13 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
+								<router-link class="mt-4 login-router" to="/login"
+									>ورود</router-link
+								>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
+							<router-link class="mt-4 px-4 register-router" to="/register"
+								>ثبت نام</router-link
+							>
 						</div>
 					</div>
 				</div>
@@ -26,49 +30,64 @@
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
-					<form class="app-ltr" @submit.prevent="doLogin">
-						<div class="form-group">
-							<input
-								type="email"
-								class="form-control input_form"
-								id="exampleInputEmail1"
-								aria-describedby="emailHelp"
-								placeholder="آدرس ایمیل "
-								v-model="email"
-							/>
-						</div>
-						<div class="form-group">
-							<input
-								type="password"
-								class="form-control input_form"
-								id="exampleInputPassword1"
-								placeholder="رمز عبور"
-								v-model="password"
-							/>
-						</div>
-						<div class="rtl">
-							<span class="text-secondary app-pointer">بازیابی رمز عبور</span>
-						</div>
-						<button type="submit" class="btn btn-primary mt-3 color-primary w-100">ورود</button>
-						<div class="hr-sect mt-3">با این حساب وارد شو</div>
-						<div class="row mt-2">
-							<div class="col-md-4">
-								<button class="btn btn-social btn-light">
-									<img src="@/assets/vectors/Facebook.svg" alt="" />
-								</button>
+					<validation-observer v-slot="{ valid }">
+						<form class="app" @submit.prevent="doLogin">
+							<div class="form-group">
+								<validation-provider
+									name="آدرس ایمیل"
+									rules="email"
+									:bails="false"
+									v-slot="{ errors }"
+								>
+									<BaseInput
+										ref="email"
+										type="email"
+										name="email"
+										v-model="model.email"
+										:errors="errors"
+										placeholder="آدرس ایمیل"
+									/>
+								</validation-provider>
 							</div>
-							<div class="col-md-4">
-								<button class="btn btn-social btn-light">
-									<img src="@/assets/vectors/linkedin.svg" alt="" />
-								</button>
+							<div class="form-group">
+								<BaseInput
+									ref="password"
+									type="password"
+									name="password"
+									v-model="model.password"
+									placeholder="رمز عبور"
+								/>
 							</div>
-							<div class="col-md-4">
-								<button class="btn btn-social btn-light">
-									<img src="@/assets/vectors/googleIcon.svg" alt="" />
-								</button>
+							<div class="rtl">
+								<span class="text-secondary app-pointer">بازیابی رمز عبور</span>
 							</div>
-						</div>
-					</form>
+							<button
+								type="submit"
+								class="btn btn-primary mt-3 color-primary w-100"
+								:disabled="!valid"
+							>
+								ورود
+							</button>
+							<div class="hr-sect mt-3">با این حساب وارد شو</div>
+							<div class="row mt-2">
+								<div class="col-md-4">
+									<button class="btn btn-social btn-light">
+										<img src="@/assets/vectors/Facebook.svg" alt="" />
+									</button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-social btn-light">
+										<img src="@/assets/vectors/linkedin.svg" alt="" />
+									</button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-social btn-light">
+										<img src="@/assets/vectors/googleIcon.svg" alt="" />
+									</button>
+								</div>
+							</div>
+						</form>
+					</validation-observer>
 				</div>
 			</div>
 		</div>
@@ -76,19 +95,26 @@
 </template>
 
 <script>
+import BaseInput from '@/components/elements/BaseInput/index.vue';
 export default {
 	data() {
 		return {
+			model: {
+				email: '',
+				password: '',
+			},
 			email: '',
-			password: '',
 		};
+	},
+	components: {
+		BaseInput,
 	},
 	methods: {
 		async doLogin() {
-			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
-				email: this.email,
-				password: this.password,
-			});
+			const res = await this.$ApiServiceLayer.post(
+				this.$PATH.RELATIVE_PATH.POST.LOGIN,
+				this.model,
+			);
 			console.log(res);
 		},
 	},
@@ -145,11 +171,7 @@ export default {
 	margin: 8px 0px;
 	font-size: 1rem;
 }
-.input_form {
-	box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.05);
-	border: none;
-	border-radius: 10px;
-}
+
 .hr-sect::before,
 .hr-sect::after {
 	content: '';

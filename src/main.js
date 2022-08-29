@@ -6,6 +6,7 @@ import store from './store';
 import GlobalComponents from '@/utils/globalComponents';
 import '@/utils/globalLibraries';
 import ApiServiceLayer from './plugins/apiServiceLayer';
+import './validators/index';
 
 Vue.config.productionTip = false;
 Vue.prototype.$PATH = PATH;
