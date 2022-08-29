@@ -18,6 +18,14 @@ const routes = [
 		component: () => import('@/views/Home/index.vue'),
 	},
 	{
+		path: '/login',
+		name: 'login',
+		meta: {
+			title: 'ورود',
+		},
+		component: () => import('@/views/login/index.vue'),
+	},
+	{
 		path: '/',
 		name: '/layout',
 		redirect: '/dashboard',
