@@ -6,9 +6,9 @@ import store from '@/store/index';
 const baseURL = '';
 
 export default class ApiServiceLayer {
-	async get(url, service, headers = {}, queryStrings, isAuthorized = true) {
+	async get(url, headers = {}, queryStrings, isAuthorized = true) {
 		// define variables for keep url and queryString
-		let apiUrl = baseURL + service + url;
+		let apiUrl = baseURL  + url;
 		let queryString = '';
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
@@ -51,8 +51,8 @@ export default class ApiServiceLayer {
 		}
 	}
 
-	async post(url, service, data, headers = {}, isAuthorized = true) {
-		let apiUrl = baseURL + service + url;
+	async post(url, data, headers = {}, isAuthorized = true) {
+		let apiUrl = baseURL  + url;
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
 
@@ -96,9 +96,9 @@ export default class ApiServiceLayer {
 		}
 	}
 
-	async delete(url, service, headers = {}, queryStrings, isAuthorized = true) {
+	async delete(url, headers = {}, queryStrings, isAuthorized = true) {
 		// define variables for keep url and response
-		let apiUrl = baseURL + service + url;
+		let apiUrl = baseURL  + url;
 		let queryString = '';
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
@@ -148,8 +148,8 @@ export default class ApiServiceLayer {
 		}
 	}
 
-	async put(url, service, data, headers = {}, isAuthorized = true) {
-		let apiUrl = baseURL + service + url;
+	async put(url, data, headers = {}, isAuthorized = true) {
+		let apiUrl = baseURL  + url;
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
 		if (token) {

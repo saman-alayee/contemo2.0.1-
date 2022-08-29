@@ -6,9 +6,6 @@
 		<div class="left-container">
 			<div class="topbar">
 				<Topbar />
-				<div class="title-container-top">
-					<p>{{ title }}</p>
-				</div>
 			</div>
 			<div class="content">
 				<div class="contdainer">
