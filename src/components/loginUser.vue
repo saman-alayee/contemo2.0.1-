@@ -22,7 +22,7 @@
 						<p>با این حساب وارد شو</p>
 					</div>
 					<div class="col-lg-10">
-						<img class="register_image" src="@/assets/vectors/Register.svg" alt="" />
+						<img class="register_image" src="@/assets/vectors/loginVector.svg" alt="" />
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
