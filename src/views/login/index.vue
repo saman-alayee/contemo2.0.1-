@@ -1,12 +1,14 @@
 <template>
 	<div class="login">
-		<h1>Login Page</h1>
+		<loginUser/>
 	</div>
 </template>
 
 <script>
+import loginUser from '@/components/loginUser.vue';
 export default {
 	name: 'name',
+	components: { loginUser },
 };
 </script>
 
