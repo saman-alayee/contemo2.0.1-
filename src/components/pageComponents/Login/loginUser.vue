@@ -50,13 +50,21 @@
 								</validation-provider>
 							</div>
 							<div class="form-group">
-								<BaseInput
-									ref="password"
-									type="password"
-									name="password"
-									v-model="model.password"
-									placeholder="رمز عبور"
-								/>
+								<validation-provider
+									name="رمز عبور"
+									rules="required"
+									:bails="false"
+									v-slot="{ errors }"
+								>
+									<BaseInput
+										ref="password"
+										type="password"
+										name="password"
+										v-model="model.password"
+										placeholder="رمز عبور"
+										:errors="errors"
+									/>
+								</validation-provider>
 							</div>
 							<div class="rtl">
 								<span class="text-secondary app-pointer">بازیابی رمز عبور</span>
