@@ -1,11 +1,12 @@
 <template>
-	<div class="container">
+	<div class="sidebar-component-container">
 		<div id="mySidenav" class="navbar-brand sidenav">
+			<UserProfile />
 			<br />
 			<a href="javascript:void(0)" class="closebtn" @click="closeNav()"
 				><img src="@/assets/vectors/closeIcon.svg" alt=""
 			/></a>
-			<div class="mt-4">
+			<div class="">
 				<router-link class="w-75" to="/Dashboard"
 					><img class="hover-img" src="@/assets/vectors/dashboard-icon.svg" alt="" />
 					داشبورد</router-link
@@ -44,7 +45,7 @@
 					><img class="hover-img" src="@/assets/vectors/dashboard-icon1.svg" alt="" /> خدمات محتوایی
 				</router-link>
 
-				<img class="image-logo" src="@/assets/vectors/Contemo-Logo.svg" alt="" />
+				<img class="image-logo mt-5" src="@/assets/vectors/Contemo-Logo.svg" alt="" />
 			</div>
 		</div>
 		<nav class="navbar">
@@ -56,7 +57,11 @@
 </template>
 
 <script>
+import UserProfile from '@/components/pageComponents/UserProfile/UserProfile.vue';
 export default {
+	components: {
+		UserProfile,
+	},
 	data() {
 		return {};
 	},
@@ -85,7 +90,9 @@ export default {
 	transition: 0.5s;
 	padding-top: 60px;
 	border-radius: 30px 0px 0px 30px;
+	box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
 }
+
 .hover-img {
 	color: rgb(255, 255, 255);
 	background-color: aliceblue;
@@ -102,7 +109,7 @@ export default {
 }
 .image-logo {
 	width: 60%;
-	margin-top: 4.5rem;
+	margin-top: 4rem;
 	margin-right: 19%;
 }
 .sidenav a:hover {
