@@ -24,8 +24,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 row w-50">
-					<div class="col-lg-2 mt-5">
-					</div>
+					<div class="col-lg-2 mt-5"></div>
 					<div class="col-lg-10">
 						<img
 							class="register_image"
@@ -55,6 +54,9 @@
 								</validation-provider>
 							</div>
 							<div class="form-group">
+								<BaseInput v-model="model.phoneNumber" placeholder="شماره تلفن" />
+							</div>
+							<div class="form-group">
 								<validation-provider
 									name="رمز عبور"
 									rules="required"
@@ -82,7 +84,7 @@
 										ref="password"
 										type="password"
 										name="password"
-										v-model="model.repassword"
+										v-model="model.confrimPassword"
 										placeholder="تکرار رمز عبور"
 										:errors="errors"
 									/>
@@ -129,8 +131,9 @@ export default {
 		return {
 			model: {
 				email: '',
+				phoneNumber: '',
 				password: '',
-				name: '',
+				confrimPassword: '',
 			},
 		};
 	},
@@ -139,11 +142,13 @@ export default {
 	},
 	methods: {
 		async register() {
-			const res = await this.$ApiServiceLayer.post(
-				this.$PATH.RELATIVE_PATH.POST.REGISTER,
-				this.model,
-			);
-			console.log(res.data);
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.REGISTER, {
+				email: this.email,
+				phoneNumber: this.phoneNumber,
+				password: this.password,
+				confrimPassword: this.confrimPassword,
+			});
+			console.log(res);
 		},
 	},
 };
