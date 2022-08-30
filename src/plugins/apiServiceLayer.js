@@ -3,7 +3,7 @@ import axios from 'axios';
 import store from '@/store/index';
 
 // add base url in here
-const baseURL = 'https://api.freerealapi.com';
+const baseURL = '';
 
 export default class ApiServiceLayer {
 	async get(url, headers = {}, queryStrings, isAuthorized = true) {

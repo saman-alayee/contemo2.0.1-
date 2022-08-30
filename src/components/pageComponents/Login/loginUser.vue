@@ -9,17 +9,20 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
+								<router-link class="mt-4 login-router" to="/login"
+									>ورود</router-link
+								>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
+							<router-link class="mt-4 px-4 register-router" to="/register"
+								>ثبت نام</router-link
+							>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-8 row w-50">
-					<div class="col-lg-2 mt-5">
-					</div>
+					<div class="col-lg-2 mt-5"></div>
 					<div class="col-lg-10">
 						<img class="register_image" src="@/assets/vectors/loginVector.svg" alt="" />
 					</div>
@@ -106,7 +109,6 @@ export default {
 				email: '',
 				password: '',
 			},
-			email: '',
 		};
 	},
 	components: {
@@ -114,7 +116,10 @@ export default {
 	},
 	methods: {
 		async doLogin() {
-			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, this.model);
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
+				email: this.email,
+				password: this.password,
+			});
 			console.log(res);
 		},
 	},
