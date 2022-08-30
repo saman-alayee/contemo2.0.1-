@@ -1,17 +1,17 @@
 <template>
 	<div class="row">
 		<div class="col-lg-8">
-			<Dashboard />
+			<Tasks />
 		</div>
 		<div class="col-lg-4">j</div>
 	</div>
 </template>
 
 <script>
-import Dashboard from '@/components/pageComponents/Dashboard/UserDashboard.vue';
+import Tasks from '@/components/pageComponents/Dashboard/DashboardTask.vue';
 export default {
 	components: {
-		Dashboard,
+		Tasks,
 	},
 };
 </script>
