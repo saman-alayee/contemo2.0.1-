@@ -1,3 +1,3 @@
 <template>
-	<p>safe list account ha masalan</p>
+	<p>safe list account ha </p>
 </template>

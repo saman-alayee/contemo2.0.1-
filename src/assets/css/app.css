@@ -19,6 +19,17 @@
 }
 body {
 	background-color: #f6f8fa;
+	overflow-x: hidden;
 	direction: rtl;
 	font-family: 'IRANYekan';
+}
+
+.app-rtl {
+	direction: rtl;
+}
+.app-ltr {
+	direction: ltr;
+}
+.app-pointer {
+	cursor: pointer;
 }

@@ -3,12 +3,12 @@ import axios from 'axios';
 import store from '@/store/index';
 
 // add base url in here
-const baseURL = '';
+const baseURL = 'https://api.freerealapi.com';
 
 export default class ApiServiceLayer {
 	async get(url, headers = {}, queryStrings, isAuthorized = true) {
 		// define variables for keep url and queryString
-		let apiUrl = baseURL  + url;
+		let apiUrl = baseURL + url;
 		let queryString = '';
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
@@ -52,7 +52,7 @@ export default class ApiServiceLayer {
 	}
 
 	async post(url, data, headers = {}, isAuthorized = true) {
-		let apiUrl = baseURL  + url;
+		let apiUrl = baseURL + url;
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
 
@@ -98,7 +98,7 @@ export default class ApiServiceLayer {
 
 	async delete(url, headers = {}, queryStrings, isAuthorized = true) {
 		// define variables for keep url and response
-		let apiUrl = baseURL  + url;
+		let apiUrl = baseURL + url;
 		let queryString = '';
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
@@ -149,7 +149,7 @@ export default class ApiServiceLayer {
 	}
 
 	async put(url, data, headers = {}, isAuthorized = true) {
-		let apiUrl = baseURL  + url;
+		let apiUrl = baseURL + url;
 		let fullHeaders = {};
 		let token = store.state.userConfig.accessToken;
 		if (token) {
