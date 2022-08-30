@@ -9,13 +9,9 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login"
-									>ورود</router-link
-								>
+								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register"
-								>ثبت نام</router-link
-							>
+							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
 						</div>
 					</div>
 				</div>
@@ -111,10 +107,7 @@ export default {
 	},
 	methods: {
 		async doLogin() {
-			const res = await this.$ApiServiceLayer.post(
-				this.$PATH.RELATIVE_PATH.POST.LOGIN,
-				this.model,
-			);
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, this.model);
 			console.log(res);
 		},
 	},
