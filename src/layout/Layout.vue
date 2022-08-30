@@ -49,7 +49,7 @@ export default {
 	}
 	.topbar {
 		width: 100%;
-		border-right: 1px solid #c4c4c4;
+
 		.title-container-top {
 			width: 100%;
 			height: 64px;
