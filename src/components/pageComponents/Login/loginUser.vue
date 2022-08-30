@@ -19,7 +19,6 @@
 			<div class="row">
 				<div class="col-lg-8 row w-50">
 					<div class="col-lg-2 mt-5">
-						<p>با این حساب وارد شو</p>
 					</div>
 					<div class="col-lg-10">
 						<img class="register_image" src="@/assets/vectors/loginVector.svg" alt="" />
