@@ -50,7 +50,7 @@
 		</div>
 		<nav class="navbar">
 			<div id="main">
-				<a class="menu" href="#" @click="openNav()"> &#9776; </a>
+				<a class="menu" id="menu" href="#" @click="openNav()"> &#9776; </a>
 			</div>
 		</nav>
 	</div>
@@ -69,9 +69,13 @@ export default {
 	methods: {
 		openNav() {
 			document.getElementById('mySidenav').style.width = '260px';
+			document.body.style.marginRight = '260px';
+			document.getElementById('menu').style.display = 'none';
 		},
 		closeNav() {
 			document.getElementById('mySidenav').style.width = '0';
+			document.body.style.marginRight = '0px';
+			document.getElementById('menu').style.display = 'inline';
 		},
 	},
 };
