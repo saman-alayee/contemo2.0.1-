@@ -1,14 +1,11 @@
 <template>
-	<div class="row">
-		<div class="col-lg-8">
-			<Dashboard />
-		</div>
-		<div class="col-lg-4">j</div>
+	<div class="dashboard-component-contai">
+		<Dashboard />
 	</div>
 </template>
 
 <script>
-import Dashboard from '@/components/pageComponents/Dashboard/UserDashboard.vue';
+import Dashboard from '../../components/pageComponents/Dashboard/index.vue';
 export default {
 	components: {
 		Dashboard,
