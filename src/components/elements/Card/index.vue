@@ -1,7 +1,7 @@
 <template>
 	<div class="base-card-container" :style="{ background, width, color }">
 		<div class="card-body">
-			<h5 class="card-title-component">{{ title }}</h5>
+			<h5 class="card-title-component" :style="{ color }">{{ title }}</h5>
 			<p class="card-text-component">
 				{{ description }}
 			</p>
