@@ -39,7 +39,14 @@ const routes = [
 		meta: {
 			title: 'باز یابی رمز عبور',
 		},
-		component: () => import('@/views/forgetPassword/index.vue'),
+		component: () => import('@/views/forgetpassword/index.vue'),
+	},
+	{
+		path: '/verify',
+		meta: {
+			title: '',
+		},
+		component: () => import('@/views/verify/index.vue'),
 	},
 	{
 		path: '/',

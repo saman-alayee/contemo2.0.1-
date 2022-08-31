@@ -14,7 +14,7 @@
 								>
 							</div>
 							<div class="mt-4">
-								<router-link class="mt-4 register-router" to="/register"
+								<router-link class="mt-4 login-router" to="/register"
 									>ثبت نام</router-link
 								>
 							</div>
@@ -22,7 +22,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row form-base-container	">
 				<div class="col-lg-8 row w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 120px">به کانتمو خوش آمدید</h1>
@@ -136,5 +136,12 @@ export default {
 	box-shadow: rgba(0, 0, 0, 0.05);
 	font-weight: 700;
 	font-size: 17px;
+}
+.form-base-container {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>
