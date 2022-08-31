@@ -1,13 +1,13 @@
 <template>
-	<SelectSideUSer/>
+	<h1> home page </h1>
 </template>
 
 <script>
-import SelectSideUSer from '@/components/SelectSideUser.vue';
+;
 export default {
-	name: 'SelectSide',
+	name : 'home',
 	components: {
-		SelectSideUSer,
+		
 	},
 	methods: {
 		async test() {
