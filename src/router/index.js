@@ -34,6 +34,14 @@ const routes = [
 		component: () => import('@/views/register/index.vue'),
 	},
 	{
+		path: '/forget-password',
+		name: 'foregtpassword',
+		meta: {
+			title: 'باز یابی رمز عبور',
+		},
+		component: () => import('@/views/forgetPassword/index.vue'),
+	},
+	{
 		path: '/',
 		name: '/layout',
 		redirect: '/dashboard',

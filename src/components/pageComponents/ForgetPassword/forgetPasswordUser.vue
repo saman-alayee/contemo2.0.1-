@@ -1,5 +1,5 @@
 <template>
-	<div class="login">
+	<div class="register">
 		<div class="container-fluid">
 			<div class="login-user">
 				<div class="container">
@@ -24,9 +24,15 @@
 				<div class="col-lg-8 row w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
-						<h5 style="padding-right: 200px">
-							اگر حساب کاربری ندارید
-							<router-link to="/register">اینجا</router-link> کلیک کنید
+						<h5
+							style="
+								padding-right: 200px;
+								width: 470px;
+								line-height: 2rem;
+								text-align: center;
+							"
+						>
+							لینک بازیابی رمز عبور به ایمیل شما ارسال خواهد شد
 						</h5>
 					</div>
 					<div class="col-lg-6">
@@ -39,7 +45,7 @@
 				</div>
 				<div class="col-lg-4 mt-5">
 					<validation-observer v-slot="{ valid }">
-						<form class="app" @submit.prevent="doLogin">
+						<form class="app" @submit.prevent="doLogin" style="margin-top: 11rem">
 							<div class="form-group">
 								<validation-provider
 									name="آدرس ایمیل"
@@ -57,53 +63,13 @@
 									/>
 								</validation-provider>
 							</div>
-							<div class="form-group">
-								<validation-provider
-									name="رمز عبور"
-									rules="required"
-									:bails="false"
-									v-slot="{ errors }"
-								>
-									<BaseInput
-										ref="password"
-										type="password"
-										name="password"
-										v-model="model.password"
-										placeholder="رمز عبور"
-										:errors="errors"
-									/>
-								</validation-provider>
-							</div>
-							<div class="rtl">
-								<span class="text-secondary app-pointer" @click="goToForgetPassword"
-									>بازیابی رمز عبور</span
-								>
-							</div>
 							<button
 								type="submit"
 								class="btn btn-primary mt-3 color-primary w-100"
 								:disabled="!valid"
 							>
-								ورود
+								بازیابی رمز عبور
 							</button>
-							<div class="hr-sect mt-3">با این حساب وارد شو</div>
-							<div class="row mt-2">
-								<div class="col-md-4">
-									<button class="btn btn-social btn-light">
-										<img src="@/assets/vectors/Facebook.svg" alt="" />
-									</button>
-								</div>
-								<div class="col-md-4">
-									<button class="btn btn-social btn-light">
-										<img src="@/assets/vectors/linkedin.svg" alt="" />
-									</button>
-								</div>
-								<div class="col-md-4">
-									<button class="btn btn-social btn-light">
-										<img src="@/assets/vectors/googleIcon.svg" alt="" />
-									</button>
-								</div>
-							</div>
 						</form>
 					</validation-observer>
 				</div>
@@ -119,7 +85,6 @@ export default {
 		return {
 			model: {
 				email: '',
-				password: '',
 			},
 		};
 	},
@@ -127,21 +92,21 @@ export default {
 		BaseInput,
 	},
 	methods: {
-		async doLogin() {
+		async sendEmail() {
 			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
 				email: this.model.email,
-				password: this.model.password,
 			});
 			console.log(res);
-		},
-		goToForgetPassword() {
-			return this.$router.push('/forget-password');
 		},
 	},
 };
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
+.register {
+	width: 100%;
+	height: 100vh;
+}
 .color-primary {
 	background-color: $color-primary;
 }
@@ -158,9 +123,7 @@ export default {
 .border_primary:active {
 	border: 1px solid $color-warning;
 }
-.login {
-	width: 100%;
-	height: 100vh;
+.register {
 	background-color: $color-white;
 }
 .login_image {
@@ -173,41 +136,12 @@ export default {
 	background: #f4f4f4;
 }
 .login-router {
-	background: #fafafa;
 	padding: 10px 50px;
-	border-radius: 21px;
-	box-shadow: rgba(0, 0, 0, 0.05);
-	font-weight: 700;
-	font-size: 17px;
 }
-.register-router {
+.register-router,
+.login-router {
 	color: $color-secoundary;
 	font-weight: 500;
 	font-size: 15px;
-}
-.hr-sect {
-	display: flex;
-	flex-basis: 100%;
-	align-items: center;
-	color: $color-secoundary;
-	margin: 8px 0px;
-	font-size: 1rem;
-}
-
-.hr-sect::before,
-.hr-sect::after {
-	content: '';
-	flex-grow: 1;
-	background: $color-secoundary;
-	height: 1px;
-	font-size: 0px;
-	line-height: 0px;
-	margin: 0px 8px;
-}
-.btn-social {
-	background: #f6f6f6;
-	border: 1px solid #dddfdd;
-	border-radius: 10px;
-	width: 100%;
 }
 </style>
