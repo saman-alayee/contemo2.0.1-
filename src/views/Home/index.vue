@@ -1,14 +1,12 @@
 <template>
-	<h1> home page </h1>
+	<ForgetPasswordUser />
 </template>
 
 <script>
-;
+import ForgetPasswordUser from '../../components/pageComponents/ForgetPassword/forgetPasswordUser.vue';
 export default {
-	name : 'home',
-	components: {
-		
-	},
+	name: 'home',
+	components: { ForgetPasswordUser },
 	methods: {
 		async test() {
 			const res = await this.$ApiServiceLayer.post(
