@@ -1,9 +1,14 @@
 <template>
-	<p>salam</p>
+	<h1> home page </h1>
 </template>
 
 <script>
+;
 export default {
+	name : 'home',
+	components: {
+		
+	},
 	methods: {
 		async test() {
 			const res = await this.$ApiServiceLayer.post(
