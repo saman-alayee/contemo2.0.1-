@@ -42,6 +42,13 @@ const routes = [
 		component: () => import('@/views/forgetpassword/index.vue'),
 	},
 	{
+		path: '/verify',
+		meta: {
+			title: '',
+		},
+		component: () => import('@/views/verify/index.vue'),
+	},
+	{
 		path: '/',
 		name: '/layout',
 		redirect: '/dashboard',
