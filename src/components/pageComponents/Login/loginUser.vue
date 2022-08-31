@@ -1,5 +1,5 @@
 <template>
-	<div class="register">
+	<div class="login">
 		<div class="container-fluid">
 			<div class="login-user">
 				<div class="container">
@@ -137,10 +137,6 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
-.register {
-	width: 100%;
-	height: 100vh;
-}
 .color-primary {
 	background-color: $color-primary;
 }
@@ -157,7 +153,9 @@ export default {
 .border_primary:active {
 	border: 1px solid $color-warning;
 }
-.register {
+.login {
+	width: 100%;
+	height: 100vh;
 	background-color: $color-white;
 }
 .login_image {

@@ -25,8 +25,8 @@
 			<div class="row">
 				<div class="col-lg-8 row w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
-						<h1 class="" style="padding-right: 130px">به کانتمو خوش آمدید</h1>
-						<h5 style="padding-right: 130px">
+						<h1 class="" style="padding-right: 120px">به کانتمو خوش آمدید</h1>
+						<h5 style="padding-right: 120px">
 							اگر قبلا ثبت نام کردی میتونی از
 							<router-link to="/login">اینجا</router-link> وارد حسابت بشی
 						</h5>
@@ -161,6 +161,10 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
+.register {
+	width: 100%;
+	height: 100vh;
+}
 .color-primary {
 	background-color: $color-primary;
 }
