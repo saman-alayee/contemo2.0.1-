@@ -75,7 +75,9 @@
 								</validation-provider>
 							</div>
 							<div class="rtl">
-								<span class="text-secondary app-pointer">بازیابی رمز عبور</span>
+								<span class="text-secondary app-pointer" @click="goToForgetPassword"
+									>بازیابی رمز عبور</span
+								>
 							</div>
 							<button
 								type="submit"
@@ -131,6 +133,9 @@ export default {
 				password: this.model.password,
 			});
 			console.log(res);
+		},
+		goToForgetPassword() {
+			return this.$router.push('/forget-password');
 		},
 	},
 };
