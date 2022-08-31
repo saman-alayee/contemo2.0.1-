@@ -11,7 +11,6 @@
 					><img class="hover-img" src="@/assets/vectors/dashboard-icon.svg" alt="" />
 					داشبورد</router-link
 				>
-
 				<router-link class="w-75" to="/Calendar"
 					><img class="hover-img" src="@/assets/vectors/dashboard-icon1.svg" alt="" /> بوم
 					محتوایی</router-link
@@ -24,7 +23,6 @@
 					><img class="hover-img" src="@/assets/vectors/dashboard-icon1.svg" alt="" /> استراتژی
 					محتوا</router-link
 				>
-
 				<router-link class="w-75" to="/Partners"
 					><img class="hover-img" src="@/assets/vectors/dashboard-icon1.svg" alt="" /> اکانت ها
 				</router-link>
@@ -48,11 +46,71 @@
 				<img class="image-logo mt-5" src="@/assets/vectors/Contemo-Logo.svg" alt="" />
 			</div>
 		</div>
-		<nav class="navbar">
-			<div id="main">
-				<a class="menu" id="menu" href="#" @click="openNav()"> &#9776; </a>
+		<div class="navbar-brand sidenav-close" id="menu">
+			<div>
+				<div id="main">
+					<a class="menu" href="#" @click="openNav()">
+						<img class="avatar" src="@/assets/vectors/test-avatar.svg" alt="avatar" />
+						<img class="p-1" src="@/assets/vectors/closeIcon.svg" alt=""
+			/>
+					</a>
+				</div>
+				<div class="icons-close">
+					<router-link class="icon-close" to="/Dashboard"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon.svg" alt="" />
+					</router-link>
+				</div>
+
+				<div>
+					<router-link class="icon-close" to="/Calendar"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<div>
+					<router-link class="icon-close" to="/image"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<div class="w-100">
+					<router-link class="icon-close" to="/Accounts"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+
+				<div class="w-100">
+					<router-link class="icon-close" to="/Partners"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+
+				<div class="w-100">
+					<router-link class="icon-close" to="/Ticket"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<div class="w-100">
+					<router-link class="icon-close" to="UserSettings"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<div>
+					<router-link class="icon-close" to="UserSettings"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<div>
+					<router-link class="icon-close" to="UserSettings"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<div>
+					<router-link class="icon-close" to="UserSettings"
+						><img class="img-icon" src="@/assets/vectors/dashboard-icon1.svg" alt="" />
+					</router-link>
+				</div>
+				<img class="img-logo-close" src="@/assets/vectors/justLogo.svg" alt="" />
 			</div>
-		</nav>
+		</div>
 	</div>
 </template>
 
@@ -81,7 +139,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/scss/_shared.scss';
+
 .sidenav {
 	height: 100%;
 	width: 0;
@@ -96,12 +156,49 @@ export default {
 	border-radius: 30px 0px 0px 30px;
 	box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
 }
-
+.icons-close {
+	margin-top: 1rem;
+}
+.sidenav-close {
+	height: 100%;
+	width: 84px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: rgb(255, 255, 255);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	border-radius: 30px 0px 0px 30px;
+	box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
+}
+.avatar {
+	width: 38px;
+	height: 38px;
+}
 .hover-img {
 	color: rgb(255, 255, 255);
 	background-color: aliceblue;
 	border-radius: 0.2rem;
 }
+.img-icon {
+	width: 18px;
+}
+.icon-close {
+	margin-right: 2rem;
+	margin-top: 1rem;
+}
+.img-logo-close {
+	margin-right: 1.3rem;
+	margin-top: 4rem;
+}
+// .icon-close:hover {
+// 	background: #4461f2;
+// 	box-shadow: 0px 12px 21px rgba(68, 97, 242, 0.15);
+// 	border-radius: 10px;
+// 	width: 4rem;
+// }
 .sidenav a {
 	padding: 8px 20px 8px 32px;
 	text-decoration: none;
@@ -111,6 +208,7 @@ export default {
 	transition: 0.3s;
 	margin-right: 12%;
 }
+
 .image-logo {
 	width: 60%;
 	margin-top: 4rem;
@@ -162,24 +260,5 @@ export default {
 #main {
 	transition: margin-left 0.5s;
 	padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-	.sidenav {
-		padding-top: 15px;
-	}
-	.sidenav a {
-		font-size: 16.5px;
-	}
-	.square {
-		height: 50px;
-		width: 50px;
-		background-color: #555;
-	}
-}
-.menu {
-	text-decoration: none;
-	font-size: 25px;
-	color: #000000;
 }
 </style>
