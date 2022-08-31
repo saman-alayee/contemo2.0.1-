@@ -1,19 +1,21 @@
 <template>
-  <div class="dashboard-component">
-    <BaseCard class="w-50">
-      <template slot="content">
-        <h1>by</h1>
-        <p>salam</p>
-      </template>
-    </BaseCard>
-  </div>
+	<div class="dashboard-component">
+		<BaseCard
+			title="say hello baby"
+			description="its a description"
+			background="white"
+			width="100%"
+			footer="this is a footer text "
+		>
+		</BaseCard>
+	</div>
 </template>
 
 <script>
-import BaseCard from "../../../components/elements/Card/index.vue";
+import BaseCard from '../../../components/elements/Card/index.vue';
 export default {
-  components: {
-    BaseCard,
-  },
+	components: {
+		BaseCard,
+	},
 };
 </script>
