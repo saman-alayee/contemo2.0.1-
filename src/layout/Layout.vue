@@ -3,15 +3,18 @@
 		<div class="sidebar-component">
 			<Sidebar />
 		</div>
-		<div class="left-container">
-			<div class="topbar">
-				<Topbar />
-			</div>
-			<div class="content">
-				<div class="contdainer">
+		<div class="main-layout-component">
+			<div class="container">
+				<div class="top-bar-continer">
+					<Topbar />
+				</div>
+				<div class="content">
 					<router-view />
 				</div>
 			</div>
+		</div>
+		<div class="left-side-bar">
+			<p>salam</p>
 		</div>
 	</div>
 </template>
@@ -42,6 +45,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sidebar-component {
+	height: 100vh;
+	flex: 1;
+}
+.main-layout-component {
+	width: 100%;
+	height: 100vh;
+	background-color: #f5f5f5;
+	overflow-x: hidden;
+	height: 100vh;
+	padding: 45px 0;
+	.content {
+		height: 100%;
+		margin-top: 24px;
+	}
+}
+
+.left-side-bar {
+	width: 440px;
+	background: rgba(166, 166, 166, 0.1);
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 0px 30px 30px 0px;
+}
 .layout-container {
 	display: flex;
 	.left-container {
@@ -68,10 +94,5 @@ export default {
 			}
 		}
 	}
-}
-.content {
-	// padding: 10px;
-	overflow-y: scroll;
-	height: calc(100vh - 110px);
 }
 </style>
