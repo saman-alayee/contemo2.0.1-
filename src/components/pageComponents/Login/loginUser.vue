@@ -22,9 +22,19 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 row w-50">
-					<div class="col-lg-2 mt-5"></div>
-					<div class="col-lg-10">
-						<img class="register_image" src="@/assets/vectors/loginVector.svg" alt="" />
+					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
+						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
+						<h5 style="padding-right: 200px">
+							اگر حساب کاربری ندارید
+							<router-link to="/register">اینجا</router-link> کلیک کنید
+						</h5>
+					</div>
+					<div class="col-lg-6">
+						<img
+							class="login_image mt-5"
+							src="@/assets/vectors/login-vector.svg"
+							alt=""
+						/>
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
@@ -127,6 +137,10 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
+.register {
+	width: 100%;
+	height: 100vh;
+}
 .color-primary {
 	background-color: $color-primary;
 }
@@ -146,8 +160,8 @@ export default {
 .register {
 	background-color: $color-white;
 }
-.register_image {
-	width: 75%;
+.login_image {
+	width: 500px;
 	margin-top: -10%;
 }
 .login-user {

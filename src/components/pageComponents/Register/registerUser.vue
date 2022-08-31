@@ -24,11 +24,17 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 row w-50">
-					<div class="col-lg-2 mt-5"></div>
-					<div class="col-lg-10">
+					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
+						<h1 class="" style="padding-right: 130px">به کانتمو خوش آمدید</h1>
+						<h5 style="padding-right: 130px">
+							اگر قبلا ثبت نام کردی میتونی از
+							<router-link to="/login">اینجا</router-link> وارد حسابت بشی
+						</h5>
+					</div>
+					<div class="col-lg-6">
 						<img
-							class="register_image"
-							src="@/assets/vectors/RegisterVector.svg"
+							class="register_image mt-5"
+							src="@/assets/vectors/register-vector.svg"
 							alt=""
 						/>
 					</div>
@@ -175,7 +181,7 @@ export default {
 	background-color: $color-white;
 }
 .register_image {
-	width: 75%;
+	width: 500px;
 	margin-top: -10%;
 }
 .login-user {
