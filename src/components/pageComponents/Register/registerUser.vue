@@ -22,8 +22,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-8 row w-50">
+			<div class="row form-base-container">
+				<div class="col-lg-8 d-flex w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 120px">به کانتمو خوش آمدید</h1>
 						<h5 style="padding-right: 120px">
@@ -164,6 +164,7 @@ export default {
 .register {
 	width: 100%;
 	height: 100vh;
+	background: $color-white;
 }
 .color-primary {
 	background-color: $color-primary;
@@ -181,17 +182,10 @@ export default {
 .border_primary:active {
 	border: 1px solid $color-warning;
 }
-.register {
-	background-color: $color-white;
-}
+
 .register_image {
 	width: 500px;
 	margin-top: -10%;
-}
-.login-user {
-	width: 100%;
-	height: auto;
-	background: #f4f4f4;
 }
 .login-router {
 	color: $color-secoundary;
@@ -234,5 +228,12 @@ export default {
 	border: 1px solid #dddfdd;
 	border-radius: 10px;
 	width: 100%;
+}
+.form-base-container {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>

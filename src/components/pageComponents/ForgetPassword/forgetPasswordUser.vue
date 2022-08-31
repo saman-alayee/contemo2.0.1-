@@ -20,8 +20,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-8 row w-50">
+			<div class="row form-base-container">
+				<div class="col-lg-8 d-flex w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
 						<h5
@@ -45,7 +45,7 @@
 				</div>
 				<div class="col-lg-4 mt-5">
 					<validation-observer v-slot="{ valid }">
-						<form class="app" @submit.prevent="doLogin" style="margin-top: 11rem">
+						<form class="app" @submit.prevent="doLogin">
 							<div class="form-group">
 								<validation-provider
 									name="آدرس ایمیل"
@@ -106,6 +106,7 @@ export default {
 .register {
 	width: 100%;
 	height: 100vh;
+	background: $color-white;
 }
 .color-primary {
 	background-color: $color-primary;
@@ -123,17 +124,10 @@ export default {
 .border_primary:active {
 	border: 1px solid $color-warning;
 }
-.register {
-	background-color: $color-white;
-}
+
 .login_image {
 	width: 500px;
 	margin-top: -10%;
-}
-.login-user {
-	width: 100%;
-	height: auto;
-	background: #f4f4f4;
 }
 .login-router {
 	padding: 10px 50px;
@@ -143,5 +137,12 @@ export default {
 	color: $color-secoundary;
 	font-weight: 500;
 	font-size: 15px;
+}
+.form-base-container{
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>

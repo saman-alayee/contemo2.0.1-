@@ -1,13 +1,7 @@
 <template>
 	<div class="topbar">
-		<div class="row">
-			<div class="col-lg-6">
-				<h3 class="pt-4 px-5 mx-3"> سلام وقت بخیر محسن هست :)</h3>
-			</div>
-			<div class="col-lg-6">
-				<wallet class="mt-3" />
-			</div>
-		</div>
+		<h3 class="">سلام وقت بخیر محسن هست :)</h3>
+		<wallet class="" />
 	</div>
 </template>
 
@@ -22,5 +16,7 @@ export default {
 <style lang="scss" scoped>
 .topbar {
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 </style>
