@@ -1,5 +1,5 @@
 <template>
-	<div class="register">
+	<div class="login">
 		<div class="container-fluid">
 			<div class="login-user">
 				<div class="container">
@@ -9,20 +9,32 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
+								<router-link class="mt-4 login-router" to="/login"
+									>ورود</router-link
+								>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
+							<router-link class="mt-4 px-4 register-router" to="/register"
+								>ثبت نام</router-link
+							>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-8 row w-50">
-					<div class="col-lg-2 mt-5">
-						<p>با این حساب وارد شو</p>
+					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
+						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
+						<h5 style="padding-right: 200px">
+							اگر حساب کاربری ندارید
+							<router-link to="/register">اینجا</router-link> کلیک کنید
+						</h5>
 					</div>
-					<div class="col-lg-10">
-						<img class="register_image" src="@/assets/vectors/loginVector.svg" alt="" />
+					<div class="col-lg-6">
+						<img
+							class="login_image mt-5"
+							src="@/assets/vectors/login-vector.svg"
+							alt=""
+						/>
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
@@ -46,13 +58,21 @@
 								</validation-provider>
 							</div>
 							<div class="form-group">
-								<BaseInput
-									ref="password"
-									type="password"
-									name="password"
-									v-model="model.password"
-									placeholder="رمز عبور"
-								/>
+								<validation-provider
+									name="رمز عبور"
+									rules="required"
+									:bails="false"
+									v-slot="{ errors }"
+								>
+									<BaseInput
+										ref="password"
+										type="password"
+										name="password"
+										v-model="model.password"
+										placeholder="رمز عبور"
+										:errors="errors"
+									/>
+								</validation-provider>
 							</div>
 							<div class="rtl">
 								<span class="text-secondary app-pointer">بازیابی رمز عبور</span>
@@ -99,7 +119,6 @@ export default {
 				email: '',
 				password: '',
 			},
-			email: '',
 		};
 	},
 	components: {
@@ -107,7 +126,10 @@ export default {
 	},
 	methods: {
 		async doLogin() {
-			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, this.model);
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
+				email: this.model.email,
+				password: this.model.password,
+			});
 			console.log(res);
 		},
 	},
@@ -131,11 +153,13 @@ export default {
 .border_primary:active {
 	border: 1px solid $color-warning;
 }
-.register {
+.login {
+	width: 100%;
+	height: 100vh;
 	background-color: $color-white;
 }
-.register_image {
-	width: 75%;
+.login_image {
+	width: 500px;
 	margin-top: -10%;
 }
 .login-user {

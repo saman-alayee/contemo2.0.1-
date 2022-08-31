@@ -9,8 +9,8 @@ const PATH = {
 		},
 		POST: {
 			PHONE_NUMBER_OTP_REQ: '/api/v1/phone_number//',
-			LOGIN: '/auth/login',
-			REGISTER: '/auth/register',
+			LOGIN: '/api/obtain-token/',
+			REGISTER: '/api/auth/users/',
 		},
 	},
 };

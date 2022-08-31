@@ -24,13 +24,17 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 row w-50">
-					<div class="col-lg-2 mt-5">
-						<p>با این حساب وارد شو</p>
+					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
+						<h1 class="" style="padding-right: 120px">به کانتمو خوش آمدید</h1>
+						<h5 style="padding-right: 120px">
+							اگر قبلا ثبت نام کردی میتونی از
+							<router-link to="/login">اینجا</router-link> وارد حسابت بشی
+						</h5>
 					</div>
-					<div class="col-lg-10">
+					<div class="col-lg-6">
 						<img
-							class="register_image"
-							src="@/assets/vectors/RegisterVector.svg"
+							class="register_image mt-5"
+							src="@/assets/vectors/register-vector.svg"
 							alt=""
 						/>
 					</div>
@@ -54,6 +58,9 @@
 										placeholder="آدرس ایمیل"
 									/>
 								</validation-provider>
+							</div>
+							<div class="form-group">
+								<BaseInput v-model="model.phoneNumber" placeholder="شماره تلفن" />
 							</div>
 							<div class="form-group">
 								<validation-provider
@@ -83,7 +90,7 @@
 										ref="password"
 										type="password"
 										name="password"
-										v-model="model.repassword"
+										v-model="model.confrimPassword"
 										placeholder="تکرار رمز عبور"
 										:errors="errors"
 									/>
@@ -130,8 +137,9 @@ export default {
 		return {
 			model: {
 				email: '',
+				phoneNumber: '',
 				password: '',
-				name: '',
+				confrimPassword: '',
 			},
 		};
 	},
@@ -140,17 +148,23 @@ export default {
 	},
 	methods: {
 		async register() {
-			const res = await this.$ApiServiceLayer.post(
-				this.$PATH.RELATIVE_PATH.POST.REGISTER,
-				this.model,
-			);
-			console.log(res.data);
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.REGISTER, {
+				email: this.model.email,
+				phone: this.model.phoneNumber,
+				password: this.model.password,
+				confirm: this.model.confrimPassword,
+			});
+			console.log(res);
 		},
 	},
 };
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
+.register {
+	width: 100%;
+	height: 100vh;
+}
 .color-primary {
 	background-color: $color-primary;
 }
@@ -171,7 +185,7 @@ export default {
 	background-color: $color-white;
 }
 .register_image {
-	width: 75%;
+	width: 500px;
 	margin-top: -10%;
 }
 .login-user {

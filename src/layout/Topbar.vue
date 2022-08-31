@@ -2,7 +2,7 @@
 	<div class="topbar">
 		<div class="row">
 			<div class="col-lg-6">
-				<h3 class="pt-4 px-3"> سلام وقت بخیر محسن هست :)</h3>
+				<h3 class="pt-4 px-5 mx-3"> سلام وقت بخیر محسن هست :)</h3>
 			</div>
 			<div class="col-lg-6">
 				<wallet class="mt-3" />
