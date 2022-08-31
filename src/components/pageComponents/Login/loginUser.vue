@@ -127,8 +127,8 @@ export default {
 	methods: {
 		async doLogin() {
 			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
-				email: this.email,
-				password: this.password,
+				email: this.model.email,
+				password: this.model.password,
 			});
 			console.log(res);
 		},

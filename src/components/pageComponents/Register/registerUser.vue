@@ -149,10 +149,10 @@ export default {
 	methods: {
 		async register() {
 			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.REGISTER, {
-				email: this.email,
-				phoneNumber: this.phoneNumber,
-				password: this.password,
-				confrimPassword: this.confrimPassword,
+				email: this.model.email,
+				phone: this.model.phoneNumber,
+				password: this.model.password,
+				confirm: this.model.confrimPassword,
 			});
 			console.log(res);
 		},
