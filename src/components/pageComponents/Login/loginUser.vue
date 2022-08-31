@@ -5,7 +5,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<img class="mt-3" src="@/assets/vectors/Contemo-Logo.svg" />
+							<img class="mr-5 mt-3" src="@/assets/vectors/Contemo-Logo.svg" />
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
@@ -20,8 +20,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-8 row w-50">
+			<div class="row form-base-container">
+				<div class="col-lg-8 d-flex w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
 						<h5 style="padding-right: 200px">
@@ -167,11 +167,6 @@ export default {
 	width: 500px;
 	margin-top: -10%;
 }
-.login-user {
-	width: 100%;
-	height: auto;
-	background: #f4f4f4;
-}
 .login-router {
 	background: #fafafa;
 	padding: 10px 50px;
@@ -209,5 +204,12 @@ export default {
 	border: 1px solid #dddfdd;
 	border-radius: 10px;
 	width: 100%;
+}
+.form-base-container {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>
