@@ -1,5 +1,5 @@
 <template>
-	<div class="base-card-container" :style="{ background, width }">
+	<div class="base-card-container" :style="{ background, width, color }">
 		<div class="card-body">
 			<h5 class="card-title-component">{{ title }}</h5>
 			<p class="card-text-component">
@@ -17,6 +17,7 @@ export default {
 		background: String,
 		width: String,
 		footer: String,
+		color: String,
 	},
 };
 </script>
@@ -34,17 +35,14 @@ export default {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 20px;
-	color: #000000;
 }
 .card-text-component {
 	font-style: normal;
 	font-weight: 200;
 	font-size: 12px;
 	line-height: 20px;
-	color: #000000;
 }
 .card-footer-component {
 	width: 100%;
-	padding: 16px;
 }
 </style>
