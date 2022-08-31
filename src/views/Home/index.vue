@@ -1,9 +1,14 @@
 <template>
-	<p>salam</p>
+	<SelectSideUSer/>
 </template>
 
 <script>
+import SelectSideUSer from '@/components/SelectSideUser.vue';
 export default {
+	name: 'SelectSide',
+	components: {
+		SelectSideUSer,
+	},
 	methods: {
 		async test() {
 			const res = await this.$ApiServiceLayer.post(
