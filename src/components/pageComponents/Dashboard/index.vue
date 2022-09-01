@@ -1,11 +1,13 @@
 <template>
 	<div class="dashboard-component">
-		<BaseCard>
-			<template slot="content">
-				salam
-				<p>salam</p>
-				<h1>by</h1>
-			</template>
+		<BaseCard
+			title="say hello baby"
+			description="its a description"
+			background="white"
+			width="50%"
+			color="balck"
+			footer="this is a footer text "
+		>
 		</BaseCard>
 	</div>
 </template>

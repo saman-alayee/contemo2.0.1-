@@ -1,13 +1,13 @@
 <template>
-	<forgetPasswordUser />
+  <forgetPasswordUser />
 </template>
 
 <script>
-import forgetPasswordUser from '@/components/pageComponents/ForgetPassword/forgetPasswordUser.vue';
+import forgetPasswordUser from "@/components/pageComponents/ForgetPassword/forgetPasswordUser.vue";
 export default {
-	components: {
-		forgetPasswordUser,
-	},
+  components: {
+    forgetPasswordUser,
+  },
 };
 </script>
 

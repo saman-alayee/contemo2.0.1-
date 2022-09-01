@@ -96,6 +96,12 @@
 									/>
 								</validation-provider>
 							</div>
+							<div class="form-group">
+								<BaseInput
+									v-model="model.marketingCode"
+									placeholder="کد بازاریابی"
+								/>
+							</div>
 
 							<button
 								type="submit"
@@ -140,6 +146,7 @@ export default {
 				phoneNumber: '',
 				password: '',
 				confrimPassword: '',
+				marketingCode: '',
 			},
 		};
 	},
@@ -153,6 +160,7 @@ export default {
 				phone: this.model.phoneNumber,
 				password: this.model.password,
 				confirm: this.model.confrimPassword,
+				marketingCode: this.model.marketingCode,
 			});
 			console.log(res);
 		},

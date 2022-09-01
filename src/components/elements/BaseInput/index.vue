@@ -76,6 +76,7 @@ export default {
 	box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.05);
 	border: none;
 	border-radius: 10px;
+	outline-color: red;
 }
 .error-text {
 	color: #c6243d !important;
