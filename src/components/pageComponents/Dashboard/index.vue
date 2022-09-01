@@ -3,9 +3,9 @@
 		<BaseCard
 			title="say hello baby"
 			description="its a description"
-			background="white"
+			background="black"
 			width="50%"
-			color="red"
+			color="white"
 			footer="this is a footer text "
 		>
 		</BaseCard>
