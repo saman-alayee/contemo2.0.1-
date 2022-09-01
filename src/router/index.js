@@ -35,7 +35,6 @@ const routes = [
 	},
 	{
 		path: '/forget-password',
-		name: 'foregtpassword',
 		meta: {
 			title: 'باز یابی رمز عبور',
 		},
