@@ -60,7 +60,20 @@
 								</validation-provider>
 							</div>
 							<div class="form-group">
-								<BaseInput v-model="model.phoneNumber" placeholder="شماره تلفن" />
+								<validation-provider
+									name="شماره تلفن"
+									rules="required|length:11|startwith:09"
+									:bails="false"
+									v-slot="{ errors }"
+									ref="phoneNumber"
+									type="phoneNumber"
+								>
+									<BaseInput
+										v-model="model.phoneNumber"
+										placeholder="شماره تلفن"
+										:errors="errors"
+									/>
+								</validation-provider>
 							</div>
 							<div class="form-group">
 								<validation-provider
