@@ -86,7 +86,10 @@ export default {
 };
 </script>
 <style scoped>
-.line-chart{
-    width: 100%;
+.line-chart {
+	border-radius: 20px;
+	width: 100%;
+	background: #fff;
+	padding: 5px 10px;
 }
 </style>

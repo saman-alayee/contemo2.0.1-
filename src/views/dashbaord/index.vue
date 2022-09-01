@@ -1,7 +1,7 @@
 <template>
 	<div class="dashboard-component-contai">
 		<Dashboard />
-		<LineChart />
+		<LineChart class="mt-2"/>
 	</div>
 </template>
 
