@@ -43,8 +43,9 @@ const routes = [
 	},
 	{
 		path: '/verify',
+		name: 'verify',
 		meta: {
-			title: '',
+			title: 'اعتبار سنجی ',
 		},
 		component: () => import('@/views/verify/index.vue'),
 	},
