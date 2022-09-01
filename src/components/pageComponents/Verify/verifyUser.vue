@@ -22,7 +22,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row form-base-container	">
+			<div class="row form-base-container">
 				<div class="col-lg-8 row w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 120px">به کانتمو خوش آمدید</h1>
@@ -39,20 +39,28 @@
 						/>
 					</div>
 				</div>
-				<div class="col-lg-4 mt-5">
+				<div class="col-lg-4 mt-1">
 					<div class="form-heading">
 						<h5>
 							لطفا برای ورود کد ارسال شده به شماره تلفنی که در مرحله قبل وارد کردین رو
 							در کادر زیر وارد کنید.
 						</h5>
 					</div>
-					<div class="form-group">
-						<BaseInput class="input-form" />
-						<BaseInput class="input-form" />
-						<BaseInput class="input-form" />
-						<BaseInput class="input-form" />
-						<BaseInput class="input-form" />
-						<BaseInput class="input-form" />
+					<div class="input-managment">
+						<div class="hidden-input">
+							<input v-model="verificationCode"
+							oninput="this.value=this.value.slice(0,6)"
+							type="number" />
+						</div>
+
+						<div class="form-group">
+							<div class="visible-input">{{ verificationCode[0] }}</div>
+							<div class="visible-input">{{ verificationCode[1] }}</div>
+							<div class="visible-input">{{ verificationCode[2] }}</div>
+							<div class="visible-input">{{ verificationCode[3] }}</div>
+							<div class="visible-input">{{ verificationCode[4] }}</div>
+							<div class="visible-input">{{ verificationCode[5] }}</div>
+						</div>
 					</div>
 					<div class="resend-code">
 						<h6>00:56 تا ارسال مجدد کد</h6>
@@ -71,11 +79,13 @@
 </template>
 
 <script>
-import BaseInput from '@/components/elements/BaseInput/index.vue';
 export default {
-	components: {
-		BaseInput,
+	data() {
+		return {
+			verificationCode: '',
+		};
 	},
+	components: {},
 };
 </script>
 <style scoped lang="scss">
@@ -88,32 +98,66 @@ export default {
 .color-primary {
 	background-color: $color-primary;
 }
-.form-group {
+.login-router {
+	color: $color-secoundary;
+	font-weight: 500;
+	font-size: 15px;
+}
+.register_image {
+	width: 500px;
+	margin-top: -10%;
+}
+.form-base-container {
+	width: 100%;
+	height: 80vh;
 	display: flex;
-	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.form-heading h5 {
+	line-height: 35px;
+	font-weight: 500;
+	text-align: center;
+	text-align: center;
+}
+.input-managment {
+	width: 100%;
+	height: 70px;
+	position: relative;
+}
+.form-group {
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
 	gap: 10px;
-	margin-top: 96px;
+	margin-top: 80px;
 }
-.form-heading {
-	text-align: center;
-}
-.form-heading h5 {
-	line-height: 35px;
-	margin-top: 104px;
-	font-weight: 500;
-}
-.input-form {
+.visible-input {
 	width: 50px;
+	height: 50px;
+	background: #ffffff;
 	box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
-	border: none;
 	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.input-form:focus {
-	border: 1px solid $color-warning;
+.hidden-input {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 222;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	input {
+		width: 100%;
+		height: 100%;
+	}
 }
 .resend-code h6 {
 	color: #9ca3af;
@@ -123,25 +167,5 @@ export default {
 .register_image {
 	width: 500px;
 	margin-top: -10%;
-}
-.login-router {
-	color: $color-secoundary;
-	font-weight: 500;
-	font-size: 15px;
-}
-.register-router {
-	background: #fafafa;
-	padding: 10px 50px;
-	border-radius: 21px;
-	box-shadow: rgba(0, 0, 0, 0.05);
-	font-weight: 700;
-	font-size: 17px;
-}
-.form-base-container {
-	width: 100%;
-	height: 80vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 </style>
