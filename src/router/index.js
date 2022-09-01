@@ -42,6 +42,14 @@ const routes = [
 		component: () => import('@/views/forgetpassword/index.vue'),
 	},
 	{
+		path: '/verify',
+		name: 'verify',
+		meta: {
+			title: 'اعتبار سنجی ',
+		},
+		component: () => import('@/views/verify/index.vue'),
+	},
+	{
 		path: '/',
 		name: '/layout',
 		redirect: '/dashboard',

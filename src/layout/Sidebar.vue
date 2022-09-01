@@ -13,28 +13,89 @@
 		<div class="menu-item-container">
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="">
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboard-icon1.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">داشبود</div>
 			</div>
 			<div class="menu-item">
-				<div class="icon-container"></div>
-				<div class="menu-title" v-if="isOpen"></div>
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">ابر محتوا</div>
 			</div>
 			<div class="menu-item">
-				<div class="icon-container"></div>
-				<div class="menu-title" v-if="isOpen"></div>
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">استراتژی محتوا</div>
 			</div>
 			<div class="menu-item">
-				<div class="icon-container"></div>
-				<div class="menu-title" v-if="isOpen"></div>
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">اکانت ها</div>
 			</div>
 			<div class="menu-item">
-				<div class="icon-container"></div>
-				<div class="menu-title" v-if="isOpen"></div>
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">همکاران</div>
+			</div>
+			<div class="menu-item">
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">تحلیل وب سایت</div>
+			</div>
+			<div class="menu-item">
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">معاشرت</div>
+			</div>
+			<div class="menu-item">
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">مدیریت پروژه</div>
+			</div>
+			<div class="menu-item">
+				<div class="icon-container">
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
+				</div>
+				<div class="menu-title" v-if="isOpen">خدمات محتوایی</div>
 			</div>
 		</div>
-		<div class="logo-botton">p</div>
+		<div class="logo-botton" v-if="isOpen">
+			<img :src="this.$PATH.GET_IMAGE_PATH('vectors/Contemo-Logo.svg')" alt="" />
+		</div>
+		<div class="logo-botton" v-if="!isOpen">
+			<img :src="this.$PATH.GET_IMAGE_PATH('vectors/justLogo.svg')" alt="" />
+		</div>
 	</div>
 </template>
 
@@ -58,7 +119,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
 .sidebar-component-container {
-	width: 84px;
+	width: 72px;
 	height: 100%;
 	background-color: #fff;
 	border-radius: 20px 0 0 20px;
@@ -101,26 +162,27 @@ export default {
 			margin-top: 4px;
 		}
 	}
+	.icon-container {
+	}
 	.menu-item-container {
 		width: 100%;
 		.menu-item {
 			width: 100%;
 			height: 32px;
 			background-color: #fff;
-			box-shadow: 0px 12px 21px rgba(68, 97, 242, 0.15);
 			border-radius: 10px;
 			transition: all 0.3s;
 			cursor: pointer;
 			margin-bottom: 16px;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			justify-content: start;
+			align-items: start;
 			&:hover {
 				background-color: #4461f2;
+				color: #fff;
 			}
 			.menu-title {
 				margin-right: 16px;
-
 			}
 		}
 	}
@@ -128,7 +190,6 @@ export default {
 	.logo-botton {
 		height: 100px;
 		width: 100%;
-		background-color: red;
 	}
 
 	.close-container {
