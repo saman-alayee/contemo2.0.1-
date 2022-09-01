@@ -12,12 +12,27 @@
 <script>
 export default {
 	props: {
-		title: String,
-		description: String,
-		background: String,
-		width: String,
-		footer: String,
-		color: String,
+		title: {
+			type: String,
+		},
+		description: {
+			type: String,
+		},
+		background: {
+			type: String,
+			default: 'white',
+		},
+		width: {
+			type: String,
+			default: '100%',
+		},
+		footer: {
+			type: String,
+		},
+		color: {
+			type: String,
+			default: 'black',
+		},
 	},
 };
 </script>

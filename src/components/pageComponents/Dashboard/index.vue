@@ -9,15 +9,6 @@
 			footer="this is a footer text "
 		>
 		</BaseCard>
-    <BaseCard
-			title="test"
-			description="its a test"
-			background="red"
-			width="50%"
-			color="white"
-			footer="this is a footer text "
-		>
-		</BaseCard>
 	</div>
 </template>
 
