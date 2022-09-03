@@ -19,49 +19,73 @@
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">ابر محتوا</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">استراتژی محتوا</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">اکانت ها</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">همکاران</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">تحلیل وب سایت</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">معاشرت</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">مدیریت پروژه</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">خدمات محتوایی</div>
 			</div>
@@ -138,8 +162,7 @@ export default {
 			margin-top: 4px;
 		}
 	}
-	.icon-container {
-	}
+
 	.menu-item-container {
 		width: 100%;
 		.menu-item {
@@ -154,6 +177,7 @@ export default {
 			justify-content: start;
 			align-items: start;
 			&:hover {
+				transition: 0.5s;
 				background-color: #4461f2;
 				color: #fff;
 				display: flex;
