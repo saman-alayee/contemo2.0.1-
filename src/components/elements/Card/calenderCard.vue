@@ -14,10 +14,10 @@
 					</div>
 					<div class="calender-card-content">
 						<div class="title-container">
-							<p>عنوان پست</p>
+							<p>{{title}}</p>
 						</div>
 						<div class="progress-bar-container">
-							<div class="progress-bar-right">60%</div>
+							<div class="progress-bar-right">{{progressCount}}%</div>
 						</div>
 						<div class="progress app-ltr">
 							<div
@@ -52,6 +52,11 @@ export default {
 	props: {
 		title: {
 			type: String,
+			default: '',
+		},
+		progressCount: {
+			type: Number,
+			default: 0,
 		},
 	},
 };
