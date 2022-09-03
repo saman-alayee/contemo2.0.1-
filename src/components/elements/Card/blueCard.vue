@@ -38,22 +38,21 @@
 
 <script>
 import BaseCard from '@/components/elements/Card/index.vue';
-import { integer } from 'vee-validate/dist/rules';
 export default {
 	components: {
 		BaseCard,
 	},
 	props: {
 		project: {
-			type: integer,
+			type: Number,
 			// required: true,
 		},
 		online: {
-			type: integer,
+			type: Number,
 			// required: true,
 		},
 		offline: {
-			type: integer,
+			type: Number,
 			// required: true,
 		},
 	},
