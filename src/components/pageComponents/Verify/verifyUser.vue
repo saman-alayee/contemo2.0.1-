@@ -24,9 +24,9 @@
 			</div>
 			<div class="row form-base-container">
 				<div class="col-lg-8 row w-50">
-					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
-						<h1 class="" style="padding-right: 120px">به کانتمو خوش آمدید</h1>
-						<h5 style="padding-right: 120px">
+					<div class="col-lg-6 flex-column mt-5 welcome-message">
+						<h1 class="">به کانتمو خوش آمدید</h1>
+						<h5>
 							اگر قبلا ثبت نام کردی میتونی از
 							<router-link to="/login">اینجا</router-link> وارد حسابت بشی
 						</h5>
@@ -155,6 +155,16 @@ export default {
 .register_image {
 	width: 500px;
 	margin-top: -10%;
+}
+.welcome-message {
+	padding-right: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.welcome-message h1 {
+	padding-bottom: 16px;
 }
 .form-base-container {
 	width: 100%;
