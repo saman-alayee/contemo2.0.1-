@@ -48,9 +48,11 @@
 					</div>
 					<div class="input-managment">
 						<div class="hidden-input">
-							<input v-model="verificationCode"
-							oninput="this.value=this.value.slice(0,6)"
-							type="number" />
+							<input
+								v-model="verificationCode"
+								oninput="this.value=this.value.slice(0,6)"
+								type="number"
+							/>
 						</div>
 
 						<div class="form-group">
@@ -63,7 +65,22 @@
 						</div>
 					</div>
 					<div class="resend-code">
-						<h6>00:56 تا ارسال مجدد کد</h6>
+						<div class="countdown-container">
+							<h6
+								:class="{ resendCodeColor: resendCode }"
+								v-if="resendCode"
+								@click="sendAgainCode"
+								type="button"
+								class="py-2"
+							>
+								ارسال مجدد کد
+							</h6>
+						</div>
+						<div class="countdown-container">
+							<h6 v-if="timer" class="text-center py-2">
+								{{ second }} : {{ minute }} تا ارسال مجدد کد
+							</h6>
+						</div>
 					</div>
 					<button
 						type="submit"
@@ -83,13 +100,45 @@ export default {
 	data() {
 		return {
 			verificationCode: '',
+			second: 59,
+			minute: 1,
+			timer: true,
+			resendCode: false,
 		};
 	},
-	components: {},
+	methods: {
+		sendAgainCode() {
+			this.resendCode = true;
+		},
+	},
+
+	mounted() {
+		setInterval(() => {
+			this.second--;
+			if (this.second === 0) {
+				this.second = 59;
+			} else if (this.resendCode === true) {
+				this.resendCode = false;
+				this.timer = true;
+				this.minute = 1;
+			}
+		}, 1000);
+		setInterval(() => {
+			this.minute--;
+			if (this.minute === -1) {
+				this.timer = false;
+				this.resendCode = 'send';
+				this.minute = 0;
+			}
+		}, 59 * 1000);
+	},
 };
 </script>
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
+.resendCodeColor {
+	color: $color-primary !important ;
+}
 .register {
 	width: 100%;
 	height: 100vh;
@@ -159,10 +208,13 @@ export default {
 		height: 100%;
 	}
 }
+.countdown-container {
+	display: flex;
+	justify-content: start;
+}
 .resend-code h6 {
 	color: #9ca3af;
-	padding-top: 48px;
-	padding-bottom: 40px;
+	size: 16px;
 }
 .register_image {
 	width: 500px;
