@@ -13,7 +13,9 @@
 			</div>
 
 			<div class="col-lg-8">
-				<div class="d-flex justify-content-end"><BlueCard offline="154" online="54" project="253" /></div>
+				<div class="d-flex justify-content-end">
+					<BlueCard class="mt-1" offline="154" online="54" project="253" />
+				</div>
 				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-4" />
 				<h4 class="pt-1">همکاران</h4>
 				<div class="d-flex">
@@ -107,16 +109,16 @@ export default {
 						backgroundColor: '#1212c4',
 						color: '#1212c4',
 						data: [
-							40, 39, 70, 40, 39, 80, 70, 49, 10, 55, 49, 43, 39, 20, 40, 39, 80, 39, 10, 40, 39,
-							40, 39, 10, 40, 39, 80,
+							40, 39, 70, 40, 39, 80, 70, 49, 10, 55, 49, 43, 39, 20, 40, 39, 80, 39,
+							10, 40, 39, 40, 39, 10, 40, 39, 80,
 						],
 					},
 					{
 						label: 'تعداد فالور',
 						backgroundColor: '#b4c412',
 						data: [
-							10, 29, 40, 44, 39, 80, 75, 42, 10, 33, 49, 22, 39, 30, 88, 39, 80, 39, 10, 40, 29,
-							20, 19, 10, 40, 39, 80,
+							10, 29, 40, 44, 39, 80, 75, 42, 10, 33, 49, 22, 39, 30, 88, 39, 80, 39,
+							10, 40, 29, 20, 19, 10, 40, 39, 80,
 						],
 					},
 				],
