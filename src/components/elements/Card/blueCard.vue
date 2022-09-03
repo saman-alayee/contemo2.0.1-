@@ -45,15 +45,12 @@ export default {
 	props: {
 		project: {
 			type: Number,
-			// required: true,
 		},
 		online: {
 			type: Number,
-			// required: true,
 		},
 		offline: {
 			type: Number,
-			// required: true,
 		},
 	},
 };
