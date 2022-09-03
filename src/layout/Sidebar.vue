@@ -13,79 +13,61 @@
 		<div class="menu-item-container">
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboard-icon1.svg')" alt="" />
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">داشبود</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
+				</div>
+				<div class="menu-title" v-if="isOpen">بوم محتوایی</div>
+			</div>
+			<div class="menu-item">
+				<div class="icon-container">
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon2.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">ابر محتوا</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">استراتژی محتوا</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">اکانت ها</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/partnersIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">همکاران</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">تحلیل وب سایت</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">معاشرت</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">مدیریت پروژه</div>
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">خدمات محتوایی</div>
 			</div>
@@ -107,7 +89,6 @@ export default {
 			isOpen: false,
 		};
 	},
-
 	methods: {
 		openMenu() {
 			this.isOpen = !this.isOpen;
@@ -164,7 +145,7 @@ export default {
 	}
 
 	.menu-item-container {
-		width: 100%;
+		width: 120%;
 		.menu-item {
 			width: 100%;
 			height: 32px;
@@ -185,6 +166,7 @@ export default {
 			}
 			.menu-title {
 				margin-right: 16px;
+				margin-top: 4px;
 			}
 		}
 	}

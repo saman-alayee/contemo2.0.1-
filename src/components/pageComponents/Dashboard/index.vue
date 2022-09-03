@@ -11,8 +11,13 @@
 					class="mt-1"
 				/>
 			</div>
+
 			<div class="col-lg-8">
-				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-1" />
+				<div class="d-flex justify-content-end">
+					<BlueCard class="mt-1" offline="154" online="54" project="253" />
+				</div>
+				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-4" />
+				<h4 class="pt-1">همکاران</h4>
 				<div class="d-flex">
 					<PartnerCard
 						v-for="item in partnerData"
@@ -32,11 +37,13 @@
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
 import taskCard from '@/components/elements/Card/taskCard.vue';
 import LineChart from '@/components/charts/lineChart.vue';
+import BlueCard from '../../elements/Card/blueCard.vue';
 export default {
 	components: {
 		PartnerCard,
 		taskCard,
 		LineChart,
+		BlueCard,
 	},
 	data() {
 		return {
