@@ -72,6 +72,7 @@ export default {
 	margin: -16px;
 	display: flex;
 	flex-direction: row;
+	border-radius: 20px 20px 0 0;
 }
 .calender-card-content {
 	margin: 0;
