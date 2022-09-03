@@ -4,13 +4,13 @@
 			<template slot="content">
 				<div class="partner-item-container">
 					<div class="img-container">
-						<img :src="$PATH.GET_IMAGE_PATH(avatar)" alt="" />
+						<img src="@/assets/img/vectors/avatar.svg" alt="" />
 					</div>
 					<div class="name-container">
-						<p>{{ name }}</p>
+						<p>{{name}}</p>
 					</div>
 					<div class="role-container">
-						<p>{{ role }}</p>
+						<p>{{role}}</p>
 					</div>
 				</div>
 			</template>
