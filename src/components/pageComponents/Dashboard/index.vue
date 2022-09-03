@@ -11,8 +11,10 @@
 					class="mt-1"
 				/>
 			</div>
+
 			<div class="col-lg-8">
-				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-1" />
+				<div class="d-flex justify-content-end"><BlueCard offline="154" online="54" project="253" /></div>
+				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-4" />
 				<div class="d-flex">
 					<PartnerCard
 						v-for="item in partnerData"
@@ -32,11 +34,13 @@
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
 import taskCard from '@/components/elements/Card/taskCard.vue';
 import LineChart from '@/components/charts/lineChart.vue';
+import BlueCard from '../../elements/Card/blueCard.vue';
 export default {
 	components: {
 		PartnerCard,
 		taskCard,
 		LineChart,
+		BlueCard,
 	},
 	data() {
 		return {
@@ -102,16 +106,16 @@ export default {
 						backgroundColor: '#1212c4',
 						color: '#1212c4',
 						data: [
-							40, 39, 70, 40, 39, 80, 70, 49, 10, 55, 49, 43, 39, 20, 40, 39, 80, 39,
-							10, 40, 39, 40, 39, 10, 40, 39, 80,
+							40, 39, 70, 40, 39, 80, 70, 49, 10, 55, 49, 43, 39, 20, 40, 39, 80, 39, 10, 40, 39,
+							40, 39, 10, 40, 39, 80,
 						],
 					},
 					{
 						label: 'تعداد فالور',
 						backgroundColor: '#b4c412',
 						data: [
-							10, 29, 40, 44, 39, 80, 75, 42, 10, 33, 49, 22, 39, 30, 88, 39, 80, 39,
-							10, 40, 29, 20, 19, 10, 40, 39, 80,
+							10, 29, 40, 44, 39, 80, 75, 42, 10, 33, 49, 22, 39, 30, 88, 39, 80, 39, 10, 40, 29,
+							20, 19, 10, 40, 39, 80,
 						],
 					},
 				],
