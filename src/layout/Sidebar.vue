@@ -89,7 +89,6 @@ export default {
 			isOpen: false,
 		};
 	},
-
 	methods: {
 		openMenu() {
 			this.isOpen = !this.isOpen;
