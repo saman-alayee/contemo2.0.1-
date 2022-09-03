@@ -13,6 +13,7 @@
 			</div>
 			<div class="col-lg-8">
 				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-1" />
+				<h4 class="pt-1">همکاران</h4>
 				<div class="d-flex">
 					<PartnerCard
 						v-for="item in partnerData"
