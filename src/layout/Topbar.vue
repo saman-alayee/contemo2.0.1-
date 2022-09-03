@@ -1,9 +1,7 @@
 <template>
 	<div class="topbar">
-		<!-- <div class="row"> -->
-			<div class="col-8"><h3 class="">سلام وقت بخیر محسن هست :)</h3></div>
+			<div class="col-8"><h3 class="">سلام وقت بخیر محسن هستم :)</h3></div>
 			<div class="col-4"><wallet class="" /></div>
-		<!-- </div> -->
 	</div>
 </template>
 

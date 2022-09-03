@@ -15,6 +15,7 @@
 			<div class="col-lg-8">
 				<div class="d-flex justify-content-end"><BlueCard offline="154" online="54" project="253" /></div>
 				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-4" />
+				<h4 class="pt-1">همکاران</h4>
 				<div class="d-flex">
 					<PartnerCard
 						v-for="item in partnerData"
