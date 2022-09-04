@@ -1,11 +1,20 @@
 <template>
 	<div class="accounts-user">
-		<h1>Hello Accounts User</h1>
+		<!-- <accountCard
+			:accountName="accountName"
+			:socialAccountName="socialAccountName"
+			:username="username"
+		/> -->
 	</div>
 </template>
 
 <script>
-export default {};
+//import accountCard from '../../../components/elements/Card/accountCard.vue';
+export default {
+	components: {
+		//accountCard,
+	},
+};
 </script>
 
 <style></style>
