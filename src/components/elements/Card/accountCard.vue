@@ -1,6 +1,6 @@
 <template>
 	<div class="partner-account-card">
-		<BaseCard>
+		<BaseCard class="white-card">
 			<template slot="content">
 				<div class="partner-item-container">
 					<div class="row">
@@ -62,6 +62,9 @@ export default {
 .partner-account-card {
 	width: 220px;
 	height: auto;
+}
+.white-card {
+	padding: 16px;
 }
 .text-container {
 	margin-top: 5px;
