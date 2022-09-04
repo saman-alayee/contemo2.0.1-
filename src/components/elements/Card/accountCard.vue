@@ -1,11 +1,11 @@
 <template>
-	<div class="partner-account-card mt-4">
+	<div class="partner-account-card">
 		<BaseCard>
 			<template slot="content">
 				<div class="partner-item-container">
 					<div class="row">
 						<div class="col-md-5">
-							<img src="@/assets/img/vectors/instagram-icon.svg" alt="" />
+							<img src="@/assets/img/icon/instagramIcon.svg" alt="" />
 						</div>
 						<div class="col-md-7 text-container">
 							<div class="typeEn-container">
