@@ -1,5 +1,5 @@
 <template>
-	<div class="dashboard-component-contai">
+	<div class="application-animation">
 		<Dashboard />
 	</div>
 </template>

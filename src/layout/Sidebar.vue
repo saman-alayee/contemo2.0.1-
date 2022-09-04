@@ -11,9 +11,12 @@
 			<p class="email" v-if="isOpen">mohsenfadaei97@gmail.com</p>
 		</div>
 		<div class="menu-item-container">
-			<div class="menu-item">
+			<div class="menu-item" @click="goToDashboard">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">داشبود</div>
 			</div>
@@ -25,7 +28,10 @@
 			</div>
 			<div class="menu-item">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon2.svg')" alt="" />
+					<img
+						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon2.svg')"
+						alt=""
+					/>
 				</div>
 				<div class="menu-title" v-if="isOpen">ابر محتوا</div>
 			</div>
@@ -35,7 +41,7 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">استراتژی محتوا</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToAccounts">
 				<div class="icon-container">
 					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
@@ -92,6 +98,12 @@ export default {
 	methods: {
 		openMenu() {
 			this.isOpen = !this.isOpen;
+		},
+		goToDashboard() {
+			return this.$router.push('/dashboard');
+		},
+		goToAccounts() {
+			return this.$router.push('/accounts');
 		},
 	},
 };

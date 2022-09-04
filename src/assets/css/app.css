@@ -35,3 +35,10 @@ body {
 }
 ::-webkit-scrollbar{width: 8px;}
 ::-webkit-scrollbar-thumb{background-color: #A5A5A5; border-radius: 50px;} 
+.application-animation{
+	animation: 2s applicationAnimation;
+}
+@keyframes applicationAnimation {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}

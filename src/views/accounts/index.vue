@@ -1,5 +1,7 @@
 <template>
-	<accountsUser />
+	<div class="application-animation">
+		<accountsUser />
+	</div>
 </template>
 
 <script>
