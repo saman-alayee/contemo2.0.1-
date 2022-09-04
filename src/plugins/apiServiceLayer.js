@@ -3,7 +3,7 @@ import axios from 'axios';
 import store from '@/store/index';
 
 // add base url in here
-const baseURL = 'http://192.168.1.114:8000';
+const baseURL = 'http://192.168.1.121:8000';
 
 export default class ApiServiceLayer {
 	async get(url, headers = {}, queryStrings, isAuthorized = true) {

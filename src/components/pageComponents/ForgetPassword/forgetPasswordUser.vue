@@ -9,13 +9,9 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login"
-									>ورود</router-link
-								>
+								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register"
-								>ثبت نام</router-link
-							>
+							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
 						</div>
 					</div>
 				</div>
@@ -24,28 +20,17 @@
 				<div class="col-lg-8 d-flex w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
-						<h5
-							style="
-								padding-right: 200px;
-								width: 470px;
-								line-height: 2rem;
-								text-align: center;
-							"
-						>
+						<h5 style="padding-right: 200px; width: 470px; line-height: 2rem; text-align: center">
 							لینک بازیابی رمز عبور به ایمیل شما ارسال خواهد شد
 						</h5>
 					</div>
 					<div class="col-lg-6">
-						<img
-							class="login_image mt-5"
-							src="@/assets/vectors/login-vector.svg"
-							alt=""
-						/>
+						<img class="login_image mt-5" src="@/assets/vectors/login-vector.svg" alt="" />
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
 					<validation-observer v-slot="{ valid }">
-						<form class="app" @submit.prevent="doLogin">
+						<form class="app" @submit.prevent="sendEmail">
 							<div class="form-group">
 								<validation-provider
 									name="آدرس ایمیل"
@@ -93,7 +78,7 @@ export default {
 	},
 	methods: {
 		async sendEmail() {
-			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
+			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.RESET_PASSWORD, {
 				email: this.model.email,
 			});
 			console.log(res);
@@ -138,7 +123,7 @@ export default {
 	font-weight: 500;
 	font-size: 15px;
 }
-.form-base-container{
+.form-base-container {
 	width: 100%;
 	height: 80vh;
 	display: flex;

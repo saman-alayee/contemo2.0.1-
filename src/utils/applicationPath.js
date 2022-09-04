@@ -11,6 +11,7 @@ const PATH = {
 			PHONE_NUMBER_OTP_REQ: '/api/v1/phone_number//',
 			LOGIN: '/api/obtain-token/',
 			REGISTER: '/api/auth/users/',
+			RESET_PASSWORD: '/api/auth/users/reset_password/',
 		},
 	},
 };
