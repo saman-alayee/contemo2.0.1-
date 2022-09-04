@@ -9,10 +9,14 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 px-4 login-router" to="/login">ورود</router-link>
+								<router-link class="mt-4 px-4 login-router" to="/login"
+									>ورود</router-link
+								>
 							</div>
 							<div class="mt-4">
-								<router-link class="mt-4 register-router" to="/register">ثبت نام</router-link>
+								<router-link class="mt-4 register-router" to="/register"
+									>ثبت نام</router-link
+								>
 							</div>
 						</div>
 					</div>
@@ -28,7 +32,11 @@
 						</h5>
 					</div>
 					<div class="col-lg-6">
-						<img class="register_image mt-5" src="@/assets/vectors/register-vector.svg" alt="" />
+						<img
+							class="register_image mt-5"
+							src="@/assets/vectors/register-vector.svg"
+							alt=""
+						/>
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
@@ -52,16 +60,20 @@
 								</validation-provider>
 							</div>
 							<div class="form-group">
-								<!-- <validation-provider
+								<validation-provider
 									name="شماره تلفن"
 									rules="required|length:11|startwith:09"
 									:bails="false"
 									v-slot="{ errors }"
 									ref="phoneNumber"
 									type="phoneNumber"
-								> -->
-								<BaseInput v-model="model.phoneNumber" placeholder="شماره تلفن" />
-								<!-- </validation-provider> -->
+								>
+									<BaseInput
+										v-model="model.phoneNumber"
+										placeholder="شماره تلفن"
+										:errors="errors"
+									/>
+								</validation-provider>
 							</div>
 							<div class="form-group">
 								<validation-provider
@@ -98,7 +110,10 @@
 								</validation-provider>
 							</div>
 							<div class="form-group">
-								<BaseInput v-model="model.marketingCode" placeholder="کد بازاریابی" />
+								<BaseInput
+									v-model="model.marketingCode"
+									placeholder="کد بازاریابی"
+								/>
 							</div>
 
 							<button
