@@ -14,7 +14,7 @@
 
 			<div class="col-lg-8">
 				<div class="d-flex justify-content-end">
-					<BlueCard class="mt-1" offline="154" online="54" project="253" />
+					<BlueCard class="mt-1" offline="154" online="54" projects="253" />
 				</div>
 				<LineChart :width="900" :height="400" :chart-data="chartData" class="mt-4" />
 				<h4 class="pt-1">همکاران</h4>
