@@ -14,6 +14,22 @@
 			</div>
 		</div>
 		<div class="left-side-bar">
+			<div class="left-bar-header">
+				<div class="icon-card">
+					<img src="@/assets/img/vectors/support-icon.svg" alt="" />
+				</div>
+				<div class="icon-card">
+					<img src="@/assets/img/vectors/profile-icon.svg" alt="" />
+				</div>
+				<div class="icon-card">
+					<img src="@/assets/img/vectors/notification-icon.svg" alt="" />
+				</div>
+				<div class="switch-box">
+					<span class="test">غیر فعال</span>
+					<baseSwitch />
+					<span class="test">فعال</span>
+				</div>
+			</div>
 			<calender />
 		</div>
 	</div>
@@ -23,12 +39,14 @@
 import Sidebar from './Sidebar.vue';
 import Topbar from './Topbar.vue';
 import calender from '../components/elements/Calendar/index.vue';
+import baseSwitch from '../components/elements/BaseSwitch/index.vue';
 export default {
 	name: 'layout',
 	components: {
 		Sidebar,
 		Topbar,
 		calender,
+		baseSwitch,
 	},
 	created() {
 		console.log(this.$route);
@@ -70,6 +88,30 @@ export default {
 	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
 	border-radius: 0px 30px 30px 0px;
 	padding: 0 10px;
+	.left-bar-header {
+		width: 350px;
+		direction: ltr;
+		display: flex;
+		flex-direction: row;
+		.icon-card {
+			width: 45px;
+			height: 48px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 15px;
+			background: #fff;
+			margin: 10px 6px;
+		}
+		.switch-box {
+			display: flex;
+			flex-direction: row;
+			margin: 22px 8px;
+			.test {
+				padding: 0px 6px;
+			}
+		}
+	}
 }
 .layout-container {
 	display: flex;
