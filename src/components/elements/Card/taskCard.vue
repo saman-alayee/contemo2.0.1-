@@ -1,6 +1,6 @@
 <template>
 	<div class="task-card-container">
-		<BaseCard>
+		<BaseCard class="white-card">
 			<template slot="content">
 				<div class="task-cart-item-container">
 					<div class="title-container">
@@ -65,6 +65,9 @@ export default {
 .task-card-container {
 	width: 350px;
 	margin-right: 4px;
+}
+.white-card{
+	padding: 16px;
 }
 .task-cart-item-container {
 	display: flex;

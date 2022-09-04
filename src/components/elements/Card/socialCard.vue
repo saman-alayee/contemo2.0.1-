@@ -2,19 +2,17 @@
 	<div class="social-card-container">
 		<BaseCard class="base-color">
 			<template slot="content">
-				<div class="partner-item-container">
-					<div class="row">
-						<div class="col-md-5 social-media-icon">
-							<img src="@/assets/img/icon/instagramIcon.svg" alt="" />
-						</div>
+				<div class="row">
+					<div class="col-md-5 social-media-icon">
+						<img src="@/assets/img/icon/instagramIcon.svg" alt="" />
+					</div>
 
-						<div class="col-md-7 text-container">
-							<div class="textFa-container">
-								<p>{{ accountName }}</p>
-							</div>
-							<div class="textEn-container">
-								<p>{{ socialAccountName }}</p>
-							</div>
+					<div class="col-md-7 text-container">
+						<div class="textFa-container">
+							<p>{{ accountName }}</p>
+						</div>
+						<div class="textEn-container">
+							<p>{{ socialAccountName }}</p>
 						</div>
 					</div>
 				</div>
@@ -56,8 +54,11 @@ export default {
 	border-radius: 20px;
 	background-color: #f5f5f5;
 }
+.social-media-icon {
+	padding: 10px 24px;
+}
 .text-container {
-	margin-top: 8px;
+	padding: 8px 4px;
 }
 .textFa-container {
 	p {
