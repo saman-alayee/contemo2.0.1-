@@ -5,7 +5,7 @@
 				<div class="partner-item-container">
 					<div class="row">
 						<div class="col-md-5">
-							<img :src="$PATH.GET_IMAGE_PATH(icon)" alt="" />
+							<img src="@/assets/img/vectors/instagram-icon.svg" alt="" />
 						</div>
 						<div class="col-md-7 text-container">
 							<div class="typeEn-container">

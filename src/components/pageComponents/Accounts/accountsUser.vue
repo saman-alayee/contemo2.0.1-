@@ -1,18 +1,51 @@
 <template>
 	<div class="accounts-user">
-		<!-- <accountCard
-			:accountName="accountName"
-			:socialAccountName="socialAccountName"
-			:username="username"
-		/> -->
+		<span>اکانت لینک شده</span>
+
+		<div class="d-flex">
+			<accountCard
+				v-for="item in accounts"
+				:key="item.id"
+				:accountName="item.accounName"
+				:socialAccountName="item.socialAccountName"
+				:username="item.username"
+				class="mx-1"
+			/>
+		</div>
 	</div>
 </template>
 
 <script>
-//import accountCard from '../../../components/elements/Card/accountCard.vue';
+import accountCard from '../../../components/elements/Card/accountCard.vue';
 export default {
 	components: {
-		//accountCard,
+		accountCard,
+	},
+	data() {
+		return {
+			accounts: [
+				{
+					accounName: 'اینستاگرام',
+					socialAccountName: 'instagram',
+					username: 'jhoneDoe@gmail.com',
+				},
+				{
+					accounName: 'اینستاگرام',
+					socialAccountName: 'instagram',
+					username: 'jhoneDoe@gmail.com',
+				},
+				{
+					accounName: 'اینستاگرام',
+					socialAccountName: 'instagram',
+					username: 'jhoneDoe@gmail.com',
+				},
+				{
+					accounName: 'اینستاگرام',
+					socialAccountName: 'instagram',
+					username: 'jhoneDoe@gmail.com',
+				},
+			],
+		};
 	},
 };
 </script>
