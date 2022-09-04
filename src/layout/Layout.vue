@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="left-side-bar">
-			<p>salam</p>
+			<calender />
 		</div>
 	</div>
 </template>
@@ -22,11 +22,13 @@
 <script>
 import Sidebar from './Sidebar.vue';
 import Topbar from './Topbar.vue';
+import calender from '../components/elements/Calendar/index.vue';
 export default {
 	name: 'layout',
 	components: {
 		Sidebar,
 		Topbar,
+		calender,
 	},
 	created() {
 		console.log(this.$route);
@@ -67,6 +69,7 @@ export default {
 	background: rgba(166, 166, 166, 0.1);
 	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
 	border-radius: 0px 30px 30px 0px;
+	padding: 0 10px;
 }
 .layout-container {
 	display: flex;

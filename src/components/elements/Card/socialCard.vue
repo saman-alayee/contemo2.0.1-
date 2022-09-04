@@ -54,8 +54,6 @@ export default {
 	border-radius: 20px;
 	background-color: #f5f5f5;
 }
-.partner-item-container {
-}
 .name-container {
 	p {
 		font-weight: 600;
