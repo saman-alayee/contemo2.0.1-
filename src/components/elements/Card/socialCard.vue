@@ -1,19 +1,19 @@
 <template>
-	<div class="partner-card-container">
+	<div class="social-card-container">
 		<BaseCard class="base-color">
 			<template slot="content">
 				<div class="partner-item-container">
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col-md-5 social-media-icon">
 							<img src="@/assets/img/icon/instagramIcon.svg" alt="" />
 						</div>
 
 						<div class="col-md-7 text-container">
 							<div class="textFa-container">
-								<p>{{ textFa }}</p>
+								<p>{{ accountName }}</p>
 							</div>
 							<div class="textEn-container">
-								<p>{{ textEN }}</p>
+								<p>{{ socialAccountName }}</p>
 							</div>
 						</div>
 					</div>
@@ -30,11 +30,11 @@ export default {
 		BaseCard,
 	},
 	props: {
-		textFa: {
+		accountName: {
 			type: String,
 			required: true,
 		},
-		textEN: {
+		socialAccountName: {
 			type: String,
 			required: true,
 		},
@@ -45,26 +45,19 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
 
-.partner-card-container {
+.social-card-container {
 	width: 210px;
 	height: 88px;
+	padding: 0;
+	margin: 5px;
 }
 .base-color {
 	border: 1px solid #a5a5a5;
 	border-radius: 20px;
 	background-color: #f5f5f5;
 }
-.name-container {
-	p {
-		font-weight: 600;
-		font-size: 20px;
-		line-height: 23px;
-		text-align: right;
-		color: #ffffff;
-	}
-}
-.text-container{
-    margin-top: 8px;
+.text-container {
+	margin-top: 8px;
 }
 .textFa-container {
 	p {

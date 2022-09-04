@@ -1,28 +1,28 @@
 <template>
-	<div class="partner-account-card mt-4">
+	<div class="partner-account-card">
 		<BaseCard>
 			<template slot="content">
 				<div class="partner-item-container">
 					<div class="row">
 						<div class="col-md-5">
-							<img :src="$PATH.GET_IMAGE_PATH(icon)" alt="" />
+							<img src="@/assets/img/icon/instagramIcon.svg" alt="" />
 						</div>
 						<div class="col-md-7 text-container">
 							<div class="typeEn-container">
-								<p>{{ typeFa }}</p>
+								<p>{{ accountName }}</p>
 							</div>
 							<div class="typeFa-container">
-								<p>{{ typeEn }}</p>
+								<p>{{ socialAccountName }}</p>
 							</div>
 						</div>
 					</div>
 
 					<div class="link-container">
 						<div>
-							<p>{{ link }}</p>
+							<p>{{ username }}</p>
 						</div>
 						<div class="icon-container">
-							<img src="@/assets/img/vectors/contactIcon.svg" alt="" />
+							<img src="@/assets/img/vectors/user-icon.svg" alt="" />
 						</div>
 					</div>
 					<button class="btn btn-primary text-btn w-100">افزودن اکانت دیگر</button>
@@ -39,15 +39,15 @@ export default {
 		BaseCard,
 	},
 	props: {
-		typeFa: {
+		accountName: {
 			type: String,
 			// required: true,
 		},
-		typeEn: {
+		socialAccountName: {
 			type: String,
 			// required: true,
 		},
-		link: {
+		username: {
 			type: String,
 			// required: true,
 		},
