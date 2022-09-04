@@ -1,49 +1,41 @@
 <template>
 	<div class="partner-card-container">
-		<BaseCard class="base-color">
-			<template slot="content">
-				<div class="partner-item-container">
-					<div class="row">
-						<div class="col-md-7 name-container">
-							<p>تعداد کل پروژه ها</p>
-							<p>{{ project }}</p>
-							<div class="row">
-								<div class="col-md-6 end-text-container">
-									<img src="@/assets/img/icon/onlineIcon.svg" alt="" />
-									<p>آنلاین</p>
-								</div>
-								<div class="col-md-6 end-text-container">
-									<img src="@/assets/img/icon/offlineIcon.svg" alt="" />
-									<p>آفلاین</p>
-								</div>
-							</div>
-							<div class="row number-container">
-								<div class="col-md-6">
-									<p>{{ online }}</p>
-								</div>
-								<div class="col-md-6">
-									<p>{{ offline }}</p>
-								</div>
-							</div>
+		<div class="partner-item-container">
+			<div class="row">
+				<div class="col-md-7 name-container">
+					<p>تعداد کل پروژه ها</p>
+					<p>{{ projects }}</p>
+					<div class="row mt-2">
+						<div class="col-md-6 end-text-container">
+							<img src="@/assets/img/icon/onlineIcon.svg" alt="" />
+							<p>آنلاین</p>
 						</div>
-						<div class="col-md-4">
-							<img class="space-top" src="@/assets/img/vectors/doneHand.svg" alt="" />
+						<div class="col-md-6 end-text-container">
+							<img src="@/assets/img/icon/offlineIcon.svg" alt="" />
+							<p>آفلاین</p>
+						</div>
+					</div>
+					<div class="row number-container">
+						<div class="col-md-6">
+							<p>{{ online }}</p>
+						</div>
+						<div class="col-md-6">
+							<p>{{ offline }}</p>
 						</div>
 					</div>
 				</div>
-			</template>
-		</BaseCard>
+				<div class="col-md-4">
+					<img class="space-top" src="@/assets/img/vectors/doneHand.svg" alt="" />
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
-import BaseCard from '@/components/elements/Card/index.vue';
 export default {
-	components: {
-		BaseCard,
-	},
 	props: {
-		project: {
+		projects: {
 			type: Number,
 		},
 		online: {
@@ -61,6 +53,12 @@ export default {
 
 .partner-card-container {
 	width: 363px;
+	height: 207px;
+	left: 488px;
+	top: 156px;
+	background: $color-primary;
+	box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 20px;
 }
 .base-color {
 	background-color: $color-primary;
@@ -87,7 +85,7 @@ export default {
 	flex-direction: row;
 	p {
 		font-weight: 400;
-		font-size: 17px;
+		font-size: 20px;
 		line-height: 23px;
 		color: #ffffff;
 		margin-top: 16px;
