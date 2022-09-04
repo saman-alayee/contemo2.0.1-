@@ -41,6 +41,13 @@ const routes = [
 		component: () => import('@/views/forgetPassword/index.vue'),
 	},
 	{
+		path: '/new-password',
+		meta: {
+			title: 'رمز عبور جدید',
+		},
+		component: () => import('@/views/newPassword/index.vue'),
+	},
+	{
 		path: '/verify',
 		name: 'verify',
 		meta: {
