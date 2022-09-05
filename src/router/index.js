@@ -75,9 +75,18 @@ const routes = [
 				name: 'accounts',
 				meta: {
 					title: 'acc',
-					breadcrumbs: [{ title: 'acc', url: 'dashboard' }],
+					breadcrumbs: [{ title: 'acc', url: 'accounts' }],
 				},
 				component: () => import('@/views/accounts/index.vue'),
+			},
+			{
+				path: '/market',
+				name: 'market',
+				meta: {
+					title: 'market',
+					breadcrumbs: [{ title: 'acc', url: 'market' }],
+				},
+				component: () => import('@/views/market/index.vue'),
 			},
 		],
 	},

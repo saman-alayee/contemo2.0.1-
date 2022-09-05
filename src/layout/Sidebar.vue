@@ -71,11 +71,11 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">مدیریت پروژه</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToMarket">
 				<div class="icon-container">
-					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/basket.svg')" alt="" />
 				</div>
-				<div class="menu-title" v-if="isOpen">خدمات محتوایی</div>
+				<div class="menu-title" v-if="isOpen">بازارچه</div>
 			</div>
 		</div>
 		<div class="logo-botton" v-if="isOpen">
@@ -104,6 +104,9 @@ export default {
 		},
 		goToAccounts() {
 			return this.$router.push('/accounts');
+		},
+		goToMarket() {
+			return this.$router.push('/market');
 		},
 	},
 };
