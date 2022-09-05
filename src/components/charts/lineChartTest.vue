@@ -1,5 +1,5 @@
 <template>
-	<div class="line-chart">
+	<div class="chart-container">
 		<LineChartGenerator
 			:chart-options="chartOptions"
 			:chart-data="chartData"
@@ -36,10 +36,6 @@ export default {
 		LineChartGenerator,
 	},
 	props: {
-		chartData: {
-			type: String,
-			default: '',
-		},
 		chartId: {
 			type: String,
 			default: 'line-chart',
@@ -50,7 +46,7 @@ export default {
 		},
 		width: {
 			type: Number,
-			default: 900,
+			default: 400,
 		},
 		height: {
 			type: Number,
@@ -71,20 +67,52 @@ export default {
 	},
 	data() {
 		return {
+			chartData: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [
+					{
+						label: 'Data One',
+						pointRadius: '0',
+						data: [40, 39, 10, 40, 39, 80, 40],
+						borderColor: '#4461F2',
+						tension: 0.5,
+					},
+					{
+						label: 'Data One',
+						pointRadius: '0',
+						data: [23, 45, 65, 66, 33, 7, 2],
+						borderColor: '#FCBF00',
+						tension: 0.5,
+						display: false,
+					},
+				],
+			},
 			chartOptions: {
 				responsive: true,
 				maintainAspectRatio: false,
-				backgroundColor: 'purple',
+				// cubicInterpolationMode: 'monotone',
+				scales: {
+					y: {
+						grid: {
+							drawBorder: false,
+							color: '#fff',
+						},
+					},
+					x: {
+						grid: {
+							drawBorder: false,
+							color: '#fff',
+						},
+					},
+				},
 			},
 		};
 	},
 };
 </script>
-<style scoped>
-.line-chart {
-	border-radius: 20px;
-	width: 100%;
-	background: #fff;
-	padding: 5px 10px;
+
+<style lang="scss" scoped>
+.chart-container {
+	background-color: #fff;
 }
 </style>
