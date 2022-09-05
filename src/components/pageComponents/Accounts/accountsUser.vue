@@ -72,35 +72,35 @@ export default {
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
-					icon: '',
+					icon: 'vectors/insta.svg',
+				},
+				{
+					accountName: 'تلگرام',
+					socialAccountName: 'Telegram',
+					icon: 'vectors/telegram.svg',
+				},
+				{
+					accountName: 'فیس بوک',
+					socialAccountName: 'FaceBook',
+					icon: 'vectors/facebook.svg',
+				},
+				{
+					accountName: 'لینکدین',
+					socialAccountName: 'Linkedin',
+					icon: 'vectors/linkedin.svg',
+				},
+				{
+					accountName: 'توییتر',
+					socialAccountName: 'Twttier',
+					icon: 'vectors/twitter.svg',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
-					icon: '',
+					icon: 'vectors/soundCloud.svg',
 				},
 				{
-					accountName: 'اینستاگرام',
-					socialAccountName: 'instagram',
-					icon: '',
-				},
-				{
-					accountName: 'اینستاگرام',
-					socialAccountName: 'instagram',
-					icon: '',
-				},
-				{
-					accountName: 'اینستاگرام',
-					socialAccountName: 'instagram',
-					icon: '',
-				},
-				{
-					accountName: 'اینستاگرام',
-					socialAccountName: 'instagram',
-					icon: '',
-				},
-				{
-					accountName: 'اینستاگرام',
+					accountName: 'ساندکا',
 					socialAccountName: 'instagram',
 					icon: '',
 				},
