@@ -72,7 +72,7 @@ export default {
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
-					icon: '@/assets/img/vectors/aparat.svg',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
