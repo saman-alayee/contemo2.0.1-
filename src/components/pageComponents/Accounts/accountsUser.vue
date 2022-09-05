@@ -22,6 +22,7 @@
 					:key="item.id"
 					:socialAccountName="item.socialAccountName"
 					:accountName="item.accountName"
+					:icon="item.icon"
 				/>
 			</div>
 		</div>
@@ -71,42 +72,52 @@ export default {
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '@/assets/img/vectors/aparat.svg',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 				{
 					accountName: 'اینستاگرام',
 					socialAccountName: 'instagram',
+					icon: '',
 				},
 			],
 		};
@@ -116,7 +127,7 @@ export default {
 
 <style scoped lang="scss">
 @import '@/assets/scss/_shared.scss';
-.accounts-user{
+.accounts-user {
 	margin-top: 40px;
 }
 .account-header {

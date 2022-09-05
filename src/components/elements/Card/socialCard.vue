@@ -4,7 +4,7 @@
 			<template slot="content">
 				<div class="row">
 					<div class="col-md-5 social-media-icon">
-						<img src="@/assets/img/icon/instagramIcon.svg" alt="" />
+						<img src="@/assets/img/vectors/facebook.svg" alt="" />
 					</div>
 
 					<div class="col-md-7 text-container">
@@ -33,6 +33,10 @@ export default {
 			required: true,
 		},
 		socialAccountName: {
+			type: String,
+			required: true,
+		},
+		icon: {
 			type: String,
 			required: true,
 		},
