@@ -4,7 +4,7 @@
 			<template slot="content">
 				<div class="row">
 					<div class="col-md-5 social-media-icon">
-						<img src="@/assets/img/vectors/facebook.svg" alt="" />
+						<img :src="$PATH.GET_IMAGE_PATH(icon)" alt="" />
 					</div>
 
 					<div class="col-md-7 text-container">
@@ -39,7 +39,6 @@ export default {
 		icon: {
 			type: String,
 			required: true,
-			default: '',
 		},
 	},
 };
