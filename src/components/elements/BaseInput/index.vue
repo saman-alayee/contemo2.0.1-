@@ -1,25 +1,30 @@
 <template>
 	<div class="input-component-container">
-		<input
-			ref="input"
-			class="form-control input_form"
-			:style="{ height, ...styleInput }"
-			:type="type"
-			:placeholder="placeholder"
-			:value="value"
-			:name="name"
-			@focus="
-				$emit('focus');
-				isFocus = true;
-			"
-			@blur="
-				$emit('blur');
-				isFocus = false;
-			"
-			@input="$emit('input', $event.target.value)"
-			:disabled="disabled"
-			@keyup.enter="keyUp"
-		/>
+		<div class="inside-input-container">
+			<input
+				ref="input"
+				class="input_form"
+				:style="{ height, ...styleInput }"
+				:type="type"
+				:placeholder="placeholder"
+				:value="value"
+				:name="name"
+				@focus="
+					$emit('focus');
+					isFocus = true;
+				"
+				@blur="
+					$emit('blur');
+					isFocus = false;
+				"
+				@input="$emit('input', $event.target.value)"
+				:disabled="disabled"
+				@keyup.enter="keyUp"
+			/>
+			<!-- <img src="../../../assets/img/icon/add-item-icon.svg" alt="" /> -->
+			<img :src="this.$PATH.GET_IMAGE_PATH(icon)" alt="" v-if="icon" />
+		</div>
+
 		<ul v-if="errors && errors.length">
 			<li v-for="(error, index) in errors" :key="index" class="error-text">{{ error }}</li>
 		</ul>
@@ -53,6 +58,10 @@ export default {
 		disabled: {
 			type: Boolean,
 		},
+		icon: {
+			type: String,
+			default: null,
+		},
 	},
 	data: () => ({
 		isFocus: false,
@@ -72,12 +81,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.input_form {
-	box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.05);
-	border: none;
+.inside-input-container {
+	width: 100%;
+	height: 60px;
+	background: #ffffff;
+	box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
 	border-radius: 10px;
-	outline-color: red;
+	display: flex;
+	align-items: center;
+	padding: 0 16px;
+	input {
+		border: none;
+		width: 100%;
+		margin-right: 8px;
+		border-radius: 10px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	img {
+		width: 16px;
+		height: 16px;
+		object-fit: contain;
+	}
 }
+
 .error-text {
 	color: #c6243d !important;
 	font-size: 12px;

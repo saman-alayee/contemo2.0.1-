@@ -19,8 +19,12 @@
 		<div class="spinner-border spinner-border-sm" role="status" v-if="loading"></div>
 		<div v-if="!loading" class="btn-text">
 			<span v-if="title">{{ title }}</span>
-			<span class="iconify" :data-icon="btnImageUrl" v-if="btnImageUrl"
-				:class="{ 'has-margin': title }"></span>
+			<span
+				class="iconify"
+				:data-icon="btnImageUrl"
+				v-if="btnImageUrl"
+				:class="{ 'has-margin': title }"
+			></span>
 			<slot></slot>
 		</div>
 	</button>
@@ -159,6 +163,7 @@ export default {
 
 <style lang="scss" scoped>
 button {
+	width: 100%;
 	&:disabled {
 		box-shadow: unset !important;
 		cursor: no-drop;
@@ -173,7 +178,9 @@ button {
 		margin-right: 8px;
 	}
 }
-
+.btn-primary {
+	background-color: #4461f2 !important;
+}
 .btn-text {
 	display: flex;
 	align-items: center;
@@ -182,8 +189,8 @@ button {
 		font-size: 14px;
 	}
 	.iconify {
-			margin-right: 10px;
-			margin-top:3px ;
+		margin-right: 10px;
+		margin-top: 3px;
 	}
 	&:hover {
 		color: #fff;
@@ -193,7 +200,7 @@ button {
 		.iconify {
 			color: #fff !important;
 			margin-right: 10px;
-			margin-top:3px ;
+			margin-top: 3px;
 		}
 	}
 }
