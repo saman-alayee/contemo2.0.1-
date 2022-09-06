@@ -1,7 +1,7 @@
 <template>
 	<div class="dashboard-component">
 		<div class="row">
-			<div class="col-lg-4">
+			<div class="col-lg-4 scroll-y-container">
 				<taskCard
 					:title="item.title"
 					:description="item.description"
@@ -23,9 +23,12 @@
 					:chart-options="chartOptions"
 					class="mt-4"
 				/>
-
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-9">
 				<h4 class="pt-1">همکاران</h4>
-				<div class="d-flex">
+				<div class="d-flex scroll-x-container">
 					<PartnerCard
 						v-for="item in partnerData"
 						:key="item.id"
@@ -36,6 +39,7 @@
 					/>
 				</div>
 			</div>
+			<div class="col-lg-3">click add</div>
 		</div>
 	</div>
 </template>
@@ -55,6 +59,9 @@ export default {
 	data() {
 		return {
 			partnerData: [
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
@@ -134,4 +141,16 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.scroll-y-container {
+	height: 85vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px 12px;
+}
+.scroll-x-container {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 10px 5px;
+}
+</style>
