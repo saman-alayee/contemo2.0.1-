@@ -92,6 +92,21 @@ export default {
 					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
 					avatars: 'vectors/avatar.svg',
 				},
+					{
+					title: 'عنوان تسک',
+					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
+					avatars: 'vectors/avatar.svg',
+				},
+				{
+					title: 'عنوان تسک',
+					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
+					avatars: 'vectors/avatar.svg',
+				},
+				{
+					title: 'عنوان تسک',
+					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
+					avatars: 'vectors/avatar.svg',
+				},
 			],
 			chartData: {
 				labels: [
