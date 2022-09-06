@@ -81,7 +81,7 @@
 									>بازیابی رمز عبور</span
 								>
 							</div>
-							<BaseButton title="ورود" class="mt-3" :disabled="!valid" />
+							<BaseButton title="ورود" class="mt-3" :disabled="!valid" icon="icon/arrow-right.png"/>
 							<div class="hr-sect mt-3">با این حساب وارد شو</div>
 							<div class="row mt-2">
 								<div class="col-md-4">
