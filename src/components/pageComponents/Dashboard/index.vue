@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-9">
+			<div class="col-lg-10">
 				<h4 class="pt-1">همکاران</h4>
 				<div class="d-flex scroll-x-container">
 					<PartnerCard
@@ -39,7 +39,9 @@
 					/>
 				</div>
 			</div>
-			<div class="col-lg-3">click add</div>
+			<div class="col-lg-2 d-flex justify-content-center align-items-center">
+				<AddItem class="mt-2" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -49,16 +51,24 @@ import PartnerCard from '@/components/elements/Card/partnerCard.vue';
 import taskCard from '@/components/elements/Card/taskCard.vue';
 import LineChart from '@/components/charts/lineChart.vue';
 import BlueCard from '../../elements/Card/blueCard.vue';
+import AddItem from '@/components/elements/AddItem/index.vue';
 export default {
 	components: {
 		PartnerCard,
 		taskCard,
 		LineChart,
 		BlueCard,
+		AddItem,
 	},
 	data() {
 		return {
 			partnerData: [
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
