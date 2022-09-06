@@ -33,8 +33,9 @@ body {
 .app-pointer {
 	cursor: pointer;
 }
-::-webkit-scrollbar{width: 8px;}
-::-webkit-scrollbar-thumb{background-color: #A5A5A5; border-radius: 50px;} 
+::-webkit-scrollbar{width: 5px; height: 6px;cursor: pointer;}
+::-webkit-scrollbar-track {border-radius: 5px;background: #fff;}
+::-webkit-scrollbar-thumb {border-radius: 5px;background: #dee1f1;}
 .application-animation{
 	animation: 2s applicationAnimation;
 }

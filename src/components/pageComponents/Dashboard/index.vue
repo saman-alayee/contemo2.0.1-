@@ -1,7 +1,7 @@
 <template>
 	<div class="dashboard-component">
 		<div class="row">
-			<div class="col-lg-4">
+			<div class="col-lg-4 scroll-y-container">
 				<taskCard
 					:title="item.title"
 					:description="item.description"
@@ -23,9 +23,12 @@
 					:chart-options="chartOptions"
 					class="mt-4"
 				/>
-
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-10">
 				<h4 class="pt-1">همکاران</h4>
-				<div class="d-flex">
+				<div class="d-flex scroll-x-container">
 					<PartnerCard
 						v-for="item in partnerData"
 						:key="item.id"
@@ -36,6 +39,9 @@
 					/>
 				</div>
 			</div>
+			<div class="col-lg-2 d-flex justify-content-center align-items-center">
+				<AddItem class="mt-2" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -45,12 +51,14 @@ import PartnerCard from '@/components/elements/Card/partnerCard.vue';
 import taskCard from '@/components/elements/Card/taskCard.vue';
 import LineChart from '@/components/charts/lineChart.vue';
 import BlueCard from '../../elements/Card/blueCard.vue';
+import AddItem from '@/components/elements/AddItem/index.vue';
 export default {
 	components: {
 		PartnerCard,
 		taskCard,
 		LineChart,
 		BlueCard,
+		AddItem,
 	},
 	data() {
 		return {
@@ -58,9 +66,33 @@ export default {
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
+				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 			],
 			taskDatas: [
 				{
+					title: 'عنوان تسک',
+					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
+					avatars: 'vectors/avatar.svg',
+				},
+				{
+					title: 'عنوان تسک',
+					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
+					avatars: 'vectors/avatar.svg',
+				},
+				{
+					title: 'عنوان تسک',
+					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
+					avatars: 'vectors/avatar.svg',
+				},
+					{
 					title: 'عنوان تسک',
 					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
 					avatars: 'vectors/avatar.svg',
@@ -134,4 +166,16 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.scroll-y-container {
+	height: 85vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px 12px;
+}
+.scroll-x-container {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 10px 5px;
+}
+</style>
