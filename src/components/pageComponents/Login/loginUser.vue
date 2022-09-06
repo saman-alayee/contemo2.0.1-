@@ -79,13 +79,7 @@
 									>بازیابی رمز عبور</span
 								>
 							</div>
-							<button
-								type="submit"
-								class="btn btn-primary mt-3 color-primary w-100"
-								:disabled="!valid"
-							>
-								ورود
-							</button>
+							<BaseButton title="ورود" class="mt-3" :disabled="!valid" />
 							<div class="hr-sect mt-3">با این حساب وارد شو</div>
 							<div class="row mt-2">
 								<div class="col-md-4">
@@ -114,6 +108,7 @@
 
 <script>
 import BaseInput from '@/components/elements/BaseInput/index.vue';
+import BaseButton from '../../../components/elements/Button/Button.vue';
 export default {
 	data() {
 		return {
@@ -125,6 +120,7 @@ export default {
 	},
 	components: {
 		BaseInput,
+		BaseButton,
 	},
 	methods: {
 		async doLogin() {
