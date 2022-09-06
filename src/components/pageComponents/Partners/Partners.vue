@@ -16,7 +16,7 @@
 				:role="item.role"
 				:name="item.name"
 				:avatar="item.avatar"
-				:deleteIcon="true"
+				:hasIcon="true"
 				class="mx-1 mt-1"
 			/>
 		</div>

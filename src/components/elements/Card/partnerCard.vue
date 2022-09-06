@@ -3,7 +3,7 @@
 		<BaseCard>
 			<template slot="content">
 				<div class="partner-item-container">
-					<div v-if="deleteIcon == true" class="delete-container">
+					<div v-if="hasIcon == true" class="delete-container">
 						<img src="@/assets/img/icon/deleteIcon.svg" alt="" />
 					</div>
 					<div class="img-container">
@@ -32,7 +32,7 @@ export default {
 			type: String,
 			// required: true,
 		},
-		deleteIcon: {
+		hasIcon: {
 			type: Boolean,
 			default: false,
 		},
