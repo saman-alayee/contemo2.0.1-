@@ -7,7 +7,7 @@
 						class="search-box"
 						type="text"
 						name="search"
-						v-model="model.email"
+						v-model="model.search"
 						placeholder="جستجو ..."
 					/>
 				</div>
@@ -202,7 +202,7 @@ export default {
 }
 .search-box {
 	width: 304px;
-	height: 32px;
+	height: 32px !important;
 	border-radius: 21px !important;
 }
 .heading-container {
