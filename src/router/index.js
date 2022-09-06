@@ -92,6 +92,15 @@ const routes = [
 				},
 				component: () => import('@/views/market/basket.vue'),
 			},
+			{
+				path: '/content-cloud',
+				name: 'contentCloud',
+				meta: {
+					title: 'ابر محتوایی',
+					breadcrumbs: [{ title: 'ابر محتوایی', url: 'dashboard' }],
+				},
+				component: () => import('@/views/contentCloud/index.vue'),
+			},
 		],
 	},
 ];
