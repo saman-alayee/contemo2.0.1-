@@ -3,14 +3,17 @@
 		<BaseCard>
 			<template slot="content">
 				<div class="partner-item-container">
+					<div v-if="deleteIcon == true" class="delete-container">
+						<img src="@/assets/img/icon/deleteIcon.svg" alt="" />
+					</div>
 					<div class="img-container">
 						<img src="@/assets/img/vectors/avatar.svg" alt="" />
 					</div>
 					<div class="name-container">
-						<p>{{name}}</p>
+						<p>{{ name }}</p>
 					</div>
 					<div class="role-container">
-						<p>{{role}}</p>
+						<p>{{ role }}</p>
 					</div>
 				</div>
 			</template>
@@ -28,6 +31,10 @@ export default {
 		role: {
 			type: String,
 			// required: true,
+		},
+		deleteIcon: {
+			type: Boolean,
+			default: false,
 		},
 		name: {
 			type: String,
@@ -51,6 +58,7 @@ export default {
 	justify-content: center;
 	flex-direction: column;
 	padding: 20px;
+	position: relative;
 }
 .name-container {
 	p {
@@ -72,5 +80,11 @@ export default {
 		margin-top: 8px;
 		margin-bottom: 0;
 	}
+}
+.delete-container {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	cursor: pointer;
 }
 </style>

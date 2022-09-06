@@ -101,6 +101,15 @@ const routes = [
 				},
 				component: () => import('@/views/contentCloud/index.vue'),
 			},
+			{
+				path: '/partners',
+				name: 'partners',
+				meta: {
+					title: 'همکاران',
+					breadcrumbs: [{ title: 'همکاران', url: 'partners' }],
+				},
+				component: () => import('@/views/partners/index.vue'),
+			},
 		],
 	},
 ];

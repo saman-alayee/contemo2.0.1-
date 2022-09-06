@@ -47,7 +47,7 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">اکانت ها</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToPartners">
 				<div class="icon-container">
 					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/partnersIcon.svg')" alt="" />
 				</div>
@@ -110,6 +110,9 @@ export default {
 		},
 		goToContentCloud() {
 			return this.$router.push('/content-cloud');
+		},
+		goToPartners() {
+			return this.$router.push('/Partners');
 		},
 	},
 };
