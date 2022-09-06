@@ -84,6 +84,15 @@ const routes = [
 				component: () => import('@/views/market/index.vue'),
 			},
 			{
+				path: '/market/basket',
+				name: 'basket',
+				meta: {
+					title: 'basket',
+					breadcrumbs: [{ title: 'basket', url: 'basket' }],
+				},
+				component: () => import('@/views/market/basket.vue'),
+			},
+			{
 				path: '/contentCloud',
 				name: 'contentCloud',
 				meta: {
