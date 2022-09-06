@@ -1,11 +1,16 @@
 <template>
 	<div class="application-animation">
-		<h1>hello market</h1>
+		<marketData />
 	</div>
 </template>
 
 <script>
-export default {};
+import marketData from '@/components/pageComponents/Market/marketData.vue';
+export default {
+	components: {
+		marketData,
+	},
+};
 </script>
 
 <style></style>

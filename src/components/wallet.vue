@@ -29,6 +29,9 @@ export default {};
 .account-credit {
 	display: flex;
 	justify-content: flex-start;
+	span {
+		width: 85px;
+	}
 }
 .amount-box {
 	display: flex;
