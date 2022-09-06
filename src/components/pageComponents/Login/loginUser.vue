@@ -54,6 +54,7 @@
 										v-model="model.email"
 										:errors="errors"
 										placeholder="آدرس ایمیل"
+										icon="icon/arrow-down.png"
 									/>
 								</validation-provider>
 							</div>
@@ -71,6 +72,7 @@
 										v-model="model.password"
 										placeholder="رمز عبور"
 										:errors="errors"
+										icon="icon/add-item-icon.svg"
 									/>
 								</validation-provider>
 							</div>
