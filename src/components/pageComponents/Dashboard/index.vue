@@ -49,7 +49,7 @@
 <script>
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
 import taskCard from '@/components/elements/Card/taskCard.vue';
-import LineChart from '@/components/charts/lineChart.vue';
+import LineChart from '@/components/elements/charts/lineChart.vue';
 import BlueCard from '../../elements/Card/blueCard.vue';
 import AddItem from '@/components/elements/AddItem/index.vue';
 export default {
