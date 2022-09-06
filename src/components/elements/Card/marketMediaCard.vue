@@ -4,9 +4,11 @@
 			<template slot="content">
 				<div class="media-container">
 					<img v-if="image" :src="image" alt="" />
-					<video v-if="video" controls class="video">
-						<source :src="video" type="video/mp4" />
-					</video>
+					<div v-if="video" class="video-container">
+						<video controls class="video">
+							<source :src="video" type="video/mp4" />
+						</video>
+					</div>
 					<audio v-if="audio" controls>
 						<source :src="audio" type="audio/ogg" />
 					</audio>
@@ -15,12 +17,12 @@
 					<span>{{ title }}</span>
 					<p>{{ description }}</p>
 				</div>
-				<div class="market-card-footer">
-					<div class="price">
+				<div class="market-card-footer row">
+					<div class="price col-6">
 						<span class="amount">{{ price }}</span>
 						<span class="currency">تومان</span>
 					</div>
-					<div class="learn-more-icon">
+					<div class="learn-more-icon col-6">
 						<img src="@/assets/img/icon/plus-icon.svg" />
 					</div>
 				</div>
@@ -81,18 +83,22 @@ export default {
 		width: 185px;
 		height: 135px;
 		border-radius: 20px 20px 0 0;
-		width: 193px;
-		height: 141px;
 	}
-	.video {
+	.video-container {
 		position: relative;
 		left: 4px;
 		top: -4px;
+		border-radius: 20px 20px 0 0;
+		overflow: hidden;
 		width: 185px;
 		height: 135px;
-		border-radius: 20px 20px 0 0;
-		width: 193px;
-		height: 141px;
+		video {
+			width: 185px;
+			height: 135px;
+			position: relative;
+			left: 0;
+			top: -16px;
+		}
 	}
 	audio {
 		position: relative;
@@ -125,7 +131,8 @@ export default {
 .market-card-footer {
 	display: flex;
 	flex-direction: row;
-}
+	width: 120px;
+	padding-right: 16px;}
 .price {
 	padding-right: 2px;
 	.amount {
@@ -147,6 +154,7 @@ export default {
 	}
 }
 .learn-more-icon {
+	text-align: left;
 	position: relative;
 	right: 80px;
 }
