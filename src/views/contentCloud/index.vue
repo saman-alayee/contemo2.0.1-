@@ -1,5 +1,7 @@
 <template>
-	<ContentCloud />
+	<div class="application-animation">
+		<ContentCloud />
+	</div>
 </template>
 
 <script>

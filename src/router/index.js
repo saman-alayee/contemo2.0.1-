@@ -93,7 +93,7 @@ const routes = [
 				component: () => import('@/views/market/basket.vue'),
 			},
 			{
-				path: '/contentCloud',
+				path: '/content-cloud',
 				name: 'contentCloud',
 				meta: {
 					title: 'ابر محتوایی',
