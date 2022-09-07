@@ -1,0 +1,30 @@
+usage in html:
+  <notify type="danger" :icon="true" :closeButton="true">
+          <template slot="NotifyIcon">
+            <i class="material-icons" data-notify="icon">add_alert</i>
+          </template>
+          <template slot="NotifyMessage">this message for test</template>
+  </notify>
+
+--------------------------------------------------------------------------------------------------------------
+
+usage in js :
+
+  this.$notify({
+    group: 'tc',
+    type: 'warn',
+    title: 'This is title',
+    text: 'This is <b> content </b>',
+
+    // (optional)
+    // Overrides default/provided duration
+    duration: 10000,
+
+    // (optional)
+    // Overrides default/provided animation speed
+    speed: 1000
+
+    // (optional)
+    // Data object that can be used in your template
+    data: {}
+  })
