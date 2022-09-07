@@ -26,7 +26,7 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">بوم محتوایی</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToContentCloud">
 				<div class="icon-container">
 					<img
 						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon2.svg')"
@@ -47,7 +47,7 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">اکانت ها</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToPartners">
 				<div class="icon-container">
 					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/partnersIcon.svg')" alt="" />
 				</div>
@@ -107,6 +107,12 @@ export default {
 		},
 		goToMarket() {
 			return this.$router.push('/market');
+		},
+		goToContentCloud() {
+			return this.$router.push('/content-cloud');
+		},
+		goToPartners() {
+			return this.$router.push('/Partners');
 		},
 	},
 };

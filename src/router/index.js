@@ -83,6 +83,33 @@ const routes = [
 				},
 				component: () => import('@/views/market/index.vue'),
 			},
+			{
+				path: '/market/basket',
+				name: 'basket',
+				meta: {
+					title: 'basket',
+					breadcrumbs: [{ title: 'basket', url: 'basket' }],
+				},
+				component: () => import('@/views/market/basket.vue'),
+			},
+			{
+				path: '/content-cloud',
+				name: 'contentCloud',
+				meta: {
+					title: 'ابر محتوایی',
+					breadcrumbs: [{ title: 'ابر محتوایی', url: 'dashboard' }],
+				},
+				component: () => import('@/views/contentCloud/index.vue'),
+			},
+			{
+				path: '/partners',
+				name: 'partners',
+				meta: {
+					title: 'همکاران',
+					breadcrumbs: [{ title: 'همکاران', url: 'partners' }],
+				},
+				component: () => import('@/views/partners/index.vue'),
+			},
 		],
 	},
 ];

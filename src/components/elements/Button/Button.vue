@@ -18,14 +18,10 @@
 	>
 		<div class="spinner-border spinner-border-sm" role="status" v-if="loading"></div>
 		<div v-if="!loading" class="btn-text">
+			<div v-if="icon" class="icon-container">
+				<img :src="this.$PATH.GET_IMAGE_PATH(icon)" alt="" />
+			</div>
 			<span v-if="title">{{ title }}</span>
-			<span
-				class="iconify"
-				:data-icon="btnImageUrl"
-				v-if="btnImageUrl"
-				:class="{ 'has-margin': title }"
-			></span>
-			<slot></slot>
 		</div>
 	</button>
 </template>
@@ -79,7 +75,8 @@ export default {
 			type: Boolean,
 		},
 		icon: {
-			type: Boolean,
+			type: String,
+			default: null,
 		},
 		roundedCircle: {
 			type: Boolean,
@@ -93,6 +90,7 @@ export default {
 			type: Object,
 		},
 	},
+
 	computed: {
 		btnSizeClass() {
 			if (this.btnSize) {
@@ -185,13 +183,7 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	span {
-		font-size: 14px;
-	}
-	.iconify {
-		margin-right: 10px;
-		margin-top: 3px;
-	}
+
 	&:hover {
 		color: #fff;
 		span {
@@ -202,6 +194,16 @@ button {
 			margin-right: 10px;
 			margin-top: 3px;
 		}
+	}
+}
+.icon-container {
+	width: 20px;
+	height: 20px;
+	margin-left: 8px;
+	img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: contain;
 	}
 }
 </style>

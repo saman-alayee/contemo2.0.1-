@@ -1,14 +1,14 @@
 <template>
 	<div class="application-animation">
-		<marketData />
+		<ContentCloud />
 	</div>
 </template>
 
 <script>
-import marketData from '@/components/pageComponents/Market/marketData.vue';
+import ContentCloud from '@/components/pageComponents/ContentCloud/ContentCloud.vue';
 export default {
 	components: {
-		marketData,
+		ContentCloud,
 	},
 };
 </script>
