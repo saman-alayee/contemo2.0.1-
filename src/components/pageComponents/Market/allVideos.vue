@@ -14,44 +14,10 @@
 			</div>
 		</div>
 		<div class="heading-container row">
-			<span class="content-heading col-10">تصاویر</span>
-			<div class="see-all col-2">
-				<span> مشاهده همه </span>
-				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
-			</div>
-		</div>
-		<div class="image-container">
-			<marketMediaCard
-				v-for="image in images"
-				:key="image.id"
-				:title="image.title"
-				:image="image.imageItem"
-				:description="image.description"
-				:price="image.price"
-			/>
-		</div>
-		<div class="heading-container row">
-			<span class="content-heading col-10">صوت </span>
-			<div class="see-all col-2">
-				<span> مشاهده همه </span>
-				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
-			</div>
-		</div>
-		<div class="audio-container">
-			<marketMediaCard
-				v-for="item in audio"
-				:key="item.id"
-				:title="item.title"
-				:audio="item.audioItem"
-				:description="item.description"
-				:price="item.price"
-			/>
-		</div>
-		<div class="heading-container row">
 			<span class="content-heading col-10">ویدیو</span>
-			<div class="see-all col-2">
-				<span> مشاهده همه </span>
-				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
+			<div class="go-back-button col-2">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
 			</div>
 		</div>
 		<div class="video-container">
@@ -80,81 +46,112 @@ export default {
 			model: {
 				serach: '',
 			},
-			images: [
-				{
-					title: 'عنوان تصویر',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					imageItem: 'https://picsum.photos/200/300',
-				},
-				{
-					title: 'عنوان تصویر',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					imageItem: 'https://picsum.photos/200/300',
-				},
-				{
-					title: 'عنوان تصویر',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					imageItem: 'https://picsum.photos/200/300',
-				},
-				{
-					title: 'عنوان تصویر',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					imageItem: 'https://picsum.photos/200/300',
-				},
-				{
-					title: 'عنوان تصویر',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					imageItem: 'https://picsum.photos/200/300',
-				},
-			],
-			audio: [
-				{
-					title: 'عنوان صوت',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					audioItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
-				},
-				{
-					title: 'عنوان صوت',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					audioItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
-				},
-				{
-					title: 'عنوان صوت',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					audioItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
-				},
-				{
-					title: 'عنوان صوت',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					audioItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
-				},
-				{
-					title: 'عنوان صوت',
-					description:
-						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
-					price: 355000,
-					audioItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
-				},
-			],
 			videos: [
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
+				{
+					title: 'عنوان تصویر',
+					description:
+						'لـورم ایپسوم متن ساختگی با تولید سادگی از  نامفهوم از صنعت چاپ، و با استفاده',
+					price: 355000,
+					videoItem: 'https://static.cdn.asset.aparat.com/avt/47439137_15s.mp4',
+				},
 				{
 					title: 'عنوان تصویر',
 					description:
@@ -220,23 +217,21 @@ export default {
 	line-height: 23px;
 	color: #000000;
 }
-.see-all {
+.go-back-button {
 	color: #4461f2;
 	text-align: right;
 	position: relative;
 	top: 16px;
-	right: 160px;
+	right: 184px;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 23px;
 	cursor: pointer;
 }
-.audio-container,
-.video-container,
-.image-container {
+.video-container {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 }
 </style>
