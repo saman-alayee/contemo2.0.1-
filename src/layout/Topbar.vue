@@ -1,7 +1,12 @@
 <template>
 	<div class="topbar">
-			<div class="col-8"><h3 class="">سلام وقت بخیر محسن هستم :)</h3></div>
-			<div class="col-4"><wallet class="" /></div>
+		<div  v-if="$route.path !== `/Partners`" class="col-8">
+			<h3 class="">سلام وقت بخیر محسن هستم :)</h3>
+		</div>
+		<div v-if="$route.path == `/Partners`" class="col-8">
+			<h3 class="">متن مربوط به بخش همکاران</h3>
+		</div>
+		<div class="col-4"><wallet class="" /></div>
 	</div>
 </template>
 
