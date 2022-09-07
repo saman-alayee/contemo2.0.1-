@@ -13,7 +13,7 @@
 				<div :style="{ color: color }">
 					<p>{{ title }}</p>
 				</div>
-				<div class="col-md-3" v-if="iconLeft">
+				<div v-if="iconLeft">
 					<div class="img-container mx-1">
 						<img :src="$PATH.GET_IMAGE_PATH(iconLeft)" alt="" />
 					</div>
@@ -82,7 +82,7 @@ export default {
 	display: flex;
 	justify-content: start;
 	align-items: start;
-	padding-right:14px;
-	padding-top:2px;
+	padding-right: 14px;
+	padding-top: 2px;
 }
 </style>
