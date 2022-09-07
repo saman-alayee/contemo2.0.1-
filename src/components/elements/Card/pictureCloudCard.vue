@@ -3,7 +3,7 @@
 		<BaseCard>
 			<template slot="content">
 				<div class="file-container">
-					<span class="close-btn"><img src="@/assets/img/icon\closeIcon.svg" alt="" /></span>
+					<span class="close-btn"><img src="@/assets/img/icon/closeIcon.svg" alt="" /></span>
 					<img :src="$PATH.GET_IMAGE_PATH(file)" alt="" />
 				</div>
 			</template>

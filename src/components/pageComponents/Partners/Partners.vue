@@ -27,7 +27,7 @@
 
 <script>
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
-import chipCard from '@/components/elements/BaseChip/chipCard.vue';
+import chipCard from '@/components/elements/BaseChip/BaseChip.vue';
 export default {
 	components: {
 		PartnerCard,
