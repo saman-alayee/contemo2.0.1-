@@ -1,12 +1,13 @@
 <template>
 	<div class="dashboard-component">
 		<div>
-			<chipCardRight
+			<chipCard
 				class="chipcard-component"
-				icon="icon/plusIcon.svg"
 				background="#4461F2"
 				color="white"
-				title="افزودن همکار "
+				title="افزودن همکار"
+				width="154px"
+				iconLeft="icon/plusIcon.svg"
 			/>
 		</div>
 		<div class="row">
@@ -25,11 +26,11 @@
 
 <script>
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
-import chipCardRight from '@/components/elements/Card/chipCardRight.vue';
+import chipCard from '@/components/elements/Card/chipCard.vue';
 export default {
 	components: {
 		PartnerCard,
-		chipCardRight,
+		chipCard,
 	},
 	data() {
 		return {
