@@ -1,22 +1,21 @@
 <template>
-	<div>
-		<div
-			class="base-card-container"
-			:style="{ border: border, background: background, width: width }"
-		>
-			<div class="chip-card-container">
-				<div v-if="iconRight">
-					<div class="img-container mx-1">
-						<img :src="$PATH.GET_IMAGE_PATH(iconRight)" alt="" />
-					</div>
+	<div
+		class="base-card-container"
+		:style="{ border: border, background: background, width: width }"
+		@click="ClikOnChip"
+	>
+		<div class="chip-card-container">
+			<div v-if="iconRight">
+				<div class="img-container mx-1">
+					<img :src="$PATH.GET_IMAGE_PATH(iconRight)" alt="" />
 				</div>
-				<div :style="{ color: color }">
-					<p>{{ title }}</p>
-				</div>
-				<div v-if="iconLeft">
-					<div class="img-container mx-1">
-						<img :src="$PATH.GET_IMAGE_PATH(iconLeft)" alt="" />
-					</div>
+			</div>
+			<div :style="{ color: color }">
+				<p>{{ title }}</p>
+			</div>
+			<div v-if="iconLeft">
+				<div class="img-container mx-1">
+					<img :src="$PATH.GET_IMAGE_PATH(iconLeft)" alt="" />
 				</div>
 			</div>
 		</div>
@@ -52,6 +51,11 @@ export default {
 		},
 		border: {
 			type: String,
+		},
+	},
+	methods: {
+		ClikOnChip() {
+			this.$emit('onClick');
 		},
 	},
 };
