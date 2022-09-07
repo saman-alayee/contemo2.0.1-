@@ -8,6 +8,7 @@
 				title="افزودن همکار"
 				width="154px"
 				iconLeft="icon/plusIcon.svg"
+				@click="openAddModal"
 			/>
 		</div>
 		<div class="row">
@@ -49,6 +50,11 @@ export default {
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 			],
 		};
+	},
+	methods: {
+		openAddModal() {
+			console.log('salam');
+		},
 	},
 };
 </script>
