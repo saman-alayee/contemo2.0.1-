@@ -8,7 +8,7 @@
 							<span>جمع سبد خرید</span>
 						</div>
 						<div class="total-price">
-							<h4>234,000</h4>
+							<h4>{{price}}</h4>
 							<h5>تومان</h5>
 						</div>
 					</div>
@@ -34,6 +34,12 @@ import baseCard from '@/components/elements/Card/index.vue';
 import BaseButton from '../../../components/elements/Button/Button.vue';
 export default {
 	components: { baseCard, BaseButton },
+	props: {
+		price: {
+			type: Number,
+			required: true,
+		},
+	},
 };
 </script>
 
@@ -95,7 +101,7 @@ export default {
 	font-weight: 400;
 	transition: 0.4s;
 }
-.wallet-btn:hover{
+.wallet-btn:hover {
 	background: $color-primary;
 	color: #fff;
 }
