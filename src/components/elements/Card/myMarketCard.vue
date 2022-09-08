@@ -49,7 +49,6 @@ export default {
 	components: {
 		BaseCard,
 	},
-	data() {},
 	props: {
 		video: {
 			type: String,
