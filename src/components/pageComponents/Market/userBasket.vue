@@ -1,5 +1,9 @@
 <template>
 	<div class="user-basket">
+		<div class="go-back-button col-lg-12 mb-3" @click="goToMarket">
+			<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+			<span>بازگشت</span>
+		</div>
 		<div class="row">
 			<div class="col-lg-7">
 				<basketCard
@@ -53,7 +57,25 @@ export default {
 			],
 		};
 	},
+	methods: {
+		goToMarket() {
+			return this.$router.push('/market');
+		},
+	},
 };
 </script>
 
-<style></style>
+<style scoped>
+.go-back-button {
+	color: #4461f2;
+	text-align: right;
+	position: relative;
+	top: 16px;
+	right: 1005px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 23px;
+	cursor: pointer;
+}
+</style>

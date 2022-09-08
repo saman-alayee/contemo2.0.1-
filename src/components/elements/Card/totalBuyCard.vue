@@ -8,7 +8,7 @@
 							<span>جمع سبد خرید</span>
 						</div>
 						<div class="total-price">
-							<h4>{{price}}</h4>
+							<h4>{{ price }}</h4>
 							<h5>تومان</h5>
 						</div>
 					</div>
@@ -18,11 +18,12 @@
 					</p>
 					<div class="code-container mt-5">
 						<span class="text">کد تخفیف</span>
+						<button class="discount-code-button">بررسی کد</button>
 					</div>
 					<input class="input mt-1" type="text" />
 					<hr />
 					<BaseButton title="پرداخت با کارت بانکی" class="mt-1" />
-					<button class="wallet-btn mt-1">پرداخت با اعتبار حساب</button>
+					<button class="application-btn-outline mt-1">پرداخت با اعتبار حساب</button>
 				</div>
 			</template>
 		</baseCard>
@@ -91,7 +92,7 @@ export default {
 	border-radius: 10px;
 	padding: 0px 10px;
 }
-.wallet-btn {
+.application-btn-outline {
 	width: 100%;
 	height: 42px;
 	border: 1px solid $color-primary;
@@ -101,7 +102,24 @@ export default {
 	font-weight: 400;
 	transition: 0.4s;
 }
-.wallet-btn:hover {
+.application-btn-outline:hover {
+	background: $color-primary;
+	color: #fff;
+}
+.discount-code-button {
+	width: 100px;
+	height: 42px;
+	border: 1px solid $color-primary;
+	background: none;
+	border-radius: 8px;
+	color: $color-primary;
+	font-weight: 300;
+	transition: 0.4s;
+	position: relative;
+	right: 200px;
+	top: 67px;
+}
+.discount-code-button:hover{
 	background: $color-primary;
 	color: #fff;
 }
