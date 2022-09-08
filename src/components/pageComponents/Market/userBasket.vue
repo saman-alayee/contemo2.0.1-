@@ -5,7 +5,7 @@
 			<span>بازگشت</span>
 		</div>
 		<div class="row">
-			<div class="col-lg-7">
+			<div class="col-lg-7 basket-card-container p-2">
 				<basketCard
 					v-for="item in test"
 					:key="item.id"
@@ -54,6 +54,30 @@ export default {
 					description: 'اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید',
 					cover: 'https://picsum.photos/200/300',
 				},
+				{
+					title: 'عکس برای تست',
+					price: 234000,
+					description: 'اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید',
+					cover: 'https://picsum.photos/200/300',
+				},
+				{
+					title: 'عکس برای تست',
+					price: 234000,
+					description: 'اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید',
+					cover: 'https://picsum.photos/200/300',
+				},
+				{
+					title: 'عکس برای تست',
+					price: 234000,
+					description: 'اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید',
+					cover: 'https://picsum.photos/200/300',
+				},
+				{
+					title: 'عکس برای تست',
+					price: 234000,
+					description: 'اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید',
+					cover: 'https://picsum.photos/200/300',
+				},
 			],
 		};
 	},
@@ -77,5 +101,9 @@ export default {
 	font-size: 16px;
 	line-height: 23px;
 	cursor: pointer;
+}
+.basket-card-container {
+	background: #fff;
+	border-radius: 30px;
 }
 </style>

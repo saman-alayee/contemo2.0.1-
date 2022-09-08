@@ -1,41 +1,37 @@
 <template>
 	<div class="basket-card">
-		<baseCard>
-			<template slot="content">
-				<div class="baseket-card-container">
-					<div class="cart-container">
-						<div class="cover-container">
-							<img :src="cover" />
+		<div class="baseket-card-container">
+			<div class="cart-container">
+				<div class="cover-container">
+					<img :src="cover" />
+				</div>
+				<div class="text-container">
+					<div class="price-container">
+						<div class="price">
+							<p>تومان</p>
+							<h5 class="px-1">{{ price }}</h5>
 						</div>
-						<div class="text-container">
-							<div class="price-container">
-								<div class="price">
-									<p>تومان</p>
-									<h5 class="px-1">{{ price }}</h5>
-								</div>
-								<div class="price-title">
-									<h5>{{ title }}</h5>
-								</div>
-							</div>
-							<p>
-								{{ description }}
-							</p>
-							<div class="trash-container">
-								<img src="@/assets/img/icon/deleteIcon.svg" />
-							</div>
+						<div class="price-title">
+							<h5>{{ title }}</h5>
 						</div>
 					</div>
-					<hr />
+					<p>
+						{{ description }}
+					</p>
+					<div class="trash-container">
+						<img src="@/assets/img/icon/deleteIcon.svg" />
+					</div>
 				</div>
-			</template>
-		</baseCard>
+			</div>
+			<hr />
+		</div>
 	</div>
 </template>
 
 <script>
-import baseCard from '@/components/elements/Card/index.vue';
+//import baseCard from '@/components/elements/Card/index.vue';
 export default {
-	components: { baseCard },
+	components: {},
 	props: {
 		price: {
 			type: Number,
@@ -64,8 +60,6 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
 .basket-card {
-	width: 100%;
-    background: #fff;
 	.baseket-card-container {
 		display: flex;
 		flex-direction: column;
