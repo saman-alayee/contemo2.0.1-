@@ -15,12 +15,17 @@
 		</div>
 		<div class="heading-container row">
 			<span class="content-heading col-10">تصاویر</span>
-			<div class="see-all col-2">
+			<div class="go-back-button col-2" @click="seeAllPhotos" v-if="allPhotos">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
+			</div>
+			<div class="see-all col-2" @click="seeAllPhotos" v-else>
 				<span> مشاهده همه </span>
 				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
 			</div>
 		</div>
-		<div class="image-container">
+		<allPhotos v-if="allPhotos" class="application-animation" />
+		<div class="image-container" v-else>
 			<marketMediaCard
 				v-for="image in images"
 				:key="image.id"
@@ -28,16 +33,22 @@
 				:image="image.imageItem"
 				:description="image.description"
 				:price="image.price"
+				class="application-animation"
 			/>
 		</div>
 		<div class="heading-container row">
 			<span class="content-heading col-10">صوت </span>
-			<div class="see-all col-2">
+			<div class="go-back-button col-2" @click="seeAllAudios" v-if="allAudios">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
+			</div>
+			<div class="see-all col-2" @click="seeAllAudios" v-else>
 				<span> مشاهده همه </span>
 				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
 			</div>
 		</div>
-		<div class="video-container">
+		<allAudios v-if="allAudios" class="application-animation" />
+		<div class="audio-container">
 			<marketMediaCard
 				v-for="item in audio"
 				:key="item.id"
@@ -49,12 +60,17 @@
 		</div>
 		<div class="heading-container row">
 			<span class="content-heading col-10">ویدیو</span>
-			<div class="see-all col-2">
+			<div class="go-back-button col-2" @click="seeAllVideos" v-if="allVideos">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
+			</div>
+			<div class="see-all col-2" @click="seeAllVideos" v-else>
 				<span> مشاهده همه </span>
 				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
 			</div>
 		</div>
-		<div class="audio-container">
+		<allVideos v-if="allVideos" class="application-animation" />
+		<div class="video-container" v-else>
 			<marketMediaCard
 				v-for="video in videos"
 				:key="video.id"
@@ -70,13 +86,22 @@
 <script>
 import marketMediaCard from '../../elements/Card/marketMediaCard.vue';
 import BaseInput from '../../elements/BaseInput/index.vue';
+import allPhotos from '../../pageComponents/Market/allPhotos.vue';
+import allAudios from '../../pageComponents/Market/allAudios.vue';
+import allVideos from '../../pageComponents/Market/allVideos.vue';
 export default {
 	components: {
 		marketMediaCard,
 		BaseInput,
+		allPhotos,
+		allAudios,
+		allVideos,
 	},
 	data() {
 		return {
+			allPhotos: false,
+			allAudios: false,
+			allVideos: false,
 			model: {
 				serach: '',
 			},
@@ -193,6 +218,17 @@ export default {
 			],
 		};
 	},
+	methods: {
+		seeAllPhotos() {
+			this.allPhotos = !this.allPhotos;
+		},
+		seeAllAudios() {
+			this.allAudios = !this.allAudios;
+		},
+		seeAllVideos() {
+			this.allVideos = !this.allVideos;
+		},
+	},
 };
 </script>
 
@@ -220,7 +256,8 @@ export default {
 	line-height: 23px;
 	color: #000000;
 }
-.see-all {
+.see-all,
+.go-back-button {
 	color: #4461f2;
 	text-align: right;
 	position: relative;
