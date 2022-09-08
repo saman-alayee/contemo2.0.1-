@@ -15,8 +15,8 @@ export default {
 	},
 	data() {
 		return {
-			marketUser: true,
-			myMarket: false,
+			marketUser: false,
+			myMarket: true,
 		};
 	},
 };

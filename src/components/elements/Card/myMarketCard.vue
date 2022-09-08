@@ -25,14 +25,14 @@
 					<p>{{ description }}</p>
 				</div>
 				<div class="market-card-footer">
-					<div class="footer-item likes">
+					<!-- <div class="footer-item likes">
 						<span>{{ likes }}</span>
 						<img src="@/assets/img/icon/heart-icon.svg" />
-					</div>
-					<div class="footer-item views">
+					</div> -->
+					<!-- <div class="footer-item views">
 						<span>{{ views }}</span>
 						<img src="@/assets/img/icon/view-icon.svg" />
-					</div>
+					</div> -->
 					<div class="footer-item purchases">
 						<span>{{ purchases }}</span>
 						<img src="@/assets/img/icon/money-icon.svg" />
@@ -49,7 +49,6 @@ export default {
 	components: {
 		BaseCard,
 	},
-	data() {},
 	props: {
 		video: {
 			type: String,
