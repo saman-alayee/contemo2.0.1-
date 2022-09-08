@@ -14,7 +14,58 @@
 			</div>
 		</div>
 		<button class="btn btn-primary" @click="openModal">click</button>
+		<BaseModal ref="addPartnerModal">
+			<template slot="base-content">
+				<div class="add-partner-modal-container">
+					<BaseCard class="add-partner-card" closeBtn="true">
+						<template slot="content">
+							<div class="inside-modal-container">
+								<div class="close-btn" @click="closeModal">
+									<img src="@/assets/img/icon/closeGray.svg" alt="" />
+								</div>
+								<div class="modal-container">
+									<div>
+										<img src="@/assets/img/vectors/modalPictures.svg" alt="" />
+									</div>
+								</div>
+								<div class="info-container">
+									<div class="avatar-container">
+										<img src="@/assets/img/vectors/avatar.svg" alt="" />
+									</div>
+									<div class="names-container">
+										<h3>سامان علایی</h3>
+										<p>saman.alaii10@gmail.com</p>
+									</div>
+								</div>
+								<div class="icon-container">
+									<div>
+										<p>5555</p>
+									</div>
+									<div class="heart-container">
+										<img src="@/assets/img/icon/money-icon.svg" alt="" />
+									</div>
+								</div>
 
+								<div class="text-container">
+									<h1>عنوان تصویر</h1>
+									<h5>
+										لـورم ایپسوم متن ساختگی با تولید سادگی از نامفهوم از صنعت چاپ، و با استفاده
+									</h5>
+								</div>
+								<div class="modal-container">
+									<div class="button-container">
+										<Button title="افزودن به سبد خرید" />
+									</div>
+									<div>
+										<p>353,000 تومان</p>
+									</div>
+								</div>
+							</div>
+						</template>
+					</BaseCard>
+				</div>
+			</template>
+		</BaseModal>
 		<div class="heading-container row">
 			<span class="content-heading col-10">تصاویر</span>
 			<div class="go-back-button col-2" @click="seeAllPhotos" v-if="allPhotos">
