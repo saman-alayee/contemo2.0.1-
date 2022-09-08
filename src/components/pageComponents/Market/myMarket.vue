@@ -53,6 +53,11 @@
 				<div class="add-photo-modal-container">
 					<BaseCard class="add-photo-card">
 						<template slot="content">
+							<img
+								class="close-button"
+								src="@/assets/img/icon/closeGray.svg"
+								@click="closeAddModal"
+							/>
 							<div class="modal-heading">
 								<span>لطفا اطلاعات زیر را تکمیل کنید</span>
 							</div>
@@ -63,7 +68,12 @@
 											>عنوان تصویر خود را مشخص کنید</span
 										>
 										<div class="inside-input-container">
-											<input type="text" name="" class="form-control" />
+											<input
+												type="text"
+												name=""
+												class="form-control"
+												v-model="model.title"
+											/>
 										</div>
 									</div>
 									<div class="form-group">
@@ -75,6 +85,7 @@
 												name=""
 												style="height: 120px"
 												class="modal-text-area form-control"
+												v-model="model.description"
 											></textarea>
 										</div>
 									</div>
@@ -86,8 +97,9 @@
 											<input
 												type="number"
 												name=""
-												placeholder=""
+												placeholder="تومان"
 												class="form-control"
+												v-model="model.price"
 											/>
 										</div>
 									</div>
@@ -134,7 +146,9 @@ export default {
 	data() {
 		return {
 			model: {
-				serach: '',
+				title: '',
+				description: '',
+				price: '',
 			},
 			images: [
 				{
@@ -187,7 +201,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
-
+.close-button {
+	position: relative;
+	z-index: 15;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
 .market-header {
 	margin-bottom: 48px;
 }
@@ -206,7 +226,6 @@ export default {
 	}
 }
 .modal-heading {
-	margin-top: 24px;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 24px;
@@ -258,6 +277,9 @@ export default {
 			outline: none;
 			box-shadow: none;
 		}
+	}
+	.modal-text-area {
+		resize: none;
 	}
 	input[type='checkbox'] {
 		height: 16px;
@@ -332,8 +354,5 @@ export default {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-}
-.checkbox {
-	accent-color: $color-primary;
 }
 </style>
