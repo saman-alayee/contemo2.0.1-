@@ -123,6 +123,7 @@ export default {
 	}
 }
 .content-container {
+	height: 60px;
 	span {
 		font-style: normal;
 		font-weight: 600;
@@ -146,6 +147,8 @@ export default {
 	flex-direction: row;
 	width: 120px;
 	padding-right: 16px;
+	position: relative;
+	top: 5px;
 }
 .price {
 	padding-right: 2px;
