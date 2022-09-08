@@ -14,66 +14,20 @@
 			</div>
 		</div>
 		<button class="btn btn-primary" @click="openModal">click</button>
-		<BaseModal ref="addPartnerModal">
-			<template slot="base-content">
-				<div class="add-partner-modal-container">
-					<BaseCard class="add-partner-card" closeBtn="true">
-						<template slot="content">
-							<div class="inside-modal-container">
-								<div class="close-btn" @click="closeModal">
-									<img src="@/assets/img/icon/closeGray.svg" alt="" />
-								</div>
-								<div class="modal-container">
-									<div>
-										<img src="@/assets/img/vectors/modalPictures.svg" alt="" />
-									</div>
-								</div>
-								<div class="info-container">
-									<div class="avatar-container">
-										<img src="@/assets/img/vectors/avatar.svg" alt="" />
-									</div>
-									<div class="names-container">
-										<h3>سامان علایی</h3>
-										<p>saman.alaii10@gmail.com</p>
-									</div>
-								</div>
-								<div class="icon-container">
-									<div>
-										<p>5555</p>
-									</div>
-									<div class="heart-container">
-										<img src="@/assets/img/icon/money-icon.svg" alt="" />
-									</div>
-								</div>
 
-								<div class="text-container">
-									<h1>عنوان تصویر</h1>
-									<h5>
-										لـورم ایپسوم متن ساختگی با تولید سادگی از نامفهوم از صنعت چاپ، و با استفاده
-									</h5>
-								</div>
-								<div class="modal-container">
-									<div class="button-container">
-										<Button title="افزودن به سبد خرید" />
-									</div>
-									<div>
-										<p>353,000 تومان</p>
-									</div>
-								</div>
-							</div>
-						</template>
-					</BaseCard>
-				</div>
-			</template>
-		</BaseModal>
 		<div class="heading-container row">
 			<span class="content-heading col-10">تصاویر</span>
-			<div class="see-all col-2">
+			<div class="go-back-button col-2" @click="seeAllPhotos" v-if="allPhotos">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
+			</div>
+			<div class="see-all col-2" @click="seeAllPhotos" v-else>
 				<span> مشاهده همه </span>
 				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
 			</div>
 		</div>
-		<div class="image-container">
+		<allPhotos v-if="allPhotos" class="application-animation" />
+		<div class="image-container" v-else>
 			<marketMediaCard
 				v-for="image in images"
 				:key="image.id"
@@ -81,16 +35,22 @@
 				:image="image.imageItem"
 				:description="image.description"
 				:price="image.price"
+				class="application-animation"
 			/>
 		</div>
 		<div class="heading-container row">
 			<span class="content-heading col-10">صوت </span>
-			<div class="see-all col-2">
+			<div class="go-back-button col-2" @click="seeAllAudios" v-if="allAudios">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
+			</div>
+			<div class="see-all col-2" @click="seeAllAudios" v-else>
 				<span> مشاهده همه </span>
 				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
 			</div>
 		</div>
-		<div class="video-container">
+		<allAudios v-if="allAudios" class="application-animation" />
+		<div class="audio-container">
 			<marketMediaCard
 				v-for="item in audio"
 				:key="item.id"
@@ -102,12 +62,17 @@
 		</div>
 		<div class="heading-container row">
 			<span class="content-heading col-10">ویدیو</span>
-			<div class="see-all col-2">
+			<div class="go-back-button col-2" @click="seeAllVideos" v-if="allVideos">
+				<img src="@/assets/img/icon/arrow-right.svg" alt="" />
+				<span>بازگشت</span>
+			</div>
+			<div class="see-all col-2" @click="seeAllVideos" v-else>
 				<span> مشاهده همه </span>
 				<img src="@/assets/img/icon/arrow-left.svg" alt="" />
 			</div>
 		</div>
-		<div class="audio-container">
+		<allVideos v-if="allVideos" class="application-animation" />
+		<div class="video-container" v-else>
 			<marketMediaCard
 				v-for="video in videos"
 				:key="video.id"
@@ -126,7 +91,9 @@ import BaseInput from '../../elements/BaseInput/index.vue';
 import BaseModal from '@/components/elements/BaseModal/index.vue';
 import BaseCard from '@/components/elements/Card/index.vue';
 import Button from '../../elements/Button/Button.vue';
-
+import allPhotos from '../../pageComponents/Market/allPhotos.vue';
+import allAudios from '../../pageComponents/Market/allAudios.vue';
+import allVideos from '../../pageComponents/Market/allVideos.vue';
 export default {
 	components: {
 		marketMediaCard,
@@ -134,9 +101,15 @@ export default {
 		BaseCard,
 		BaseModal,
 		Button,
+		allPhotos,
+		allAudios,
+		allVideos,
 	},
 	data() {
 		return {
+			allPhotos: false,
+			allAudios: false,
+			allVideos: false,
 			model: {
 				serach: '',
 			},
@@ -260,6 +233,15 @@ export default {
 		closeModal() {
 			this.$refs.addPartnerModal.close();
 		},
+		seeAllPhotos() {
+			this.allPhotos = !this.allPhotos;
+		},
+		seeAllAudios() {
+			this.allAudios = !this.allAudios;
+		},
+		seeAllVideos() {
+			this.allVideos = !this.allVideos;
+		},
 	},
 };
 </script>
@@ -290,7 +272,8 @@ export default {
 	line-height: 23px;
 	color: #000000;
 }
-.see-all {
+.see-all,
+.go-back-button {
 	color: #4461f2;
 	text-align: right;
 	position: relative;

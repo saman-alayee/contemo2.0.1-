@@ -22,8 +22,12 @@
 						<span class="amount">{{ price }}</span>
 						<span class="currency">تومان</span>
 					</div>
-					<div class="learn-more-icon col-6">
-						<img src="@/assets/img/icon/plus-icon.svg" />
+					<div class="col-6">
+						<AddItem
+							class="learn-more-icon"
+							:height="addIconStyle.height"
+							:width="addIconStyle.width"
+						/>
 					</div>
 				</div>
 			</template>
@@ -33,12 +37,19 @@
 
 <script>
 import BaseCard from '@/components/elements/Card/index.vue';
+import AddItem from '../AddItem/index.vue';
 export default {
 	components: {
 		BaseCard,
+		AddItem,
 	},
 	data() {
-		return {};
+		return {
+			addIconStyle: {
+				height: '25px',
+				width: '25px',
+			},
+		};
 	},
 	props: {
 		video: {
@@ -112,6 +123,7 @@ export default {
 	}
 }
 .content-container {
+	height: 60px;
 	span {
 		font-style: normal;
 		font-weight: 600;
@@ -134,13 +146,18 @@ export default {
 	display: flex;
 	flex-direction: row;
 	width: 120px;
-	padding-right: 16px;}
+	padding-right: 16px;
+	position: relative;
+	top: 5px;
+}
 .price {
 	padding-right: 2px;
+	position: relative;
+	top: 10px;
 	.amount {
 		font-style: normal;
 		font-weight: 600;
-		font-size: 12px;
+		font-size: 16px;
 		line-height: 23px;
 		text-align: right;
 		color: #4461f2;
@@ -149,7 +166,7 @@ export default {
 		padding: 4px;
 		font-style: normal;
 		font-weight: 300;
-		font-size: 10px;
+		font-size: 14px;
 		line-height: 16px;
 		text-align: right;
 		color: #a5a5a5;
@@ -158,6 +175,6 @@ export default {
 .learn-more-icon {
 	text-align: left;
 	position: relative;
-	right: 80px;
+	right: 72px;
 }
 </style>
