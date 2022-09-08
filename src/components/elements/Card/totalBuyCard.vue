@@ -9,16 +9,20 @@
 						</div>
 						<div class="total-price">
 							<h4>234,000</h4>
-							<p>تومان</p>
+							<h5>تومان</h5>
 						</div>
 					</div>
 					<p>
 						اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های
 						برخورده اید که با نام لورم ایپسوم شناخته می‌شوند
 					</p>
-					<div class="code-container">
+					<div class="code-container mt-5">
 						<span class="text">کد تخفیف</span>
 					</div>
+					<input class="input mt-1" type="text" />
+					<hr />
+					<BaseButton title="پرداخت با کارت بانکی" class="mt-1" />
+					<button class="wallet-btn mt-1">پرداخت با اعتبار حساب</button>
 				</div>
 			</template>
 		</baseCard>
@@ -27,8 +31,9 @@
 
 <script>
 import baseCard from '@/components/elements/Card/index.vue';
+import BaseButton from '../../../components/elements/Button/Button.vue';
 export default {
-	components: { baseCard },
+	components: { baseCard, BaseButton },
 };
 </script>
 
@@ -70,5 +75,28 @@ export default {
 			flex-direction: column;
 		}
 	}
+}
+.input {
+	width: 100%;
+	background-color: #f5f5f5;
+	outline: none;
+	border: none;
+	height: 60px;
+	border-radius: 10px;
+	padding: 0px 10px;
+}
+.wallet-btn {
+	width: 100%;
+	height: 42px;
+	border: 1px solid $color-primary;
+	background: none;
+	border-radius: 8px;
+	color: $color-primary;
+	font-weight: 400;
+	transition: 0.4s;
+}
+.wallet-btn:hover{
+	background: $color-primary;
+	color: #fff;
 }
 </style>
