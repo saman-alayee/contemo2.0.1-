@@ -1,12 +1,14 @@
 <template>
 	<div class="dashboard-component">
 		<div>
-			<chipCardRight
+			<chipCard
 				class="chipcard-component"
-				icon="icon/plusIcon.svg"
 				background="#4461F2"
 				color="white"
-				title="افزودن همکار "
+				title="افزودن همکار"
+				width="154px"
+				iconLeft="icon/plusIcon.svg"
+				@onClick="openAddModal"
 			/>
 		</div>
 		<div class="row">
@@ -20,16 +22,31 @@
 				class="mx-1 mt-1"
 			/>
 		</div>
+		<BaseModal ref="addPartnerModal">
+			<template slot="base-content">
+				<div class="add-partner-modal-container">
+					<BaseCard class="add-partner-card">
+						<template slot="content">
+							<p>salam</p>
+						</template>
+					</BaseCard>
+				</div>
+			</template>
+		</BaseModal>
 	</div>
 </template>
 
 <script>
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
-import chipCardRight from '@/components/elements/Card/chipCardRight.vue';
+import chipCard from '@/components/elements/BaseChip/baseChip.vue';
+import BaseModal from '@/components/elements/BaseModal/index.vue';
+import BaseCard from '@/components/elements/Card/index.vue';
 export default {
 	components: {
 		PartnerCard,
-		chipCardRight,
+		chipCard,
+		BaseModal,
+		BaseCard,
 	},
 	data() {
 		return {
@@ -49,6 +66,12 @@ export default {
 			],
 		};
 	},
+	methods: {
+		openAddModal() {
+			console.log('salam');
+			this.$refs.addPartnerModal.open();
+		},
+	},
 };
 </script>
 
@@ -57,5 +80,16 @@ export default {
 
 .chipcard-component {
 	width: 150px;
+}
+.add-partner-modal-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.add-partner-card {
+		width: 500px;
+		height: 500px;
+	}
 }
 </style>

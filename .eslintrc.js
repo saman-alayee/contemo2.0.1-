@@ -173,7 +173,7 @@ module.exports = {
 		'eol-last': 2,
 		'func-names': 0,
 		'key-spacing': [2, { beforeColon: false, afterColon: true }],
-		'linebreak-style': [2, 'windows'],
+		'linebreak-style': [2, 'unix'],
 		'max-nested-callbacks': [2, MAX_NESTED_CALLBACKS],
 		'new-cap': 2,
 		'new-parens': 2,
