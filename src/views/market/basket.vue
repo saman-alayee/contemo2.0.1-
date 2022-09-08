@@ -1,12 +1,14 @@
 <template>
 	<div class="application-animation">
-		<h1>hello basket</h1>
+		<userBasket />
 	</div>
 </template>
 
 <script>
+import userBasket from '../../components/pageComponents/Market/userBasket.vue';
 export default {
-	name: 'cart',
+	components: { userBasket },
+	name: 'basket',
 };
 </script>
 

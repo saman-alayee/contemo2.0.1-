@@ -81,7 +81,13 @@
 									>بازیابی رمز عبور</span
 								>
 							</div>
-							<BaseButton title="ورود" class="mt-3" :disabled="!valid" icon="icon/arrow-right.png"/>
+							<BaseButton
+								title="ورود"
+								class="mt-3"
+								:disabled="!valid"
+								icon="icon/arrow-right.png"
+								@click.native="onLogin"
+							/>
 							<div class="hr-sect mt-3">با این حساب وارد شو</div>
 							<div class="row mt-2">
 								<div class="col-md-4">
@@ -125,7 +131,12 @@ export default {
 		BaseButton,
 	},
 	methods: {
-		async doLogin() {
+		async onLogin() {
+			// this.$notify({
+			// 	group: 'tc',
+			// 	type: 'success',
+			// 	text: 'Session expired. you need login again.',
+			// });
 			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.LOGIN, {
 				email: this.model.email,
 				password: this.model.password,

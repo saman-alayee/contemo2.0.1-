@@ -1,5 +1,11 @@
 <template>
 	<div class="dashboard-component">
+		<BaseTab :tabItems="tabItems">
+			<template slot="1">salam</template>
+			<template slot="2">ddd</template>
+			<template slot="3">fer</template>
+			<template slot="4">d</template>
+		</BaseTab>
 		<div class="row">
 			<div class="col-lg-4 scroll-y-container">
 				<taskCard
@@ -50,8 +56,9 @@
 import PartnerCard from '@/components/elements/Card/partnerCard.vue';
 import taskCard from '@/components/elements/Card/taskCard.vue';
 import LineChart from '@/components/elements/charts/lineChart.vue';
-import BlueCard from '../../elements/Card/blueCard.vue';
+import BlueCard from '@/components/elements/Card/blueCard.vue';
 import AddItem from '@/components/elements/AddItem/index.vue';
+import BaseTab from '@/components/elements/BaseTab/index.vue';
 export default {
 	components: {
 		PartnerCard,
@@ -59,9 +66,20 @@ export default {
 		LineChart,
 		BlueCard,
 		AddItem,
+		BaseTab,
 	},
 	data() {
 		return {
+			tabItems: [
+				{
+					id: 1,
+					tabName: 'salam',
+				},
+				{ id: 2, tabName: 'khodahafez' },
+				{ id: 3, tabName: 'dwefewfer' },
+				{ id: 4, tabName: 'erfgregregrtr' },
+			],
+
 			partnerData: [
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
 				{ name: 'سامان علایی', role: 'گرافیست', avatar: '' },
@@ -92,7 +110,7 @@ export default {
 					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
 					avatars: 'vectors/avatar.svg',
 				},
-					{
+				{
 					title: 'عنوان تسک',
 					description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با',
 					avatars: 'vectors/avatar.svg',
