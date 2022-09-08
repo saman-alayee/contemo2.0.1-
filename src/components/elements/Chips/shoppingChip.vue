@@ -19,6 +19,7 @@ export default {};
 	box-shadow: 0px 12px 21px rgba(252, 191, 0, 0.15);
 	border-radius: 15px;
 	display: flex;
+	cursor: pointer;
 }
 .shopping-cart-icon {
 	padding: 8px 14px;

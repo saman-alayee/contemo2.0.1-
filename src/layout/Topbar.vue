@@ -7,7 +7,9 @@
 			<h3 class="">متن مربوط به بخش همکاران</h3>
 		</div>
 		<div class="col-4" v-if="$route.path !== `/market`"><wallet class="" /></div>
-		<div class="col-3 app-ltr" v-if="$route.path == `/market`"><shoppingChip /></div>
+		<div @click="goToUserBasket" class="col-3 app-ltr" v-if="$route.path == `/market`">
+			<shoppingChip />
+		</div>
 	</div>
 </template>
 
@@ -17,6 +19,11 @@ import shoppingChip from '../components/elements/Chips/shoppingChip.vue';
 export default {
 	name: 'topbar',
 	components: { wallet, shoppingChip },
+	methods: {
+		goToUserBasket() {
+			this.$router.push('/market/basket');
+		},
+	},
 };
 </script>
 
