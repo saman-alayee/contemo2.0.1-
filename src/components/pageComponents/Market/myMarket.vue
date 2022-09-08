@@ -180,7 +180,7 @@ export default {
 		},
 		closeAddModal() {
 			this.$refs.addPhotoModal.close();
-		}
+		},
 	},
 };
 </script>
@@ -334,6 +334,6 @@ export default {
 	flex-wrap: nowrap;
 }
 .checkbox {
-	accent-color: #4461f2;
+	accent-color: $color-primary;
 }
 </style>
