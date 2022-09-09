@@ -7,7 +7,7 @@
 						<img src="@/assets/img/icon/deleteIcon.svg" alt="" />
 					</div>
 					<div class="img-container">
-						<img src="@/assets/img/vectors/avatar.svg" alt="" />
+						<img src="https://picsum.photos/200/300" alt="" />
 					</div>
 					<div class="name-container">
 						<p>{{ name }}</p>
@@ -83,8 +83,18 @@ export default {
 }
 .delete-container {
 	position: absolute;
-	top: 7px;
-	right: 10px;
+	top: 0;
+	right: 0;
 	cursor: pointer;
+}
+.img-container {
+	width: 60px;
+	height: 60px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
 }
 </style>
