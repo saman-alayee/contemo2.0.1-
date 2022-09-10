@@ -53,7 +53,7 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">تحلیل وب سایت</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToChatRooms">
 				<div class="icon-container">
 					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
@@ -107,6 +107,9 @@ export default {
 		},
 		goToPartners() {
 			return this.$router.push('/Partners');
+		},
+		goToChatRooms() {
+			return this.$router.push('/chat-rooms');
 		},
 	},
 };
