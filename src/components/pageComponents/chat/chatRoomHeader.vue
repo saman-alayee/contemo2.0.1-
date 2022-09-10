@@ -2,7 +2,7 @@
 	<div class="chat-room-header">
 		<div class="group-info">
 			<img src="@/assets/img/vectors/avatar.svg" alt="error" />
-			<span class="group-name"> تست </span>
+			<span class="group-name"> {{ title }}</span>
 		</div>
 		<img class="search-icon" src="@/assets/img/icon/search-icon.svg" alt="" />
 	</div>
@@ -25,8 +25,8 @@ export default {
 	height: 60px;
 	background: #fff;
 	border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 .group-info {
 	padding: 4px 24px;
@@ -44,8 +44,8 @@ export default {
 	}
 }
 .search-icon {
-    width: 26px;
-    height: 26px;
-    margin: 16px;
+	width: 26px;
+	height: 26px;
+	margin: 16px;
 }
 </style>

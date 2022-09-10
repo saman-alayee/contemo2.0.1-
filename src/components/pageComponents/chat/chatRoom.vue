@@ -1,11 +1,9 @@
 <template>
 	<div class="chat-room">
 		<div class="chat-room-header-container">
-			<chatRoomHeader />
+			<chatRoomHeader v-for="item in groupInfo" :key="item.id" :title="item.title" />
 		</div>
-		<div class="chat-room-messages-container">
-			ssssss
-		</div>
+		<div class="chat-room-messages-container">ssssss</div>
 		<div class="chat-room-footer-container">
 			<chatRoomFooter />
 		</div>
@@ -16,6 +14,11 @@
 import chatRoomHeader from '@/components/pageComponents/chat/chatRoomHeader.vue';
 import chatRoomFooter from '@/components/pageComponents/chat/chatRoomFooter.vue';
 export default {
+	data() {
+		return {
+			groupInfo: [{ title: 'تست' }],
+		};
+	},
 	components: { chatRoomHeader, chatRoomFooter },
 };
 </script>
@@ -30,7 +33,7 @@ export default {
 	height: 85vh;
 	background-color: rgba(166, 166, 166, 0.1);
 	border-radius: 15px 0 0 15px;
-	.chat-room-messages-container{
+	.chat-room-messages-container {
 		height: 70vh;
 	}
 }
