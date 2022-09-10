@@ -34,6 +34,7 @@ export default {
 	padding: 16px;
 	display: flex;
 	flex-direction: row;
+	cursor: pointer;
 }
 .group-photo {
 	width: 50px;
