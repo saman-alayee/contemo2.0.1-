@@ -110,6 +110,15 @@ const routes = [
 				},
 				component: () => import('@/views/partners/index.vue'),
 			},
+			{
+				path: '/chat-rooms',
+				name: 'chat',
+				meta: {
+					title: 'chat',
+					breadcrumbs: [{ title: 'chat', url: 'chat' }],
+				},
+				component: () => import('@/views/Chat/index.vue'),
+			},
 		],
 	},
 ];
