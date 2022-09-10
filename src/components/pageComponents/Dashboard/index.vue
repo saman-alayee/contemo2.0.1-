@@ -1,11 +1,5 @@
 <template>
 	<div class="dashboard-component">
-		<BaseTab :tabItems="tabItems">
-			<template slot="1">salam</template>
-			<template slot="2">ddd</template>
-			<template slot="3">fer</template>
-			<template slot="4">d</template>
-		</BaseTab>
 		<div class="row">
 			<div class="col-lg-4 scroll-y-container">
 				<taskCard
@@ -58,7 +52,6 @@ import taskCard from '@/components/elements/Card/taskCard.vue';
 import LineChart from '@/components/elements/charts/lineChart.vue';
 import BlueCard from '@/components/elements/Card/blueCard.vue';
 import AddItem from '@/components/elements/AddItem/index.vue';
-import BaseTab from '@/components/elements/BaseTab/index.vue';
 export default {
 	components: {
 		PartnerCard,
@@ -66,7 +59,6 @@ export default {
 		LineChart,
 		BlueCard,
 		AddItem,
-		BaseTab,
 	},
 	data() {
 		return {
