@@ -1,6 +1,6 @@
 <template>
 	<div class="social-card-container">
-		<BaseCard class="base-color">
+		<BaseCard padding="16px" class="base-color">
 			<template slot="content">
 				<div class="social-data-container">
 					<div class="social-media-icon">

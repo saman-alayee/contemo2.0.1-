@@ -25,10 +25,10 @@
     <BaseModal ref="addPartnerModal">
       <template slot="base-content">
         <div class="add-partner-modal-container">
-          <BaseCard class="add-partner-card" closeBtn="true">
+          <BaseCard padding="16px" class="add-partner-card" closeBtn="true">
             <template slot="content">
               <div class="inside-modal-container">
-                <div class="close-btn">
+                <div class="close-btn" @click="closeModal">
                   <img src="@/assets/img/icon/closeGray.svg" alt="" />
                 </div>
                 <div class="modal-container mt-3">
@@ -93,8 +93,10 @@ export default {
   },
   methods: {
     openAddModal() {
-      console.log("salam");
       this.$refs.addPartnerModal.open();
+    },
+    closeModal() {
+      this.$refs.addPartnerModal.close();
     },
   },
 };
