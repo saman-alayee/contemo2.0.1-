@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/_shared.scss';
 .chat-room-footer {
 	margin-bottom: 10px;
 	width: 700px;
