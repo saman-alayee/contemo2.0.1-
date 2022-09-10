@@ -1,17 +1,17 @@
 <template>
 	<div class="room-messages">
-		<mainUserCard :textMessage="message"  class="mb-1"/>
-		<currentUserCard :textMessage="message" class="mb-1" />
+		<mainUserMessage :textMessage="message"  class="mb-1"/>
+		<currentUserMessage :textMessage="message" class="mb-1" />
 	</div>
 </template>
 
 <script>
-import mainUserCard from '@/components/pageComponents/chat/mainUserCard.vue';
-import currentUserCard from '@/components/pageComponents/chat/currentUserCard.vue';
+import mainUserMessage from '@/components/pageComponents/chat/mainUserMessage.vue';
+import currentUserMessage from '@/components/pageComponents/chat/currentUserMessage.vue';
 export default {
 	components: {
-		mainUserCard,
-		currentUserCard,
+		mainUserMessage,
+		currentUserMessage,
 	},
 	data() {
 		return {
