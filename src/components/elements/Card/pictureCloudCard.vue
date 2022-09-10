@@ -1,10 +1,10 @@
 <template>
 	<div class="partner-account-card">
-		<BaseCard>
+		<BaseCard padding="0px">
 			<template slot="content">
+				<span class="close-btn"><img src="@/assets/img/icon/closeIcon.svg" alt="" /></span>
 				<div class="file-container">
-					<span class="close-btn"><img src="@/assets/img/icon/closeIcon.svg" alt="" /></span>
-					<img :src="$PATH.GET_IMAGE_PATH(file)" alt="" />
+					<img class="img-size" :src="$PATH.GET_IMAGE_PATH(file)" alt="" />
 				</div>
 			</template>
 		</BaseCard>
@@ -30,7 +30,7 @@ export default {
 @import '@/assets/scss/_shared.scss';
 .partner-account-card {
 	width: 124px;
-	height: 114px;
+	height: 112px;
 	padding-left: 12px;
 	position: relative;
 	margin-top: 12px;
@@ -40,6 +40,14 @@ export default {
 	display: flex;
 	justify-content: center;
 	padding: 0px 4px 0px 0px;
+	img {
+		width: 104px;
+		height: 112px;
+		border-radius: 20px;
+		object-fit: cover;
+		padding: 4px 0px;
+		margin-left: 4px;
+	}
 }
 .close-btn {
 	position: absolute;

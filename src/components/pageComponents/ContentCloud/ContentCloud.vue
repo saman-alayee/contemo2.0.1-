@@ -35,15 +35,15 @@ export default {
 	data() {
 		return {
 			pictures: [
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
-				{ file: 'vectors/picture.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
+				{ file: 'vectors/modalPictures.svg' },
 			],
 			documents: [
 				{ file: 'vectors/documentContent.svg', name: 'نام فایل ' },
