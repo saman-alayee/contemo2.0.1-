@@ -49,6 +49,7 @@ export default {
 		font-size: 18px;
 		color: #000000;
 		margin-right: 16px;
+		cursor: pointer;
 	}
 	.last-message {
 		font-style: normal;
