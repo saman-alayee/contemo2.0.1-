@@ -1,6 +1,6 @@
 <template>
 	<div class="partner-account-card">
-		<BaseCard>
+		<BaseCard padding="20px">
 			<template slot="content">
 				<div class="card-container">
 					<div class="file-container">
@@ -58,7 +58,6 @@ export default {
 .file-container {
 	display: flex;
 	justify-content: center;
-	padding-top: 20px;
 }
 .close-btn {
 	position: absolute;

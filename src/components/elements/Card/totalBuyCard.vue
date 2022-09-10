@@ -1,6 +1,6 @@
 <template>
 	<div class="total-buy-card">
-		<baseCard>
+		<baseCard padding="16px">
 			<template slot="content">
 				<div class="total-buy-card-container">
 					<div class="total-container">

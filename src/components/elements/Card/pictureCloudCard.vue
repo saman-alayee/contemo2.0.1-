@@ -1,6 +1,6 @@
 <template>
 	<div class="partner-account-card">
-		<BaseCard>
+		<BaseCard padding="0px">
 			<template slot="content">
 				<span class="close-btn"><img src="@/assets/img/icon/closeIcon.svg" alt="" /></span>
 				<div class="file-container">
@@ -45,8 +45,8 @@ export default {
 		height: 112px;
 		border-radius: 20px;
 		object-fit: cover;
-		object-fit: cover;
-		padding: 5px 4px;
+		padding: 4px 0px;
+		margin-left: 4px;
 	}
 }
 .close-btn {

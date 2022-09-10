@@ -1,6 +1,6 @@
 <template>
 	<div class="partner-card-container">
-		<BaseCard>
+		<BaseCard padding="16px">
 			<template slot="content">
 				<div class="partner-item-container">
 					<div v-if="hasIcon == true" class="delete-container">
