@@ -39,8 +39,15 @@
 					/>
 				</div>
 			</div>
-			<div class="col-lg-2 d-flex justify-content-center align-items-center">
-				<AddItem class="mt-2" />
+			<div class="col-lg-2 w-100 d-flex justify-content-center align-items-center">
+				<AddItem
+					class="mt-2"
+					background="white"
+					height="32px"
+					width="32px"
+					borderHeight="49px"
+					borderWidth="55px"
+				/>
 			</div>
 		</div>
 	</div>
