@@ -56,6 +56,7 @@
 										v-model="model.email"
 										:errors="errors"
 										placeholder="آدرس ایمیل"
+										icon="icon/envelope-icon.svg"
 									/>
 								</validation-provider>
 							</div>
@@ -89,6 +90,7 @@
 										v-model="model.password"
 										placeholder="رمز عبور"
 										:errors="errors"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
@@ -106,6 +108,7 @@
 										v-model="model.confrimPassword"
 										placeholder="تکرار رمز عبور"
 										:errors="errors"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
@@ -113,6 +116,7 @@
 								<BaseInput
 									v-model="model.marketingCode"
 									placeholder="کد بازاریابی"
+									icon="icon/marketing-icon.svg"
 								/>
 							</div>
 
