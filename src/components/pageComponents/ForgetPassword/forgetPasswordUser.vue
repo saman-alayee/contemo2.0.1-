@@ -9,9 +9,13 @@
 						</div>
 						<div class="col-lg-6 d-flex app-ltr">
 							<div class="mt-4">
-								<router-link class="mt-4 login-router" to="/login">ورود</router-link>
+								<router-link class="mt-4 login-router" to="/login"
+									>ورود</router-link
+								>
 							</div>
-							<router-link class="mt-4 px-4 register-router" to="/register">ثبت نام</router-link>
+							<router-link class="mt-4 px-4 register-router" to="/register"
+								>ثبت نام</router-link
+							>
 						</div>
 					</div>
 				</div>
@@ -20,12 +24,23 @@
 				<div class="col-lg-8 d-flex w-50">
 					<div class="flex-column align-items-center mt-5 d-flex justify-content-center">
 						<h1 class="" style="padding-right: 200px">به کانتمو خوش آمدید</h1>
-						<h5 style="padding-right: 200px; width: 470px; line-height: 2rem; text-align: center">
+						<h5
+							style="
+								padding-right: 200px;
+								width: 470px;
+								line-height: 2rem;
+								text-align: center;
+							"
+						>
 							لینک بازیابی رمز عبور به ایمیل شما ارسال خواهد شد
 						</h5>
 					</div>
 					<div class="col-lg-6">
-						<img class="login_image mt-5" src="@/assets/vectors/login-vector.svg" alt="" />
+						<img
+							class="login_image mt-5"
+							src="@/assets/vectors/login-vector.svg"
+							alt=""
+						/>
 					</div>
 				</div>
 				<div class="col-lg-4 mt-5">
@@ -48,13 +63,12 @@
 									/>
 								</validation-provider>
 							</div>
-							<button
-								type="submit"
-								class="btn btn-primary mt-3 color-primary w-100"
+							<BaseButton
+								title="بازیابی رمز عبور"
+								class="mt-3"
 								:disabled="!valid"
-							>
-								بازیابی رمز عبور
-							</button>
+								@click.native="sendEmail"
+							/>
 						</form>
 					</validation-observer>
 				</div>
@@ -65,6 +79,7 @@
 
 <script>
 import BaseInput from '@/components/elements/BaseInput/index.vue';
+import BaseButton from '@/components/elements/Button/Button.vue';
 export default {
 	data() {
 		return {
@@ -75,12 +90,16 @@ export default {
 	},
 	components: {
 		BaseInput,
+		BaseButton,
 	},
 	methods: {
 		async sendEmail() {
-			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.RESET_PASSWORD, {
-				email: this.model.email,
-			});
+			const res = await this.$ApiServiceLayer.post(
+				this.$PATH.RELATIVE_PATH.POST.RESET_PASSWORD,
+				{
+					email: this.model.email,
+				},
+			);
 			console.log(res);
 		},
 	},

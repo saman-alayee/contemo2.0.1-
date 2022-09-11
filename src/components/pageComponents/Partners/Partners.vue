@@ -48,7 +48,7 @@
                       <option>5</option>
                     </select>
                   </div>
-                  <div class="button-container"><Button title="ذخیره تغییرات" /></div>
+                  <div class="button-container"><BaseButton title="ذخیره تغییرات" /></div>
                 </div>
               </div>
             </template>
@@ -64,14 +64,14 @@ import PartnerCard from "@/components/elements/Card/partnerCard.vue";
 import chipCard from "@/components/elements/BaseChip/baseChip.vue";
 import BaseModal from "@/components/elements/BaseModal/index.vue";
 import BaseCard from "@/components/elements/Card/index.vue";
-import Button from "../../elements/Button/Button.vue";
+import BaseButton from "../../elements/Button/Button.vue";
 export default {
   components: {
     PartnerCard,
     chipCard,
     BaseModal,
     BaseCard,
-    Button,
+    BaseButton,
   },
   data() {
     return {
