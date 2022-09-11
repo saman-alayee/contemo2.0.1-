@@ -72,7 +72,7 @@
 								</div>
 								<div class="modal-container">
 									<div class="button-container">
-										<Button title="افزودن به سبد خرید" />
+										<BaseButton title="افزودن به سبد خرید" />
 									</div>
 									<div>
 										<p>353,000 تومان</p>
@@ -91,14 +91,14 @@
 import AddItem from '../AddItem/index.vue';
 import BaseModal from '@/components/elements/BaseModal/index.vue';
 import BaseCard from '@/components/elements/Card/index.vue';
-import Button from '../../elements/Button/Button.vue';
+import BaseButton from '../../elements/Button/Button.vue';
 
 export default {
 	components: {
 		BaseCard,
 		AddItem,
 		BaseModal,
-		Button,
+		BaseButton,
 	},
 	data() {
 		return {
