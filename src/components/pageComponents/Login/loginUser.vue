@@ -85,8 +85,7 @@
 								title="ورود"
 								class="mt-3"
 								:disabled="!valid"
-								icon="icon/arrow-right.png"
-								@click.native="onLogin"
+								@click.native="doLogin"
 							/>
 							<div class="hr-sect mt-3">با این حساب وارد شو</div>
 							<div class="row mt-2">
@@ -116,7 +115,7 @@
 
 <script>
 import BaseInput from '@/components/elements/BaseInput/index.vue';
-import BaseButton from '../../../components/elements/Button/Button.vue';
+import BaseButton from '@/components/elements/Button/Button.vue';
 export default {
 	data() {
 		return {
@@ -131,7 +130,7 @@ export default {
 		BaseButton,
 	},
 	methods: {
-		async onLogin() {
+		async doLogin() {
 			// this.$notify({
 			// 	group: 'tc',
 			// 	type: 'success',

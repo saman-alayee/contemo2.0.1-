@@ -41,7 +41,7 @@
 				</div>
 				<div class="col-lg-4 mt-5">
 					<validation-observer v-slot="{ valid }">
-						<form class="app" @submit.prevent="register">
+						<form class="app" @submit.prevent="registerUser">
 							<div class="form-group">
 								<validation-provider
 									name="آدرس ایمیل"
@@ -116,13 +116,13 @@
 								/>
 							</div>
 
-							<button
-								type="submit"
-								class="btn btn-primary mt-3 color-primary w-100"
+							<BaseButton
+								title="ثبت نام"
+								class="mt-3"
 								:disabled="!valid"
-							>
-								ثبت نام
-							</button>
+								@click.native="registerUser"
+							/>
+
 							<div class="hr-sect mt-3">با این حساب وارد شو</div>
 							<div class="row mt-2">
 								<div class="col-md-4">
@@ -151,6 +151,7 @@
 
 <script>
 import BaseInput from '@/components/elements/BaseInput/index.vue';
+import BaseButton from '@/components/elements/Button/Button.vue';
 export default {
 	data() {
 		return {
@@ -165,9 +166,10 @@ export default {
 	},
 	components: {
 		BaseInput,
+		BaseButton,
 	},
 	methods: {
-		async register() {
+		async registerUser() {
 			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.REGISTER, {
 				email: this.model.email,
 				phone: this.model.phoneNumber,
