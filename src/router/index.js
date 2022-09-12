@@ -119,6 +119,23 @@ const routes = [
 				},
 				component: () => import('@/views/ContentBoard/index.vue'),
 			},
+			{
+				path: '/chat-rooms',
+				name: 'chat',
+				meta: {
+					title: 'chat',
+					breadcrumbs: [{ title: 'chat', url: 'chat' }],
+				},
+				component: () => import('@/views/Chat/index.vue'),
+			},
+			{
+				path: '/payments',
+				name: 'payments',
+				meta: {
+					title: 'تراکنش ها',
+				},
+				component: () => import('@/views/payments/index.vue'),
+			},
 		],
 	},
 ];

@@ -82,13 +82,12 @@
 							</h6>
 						</div>
 					</div>
-					<button
-						type="submit"
-						class="btn btn-primary color-primary w-100"
+					<BaseButton
+						title="ورود"
+						class="mt-3"
 						:disabled="!valid"
-					>
-						ورود
-					</button>
+						@click.native="sendAgainCode"
+					/>
 				</div>
 			</div>
 		</div>
@@ -96,7 +95,9 @@
 </template>
 
 <script>
+import BaseButton from '@/components/elements/Button/Button.vue';
 export default {
+	components: { BaseButton },
 	data() {
 		return {
 			verificationCode: '',

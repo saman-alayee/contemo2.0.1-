@@ -41,7 +41,7 @@
 				</div>
 				<div class="col-lg-4 mt-5">
 					<validation-observer v-slot="{ valid }">
-						<form class="app" @submit.prevent="register">
+						<form class="app" @submit.prevent="registerUser">
 							<div class="form-group">
 								<validation-provider
 									name="آدرس ایمیل"
@@ -56,13 +56,14 @@
 										v-model="model.email"
 										:errors="errors"
 										placeholder="آدرس ایمیل"
+										icon="icon/envelope-icon.svg"
 									/>
 								</validation-provider>
 							</div>
 							<div class="form-group">
 								<validation-provider
 									name="شماره تلفن"
-									rules="required|length:11|startwith:09"
+									rules="required|length:11"
 									:bails="false"
 									v-slot="{ errors }"
 									ref="phoneNumber"
@@ -89,6 +90,7 @@
 										v-model="model.password"
 										placeholder="رمز عبور"
 										:errors="errors"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
@@ -106,23 +108,23 @@
 										v-model="model.confrimPassword"
 										placeholder="تکرار رمز عبور"
 										:errors="errors"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
-							<div class="form-group">
-								<BaseInput
-									v-model="model.marketingCode"
-									placeholder="کد بازاریابی"
-								/>
-							</div>
-
-							<button
-								type="submit"
-								class="btn btn-primary mt-3 color-primary w-100"
+							<!-- <div class="form-group">
+									<BaseInput
+										v-model="model.marketingCode"
+										placeholder="کد بازاریابی"
+									/>
+								</div> -->
+							<BaseButton
+								title="ثبت نام"
+								class="mt-3"
 								:disabled="!valid"
-							>
-								ثبت نام
-							</button>
+								@click.native="registerUser"
+							/>
+
 							<div class="hr-sect mt-3">با این حساب وارد شو</div>
 							<div class="row mt-2">
 								<div class="col-md-4">
@@ -151,6 +153,7 @@
 
 <script>
 import BaseInput from '@/components/elements/BaseInput/index.vue';
+import BaseButton from '@/components/elements/Button/Button.vue';
 export default {
 	data() {
 		return {
@@ -159,21 +162,22 @@ export default {
 				phoneNumber: '',
 				password: '',
 				confrimPassword: '',
-				marketingCode: '',
+				// marketingCode: '',
 			},
 		};
 	},
 	components: {
 		BaseInput,
+		BaseButton,
 	},
 	methods: {
-		async register() {
+		async registerUser() {
 			const res = await this.$ApiServiceLayer.post(this.$PATH.RELATIVE_PATH.POST.REGISTER, {
 				email: this.model.email,
 				phone: this.model.phoneNumber,
 				password: this.model.password,
 				confirm: this.model.confrimPassword,
-				marketingCode: this.model.marketingCode,
+				// marketingCode: this.model.marketingCode,
 			});
 			console.log(res);
 		},

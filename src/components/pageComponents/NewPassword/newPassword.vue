@@ -62,6 +62,7 @@
 										v-model="model.newPassword"
 										:errors="errors"
 										placeholder="رمز عبور"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
@@ -79,16 +80,16 @@
 										v-model="model.confirmNewPassword"
 										:errors="errors"
 										placeholder="تکرار رمز عبور"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
-							<button
-								type="submit"
-								class="btn btn-primary mt-3 color-primary w-100"
+							<BaseButton
+								title="تایید"
+								class="mt-3"
 								:disabled="!valid"
-							>
-								تایید
-							</button>
+								@click.native="sendNewPassword"
+							/>
 						</form>
 					</validation-observer>
 				</div>
@@ -99,6 +100,7 @@
 
 <script>
 import BaseInput from '@/components/elements/BaseInput/index.vue';
+import BaseButton from '@/components/elements/Button/Button.vue';
 export default {
 	name: 'New Password',
 	data() {
@@ -120,6 +122,7 @@ export default {
 	},
 	components: {
 		BaseInput,
+		BaseButton,
 	},
 };
 </script>

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import wallet from '@/components/wallet.vue';
+import wallet from '@/components/pageComponents/Wallet/wallet.vue';
 import shoppingChip from '../components/elements/Chips/shoppingChip.vue';
 export default {
 	name: 'topbar',

@@ -13,10 +13,7 @@
 		<div class="menu-item-container">
 			<div class="menu-item" @click="goToDashboard">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">داشبود</div>
 			</div>
@@ -28,10 +25,7 @@
 			</div>
 			<div class="menu-item" @click="goToContentCloud">
 				<div class="icon-container">
-					<img
-						:src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon2.svg')"
-						alt=""
-					/>
+					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/gray-dashboard-icon2.svg')" alt="" />
 				</div>
 				<div class="menu-title" v-if="isOpen">ابر محتوا</div>
 			</div>
@@ -59,7 +53,7 @@
 				</div>
 				<div class="menu-title" v-if="isOpen">تحلیل وب سایت</div>
 			</div>
-			<div class="menu-item">
+			<div class="menu-item" @click="goToChatRooms">
 				<div class="icon-container">
 					<img :src="this.$PATH.GET_IMAGE_PATH('vectors/dashboardIcon.svg')" alt="" />
 				</div>
@@ -114,6 +108,9 @@ export default {
 		goToPartners() {
 			return this.$router.push('/Partners');
 		},
+		goToChatRooms() {
+			return this.$router.push('/chat-rooms');
+		},
 	},
 };
 </script>
@@ -140,11 +137,12 @@ export default {
 		.img-container {
 			width: 32px;
 			height: 32px;
-			border-radius: 50%;
+
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				border-radius: 50%;
 			}
 		}
 		.user-name {
