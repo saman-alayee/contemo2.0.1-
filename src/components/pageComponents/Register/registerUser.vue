@@ -63,7 +63,7 @@
 							<div class="form-group">
 								<validation-provider
 									name="شماره تلفن"
-									rules="required|length:11|startwith:09"
+									rules="required|length:11"
 									:bails="false"
 									v-slot="{ errors }"
 									ref="phoneNumber"
@@ -112,14 +112,12 @@
 									/>
 								</validation-provider>
 							</div>
-							<div class="form-group">
-								<BaseInput
-									v-model="model.marketingCode"
-									placeholder="کد بازاریابی"
-									icon="icon/marketing-icon.svg"
-								/>
-							</div>
-
+							<!-- <div class="form-group">
+									<BaseInput
+										v-model="model.marketingCode"
+										placeholder="کد بازاریابی"
+									/>
+								</div> -->
 							<BaseButton
 								title="ثبت نام"
 								class="mt-3"
@@ -164,7 +162,7 @@ export default {
 				phoneNumber: '',
 				password: '',
 				confrimPassword: '',
-				marketingCode: '',
+				// marketingCode: '',
 			},
 		};
 	},
@@ -179,7 +177,7 @@ export default {
 				phone: this.model.phoneNumber,
 				password: this.model.password,
 				confirm: this.model.confrimPassword,
-				marketingCode: this.model.marketingCode,
+				// marketingCode: this.model.marketingCode,
 			});
 			console.log(res);
 		},

@@ -140,7 +140,9 @@ export default {
 				email: this.model.email,
 				password: this.model.password,
 			});
-			console.log(res);
+			this.$store.commit('userConfig/setAccessToken', res.access);
+			this.$store.commit('userConfig/refreshToken', res.refresh);
+			this.$router.push('/dashboard');
 		},
 		goToForgetPassword() {
 			return this.$router.push('/forget-password');
