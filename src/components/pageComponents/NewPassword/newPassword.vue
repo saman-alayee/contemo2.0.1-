@@ -62,6 +62,7 @@
 										v-model="model.newPassword"
 										:errors="errors"
 										placeholder="رمز عبور"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>
@@ -79,6 +80,7 @@
 										v-model="model.confirmNewPassword"
 										:errors="errors"
 										placeholder="تکرار رمز عبور"
+										icon="icon/lock-icon.svg"
 									/>
 								</validation-provider>
 							</div>

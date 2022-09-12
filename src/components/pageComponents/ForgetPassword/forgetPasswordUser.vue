@@ -60,6 +60,7 @@
 										v-model="model.email"
 										:errors="errors"
 										placeholder="آدرس ایمیل"
+										icon="icon/envelope-icon.svg"
 									/>
 								</validation-provider>
 							</div>
