@@ -1,18 +1,24 @@
 <template>
-	<div class="wallet app-rtl">
+	<div class="wallet app-rtl" @click="goToPayments">
 		<div class="account-credit">
 			<img class="mx-1" src="@/assets/vectors/plus.svg" />
 			<span class="text-white">اعتبار حساب</span>
 		</div>
 		<div class="amount-box">
-			<span class="amount "><b>2,325,000</b></span>
+			<span class="amount"><b>2,325,000</b></span>
 			<span class="currency"> تومان</span>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	methods: {
+		goToPayments() {
+			return this.$router.push('/payments');
+		},
+	},
+};
 </script>
 
 <style scoped lang="scss">
@@ -22,9 +28,10 @@ export default {};
 	width: 100%;
 	background: $color-warning;
 	border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 0;
+	cursor: pointer;
 }
 .account-credit {
 	display: flex;
@@ -43,7 +50,7 @@ export default {};
 }
 .currency {
 	padding-right: 16px;
-    padding-left: 24px;
+	padding-left: 24px;
 	color: $color-white;
 }
 </style>
