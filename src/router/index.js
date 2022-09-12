@@ -110,6 +110,15 @@ const routes = [
 				},
 				component: () => import('@/views/partners/index.vue'),
 			},
+			{
+				path: '/content-board',
+				name: 'content-board',
+				meta: {
+					title: 'بوم محتوایی',
+					breadcrumbs: [{ title: 'بوم محتوایی', url: 'content-board' }],
+				},
+				component: () => import('@/views/ContentBoard/index.vue'),
+			},
 		],
 	},
 ];

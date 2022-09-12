@@ -48,9 +48,6 @@ export default {
 		calender,
 		baseSwitch,
 	},
-	created() {
-		console.log(this.$route);
-	},
 	computed: {
 		title() {
 			return this.$route.meta.title;
