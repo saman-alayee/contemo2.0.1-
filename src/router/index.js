@@ -136,6 +136,15 @@ const routes = [
 				},
 				component: () => import('@/views/payments/index.vue'),
 			},
+			{
+				path: '/profile',
+				name: 'profile',
+				meta: {
+					title: 'پروفایل',
+				},
+				component: () => import('@/views/profile/index.vue'),
+			},
+
 		],
 	},
 ];

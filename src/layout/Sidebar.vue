@@ -7,8 +7,8 @@
 			<div class="img-container" :class="{ 'open-image-container': isOpen }">
 				<img :src="this.$PATH.GET_IMAGE_PATH('vectors/avatar.svg')" alt="" />
 			</div>
-			<p class="user-name" v-if="isOpen">فرناز فرضی</p>
-			<p class="email" v-if="isOpen">mohsenfadaei97@gmail.com</p>
+			<p class="user-name" v-if="isOpen"> سامان علایی</p>
+			<p class="email" v-if="isOpen">saman.alaii10@gmail.com</p>
 		</div>
 		<div class="menu-item-container">
 			<div class="menu-item" @click="goToDashboard">
