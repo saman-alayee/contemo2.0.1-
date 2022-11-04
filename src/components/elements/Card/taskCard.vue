@@ -12,7 +12,7 @@
 					<div class="progress-bar-container">
 						<div class="progress-bar-right">60%</div>
 						<div class="progress-bar-left">
-							<p>میزان پیشرت</p>
+							<p>میزان </p>
 						</div>
 					</div>
 					<div class="progress app-ltr">
